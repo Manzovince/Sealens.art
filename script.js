@@ -38,11 +38,16 @@ function textReveal(step, interval = 40) {
 
 // Initiate experience
 function startExperience() {
-  document.getElementById('introduction').style.display = "none";
-  document.getElementById('start').style.display = "flex";
+  document.getElementById('introduction').style.opacity = "0";
+  setTimeout(() => {
+    document.getElementById('introduction').style.display = "none";
+  }, 1000);
 
-  document.querySelector(`#start .story-text`).style.opacity = 1;
-  textReveal('start');
+  document.getElementById('start').style.display = "flex";
+  setTimeout(() => {
+    document.querySelector(`#start .story-text`).style.opacity = 1;
+    textReveal('start');
+  }, 500);
 
   setTimeout(() => {
     nextStep('photo-1');
