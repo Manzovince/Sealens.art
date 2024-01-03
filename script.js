@@ -56,6 +56,7 @@ function startExperience() {
 
 // Next step
 function nextStep(step) {
+  document.getElementById('know-more').style.display = "none";
   Array.from(document.getElementsByTagName('main')[0].children).forEach(e => { e.style.display = "none"; });
   document.getElementById(step).style.display = "block";
   document.getElementById(step).style.opacity = 1;
@@ -67,7 +68,22 @@ function nextStep(step) {
 
 // Back to introduction
 function backToIntro() {
+  document.getElementById('know-more').style.display = "block";
   document.getElementById('start').style.display = "none";
   Array.from(document.getElementsByTagName('main')[0].children).forEach(e => { e.style.display = "none"; });
   document.getElementById('introduction').style.display = "flex";
+  document.getElementById('introduction').style.opacity = 1;
+}
+
+// Show details cards
+let detailsOpened = 0; 
+
+function toggleDetails() {
+  if (!detailsOpened) {
+    document.getElementById('project-details').style.display = "flex";
+    detailsOpened = 1;
+  } else {
+    document.getElementById('project-details').style.display = "none";
+    detailsOpened = 0;
+  }
 }

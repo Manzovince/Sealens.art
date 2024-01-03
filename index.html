@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Une exposition de photographie sous-marine dont vous êtes le héros.">
-    <meta name="keywords" content="galerie, photo, photography, photographie, sous-marin, apnée, freediving, underwater, océan, mer">
+    <meta name="keywords"
+        content="galerie, photo, photography, photographie, sous-marin, apnée, freediving, underwater, océan, mer">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
@@ -26,7 +27,12 @@
                     fill="currentColor" />
             </svg>
         </a>
-        <button>En savoir plus</button>
+        <button id="know-more" onclick="toggleDetails()">
+            <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 6C2 6 6.09476 2 10 2C13.9052 2 18 6 18 6C18 6 22.0948 10 26 10C29.9052 10 34 6 34 6" stroke="white" stroke-width="3" stroke-linecap="round" />
+                <path d="M2 22C2 22 6.09476 18 10 18C13.9052 18 18 22 18 22C18 22 22.0948 26 26 26C29.9052 26 34 22 34 22" stroke="white" stroke-width="3" stroke-linecap="round" />
+            </svg>
+        </button>
     </nav>
 
     <!-- Header -->
@@ -62,6 +68,52 @@
         <button id="dive-in" onclick="startExperience()">Plonger</button>
     </header>
 
+    <!-- Project details -->
+    <div id="project-details" style="display: none;">
+        <input type="radio" name="slide" id="c1">
+        <label for="c1" class="card">
+            <div class="card-body">
+                <div class="card-collapsed">
+                    <div class="card-number">1.</div>
+                    <h2 class="card-title">Le projet</h2>
+                    <p class="card-description">Sealens est un projet d'exposition photographique sur les fonds marins
+                        de la mer méditerranée.</p>
+                </div>
+                <div class="card-expanded">
+                    Description 1
+                </div>
+            </div>
+        </label>
+        <input type="radio" name="slide" id="c2">
+        <label for="c2" class="card">
+            <div class="card-body">
+                <div class="card-collapsed">
+                    <div class="card-number">2.</div>
+                    <h2 class="card-title">La genèse</h2>
+                    <p class="card-description">Réunis autour d’une passion commune, Agathe et Vincent sont deux
+                        amoureux de la mer et de la photographie.</p>
+                </div>
+                <div class="card-expanded">
+                    Description 2
+                </div>
+            </div>
+        </label>
+        <input type="radio" name="slide" id="c3">
+        <label for="c3" class="card">
+            <div class="card-body">
+                <div class="card-collapsed">
+                    <div class="card-number">2.</div>
+                    <h2 class="card-title">L'expérience</h2>
+                    <p class="card-description">Plongez dans l’univers aquatique de Sealens, une galerie digitale
+                        immersive.</p>
+                </div>
+                <div class="card-expanded">
+                    Description 3
+                </div>
+            </div>
+        </label>
+    </div>
+
     <!-- Main content -->
     <main id="">
 
@@ -75,6 +127,11 @@
         <!-- Photo 1 -->
         <section id="photo-1" class="story-container">
             <img src="./assets/photos/photo-1.webp" alt="" class="story-photo">
+            <div class="story-exif">
+                <div class="exif-focal">F/5.6</div>
+                <div class="exif-iso">ISO 600</div>
+                <div class="exif-speed">1/2000s</div>
+            </div>
             <div class="story-content">
                 <p class="story-text">Ca y est.
                     La lumière prend un ton vert bleuté, et une douce fraicheur carresse votre visage.
@@ -90,6 +147,11 @@
         <!-- Photo 2 -->
         <section id="photo-2" class="story-container">
             <img src="./assets/photos/photo-2.webp" alt="" class="story-photo">
+            <div class="story-exif">
+                <div class="exif-focal">F/5.6</div>
+                <div class="exif-iso">ISO 600</div>
+                <div class="exif-speed">1/2000s</div>
+            </div>
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
@@ -98,7 +160,6 @@
                 <p class="story-text">Vous restez à la surface, où l'eau fraîche et revigorante vous enveloppe.
                     Vous remarquez une étrange silhouette à quelques mètres de vous.
                     Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse.
-                    Que décidez-vous de faire ?
                 </p>
                 <div class="story-choices">
                     <button class="choice choice-1" onclick="nextStep('photo-6')">Descendre dans l'obscurité</button>
@@ -111,6 +172,11 @@
         <!-- Photo 3 -->
         <section id="photo-3" class="story-container">
             <img src="./assets/photos/photo-3.webp" alt="" class="story-photo">
+            <div class="story-exif">
+                <div class="exif-focal">F/5.6</div>
+                <div class="exif-iso">ISO 600</div>
+                <div class="exif-speed">1/2000s</div>
+            </div>
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
@@ -132,6 +198,11 @@
         <!-- Photo 4 -->
         <section id="photo-4" class="story-container">
             <img src="./assets/photos/photo-4.webp" alt="" class="story-photo">
+            <div class="story-exif">
+                <div class="exif-focal">F/5.6</div>
+                <div class="exif-iso">ISO 600</div>
+                <div class="exif-speed">1/2000s</div>
+            </div>
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
@@ -153,6 +224,11 @@
         <!-- Photo 5 -->
         <section id="photo-5" class="story-container">
             <img src="./assets/photos/photo-5.webp" alt="" class="story-photo">
+            <div class="story-exif">
+                <div class="exif-focal">F/5.6</div>
+                <div class="exif-iso">ISO 600</div>
+                <div class="exif-speed">1/2000s</div>
+            </div>
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
@@ -174,6 +250,11 @@
         <!-- Photo 6 -->
         <section id="photo-6" class="story-container">
             <img src="./assets/photos/photo-6.webp" alt="" class="story-photo">
+            <div class="story-exif">
+                <div class="exif-focal">F/5.6</div>
+                <div class="exif-iso">ISO 600</div>
+                <div class="exif-speed">1/2000s</div>
+            </div>
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
@@ -193,6 +274,11 @@
         <!-- Photo 7 -->
         <section id="photo-7" class="story-container">
             <img src="./assets/photos/photo-7.webp" alt="" class="story-photo">
+            <div class="story-exif">
+                <div class="exif-focal">F/5.6</div>
+                <div class="exif-iso">ISO 600</div>
+                <div class="exif-speed">1/2000s</div>
+            </div>
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
@@ -213,6 +299,11 @@
         <!-- Photo 8 -->
         <section id="photo-8" class="story-container">
             <img src="./assets/photos/photo-8.webp" alt="" class="story-photo">
+            <div class="story-exif">
+                <div class="exif-focal">F/5.6</div>
+                <div class="exif-iso">ISO 600</div>
+                <div class="exif-speed">1/2000s</div>
+            </div>
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
@@ -233,6 +324,11 @@
         <!-- Photo 9 -->
         <section id="photo-9" class="story-container">
             <img src="./assets/photos/photo-9.webp" alt="" class="story-photo">
+            <div class="story-exif">
+                <div class="exif-focal">F/5.6</div>
+                <div class="exif-iso">ISO 600</div>
+                <div class="exif-speed">1/2000s</div>
+            </div>
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
@@ -253,6 +349,11 @@
         <!-- Photo 10 -->
         <section id="photo-10" class="story-container">
             <img src="./assets/photos/photo-10.webp" alt="" class="story-photo">
+            <div class="story-exif">
+                <div class="exif-focal">F/5.6</div>
+                <div class="exif-iso">ISO 600</div>
+                <div class="exif-speed">1/2000s</div>
+            </div>
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
@@ -274,6 +375,11 @@
         <!-- Photo 11 -->
         <section id="photo-11" class="story-container">
             <img src="./assets/photos/photo-11.webp" alt="" class="story-photo">
+            <div class="story-exif">
+                <div class="exif-focal">F/5.6</div>
+                <div class="exif-iso">ISO 600</div>
+                <div class="exif-speed">1/2000s</div>
+            </div>
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
@@ -295,6 +401,11 @@
         <!-- Photo 12 -->
         <section id="photo-12" class="story-container">
             <img src="./assets/photos/photo-12.webp" alt="" class="story-photo">
+            <div class="story-exif">
+                <div class="exif-focal">F/5.6</div>
+                <div class="exif-iso">ISO 600</div>
+                <div class="exif-speed">1/2000s</div>
+            </div>
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
@@ -316,6 +427,11 @@
         <!-- Photo 13 -->
         <section id="photo-13" class="story-container">
             <img src="./assets/photos/photo-13.webp" alt="" class="story-photo">
+            <div class="story-exif">
+                <div class="exif-focal">F/5.6</div>
+                <div class="exif-iso">ISO 600</div>
+                <div class="exif-speed">1/2000s</div>
+            </div>
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
@@ -337,6 +453,11 @@
         <!-- Photo 14 -->
         <section id="photo-14" class="story-container">
             <img src="./assets/photos/photo-14.webp" alt="" class="story-photo">
+            <div class="story-exif">
+                <div class="exif-focal">F/5.6</div>
+                <div class="exif-iso">ISO 600</div>
+                <div class="exif-speed">1/2000s</div>
+            </div>
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
