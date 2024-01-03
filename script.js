@@ -41,6 +41,7 @@ function startExperience() {
   document.getElementById('introduction').style.display = "none";
   document.getElementById('start').style.display = "flex";
 
+  document.querySelector(`#start .story-text`).style.opacity = 1;
   textReveal('start');
 
   setTimeout(() => {
@@ -53,7 +54,10 @@ function nextStep(step) {
   Array.from(document.getElementsByTagName('main')[0].children).forEach(e => { e.style.display = "none"; });
   document.getElementById(step).style.display = "block";
   document.getElementById(step).style.opacity = 1;
-  textReveal(step);
+  setTimeout(() => {
+    document.querySelector(`#${step} .story-text`).style.opacity = 1;
+    textReveal(step);
+  }, 3000);
 }
 
 // Back to introduction
