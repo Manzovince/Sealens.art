@@ -201,123 +201,7 @@ button {
 
 /* Summary */
 
-#project-card,
-#genesis-card,
-#experience-card {
-    position: relative;
-    overflow: hidden;
-    width: 33.33%;
-    background-position: center;
-    background-size: cover;
-    cursor: pointer;
-    transition: all ease-out .4s;
-}
 
-#project-card:hover,
-#genesis-card:hover,
-#experience-card:hover {
-    width: 36%;
-}
-
-#project-card {
-    background-image: url(./assets/photos/surface_fishes.png);
-}
-
-#genesis-card {
-    background-image: url(./assets/photos/floating.webp);
-}
-
-#experience-card {
-    background-image: url(./assets/photos/breath.webp);
-}
-
-.card-content {
-    position: absolute;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: end;
-    padding: 32px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: var(--text-color);
-    backdrop-filter: blur(12px);
-    transition: all ease-out .4s;
-}
-
-.card-content:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(0);
-}
-
-.card-content h2 {
-    margin-top: auto;
-    font-size: 64px;
-    font-weight: 400;
-}
-
-.rotate-title {
-    width: 400px;
-    transform-origin: top left;
-    transform: rotate(-90deg);
-}
-
-.card-content p {
-    margin-top: 32px;
-    font-size: 24px;
-    font-weight: 100;
-    max-width: 26ch;
-}
-
-.card-content button {
-    align-self: flex-start;
-    margin-top: 24px;
-    font-size: 16px;
-    padding: 8px 16px;
-    border: solid 1px var(--text-color);
-    border-radius: 50px;
-    font-weight: 300;
-    transition: all ease-in-out .25s;
-}
-
-.card-content button:hover {
-    color: var(--bg-color);
-    background-color: var(--text-color);
-}
-
-.card-content .number {
-    margin-top: 16px;
-    font-size: 96px;
-}
-
-.card-main-content {
-    align-self: flex-end;
-}
-
-.card-more-content {
-    background-color: var(--bg-color);
-    width: 50%;
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.card-more-content p {
-    width: 100%;
-    text-wrap: unset;
-}
-
-.card-more-content a {
-    margin-top: 32px;
-    font-size: 16px;
-    padding: 8px 16px;
-    border: solid 1px var(--text-color);
-    border-radius: 50px;
-    font-weight: 300;
-}
 
 /* Pages */
 
@@ -363,7 +247,10 @@ section {
 }
 
 @keyframes startWaveRaise {
-    to { top: 0; }
+    20% { transform: rotate(2deg); }
+    40% { transform: rotate(-2deg); }
+    80% { transform: rotate(2deg); }
+    100% { top: 0; }
 }
 
 /* Story */
