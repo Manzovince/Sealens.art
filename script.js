@@ -17,47 +17,6 @@
 //   }, 250);
 // });
 
-// Cards
-
-function openProject() {
-  document.getElementById("project-card").style.width = "80vw";
-  document.getElementById("project-card").getElementsByClassName("card-main-content")[0].getElementsByTagName("h2")[0].classList.remove("rotate-title");
-  document.getElementById("project-card").getElementsByClassName("card-main-content")[0].getElementsByTagName("p")[0].style.display = "flex";
-  document.getElementById("genesis-card").style.width = "10vw";
-  // document.getElementById("genesis-card").getElementsByClassName("card-main-content")[0].getElementsByTagName("h2")[0].style.opacity = 0;
-  document.getElementById("genesis-card").getElementsByClassName("card-main-content")[0].getElementsByTagName("h2")[0].classList.add("rotate-title");
-  document.getElementById("genesis-card").getElementsByClassName("card-main-content")[0].getElementsByTagName("p")[0].style.display = "none";
-  document.getElementById("experience-card").style.width = "10vw";
-  document.getElementById("experience-card").getElementsByClassName("card-main-content")[0].getElementsByTagName("h2")[0].classList.add("rotate-title");
-  document.getElementById("experience-card").getElementsByClassName("card-main-content")[0].getElementsByTagName("p")[0].style.display = "none";
-}
-
-function openGenesis() {
-  document.getElementById("genesis-card").style.width = "80vw";
-  document.getElementById("genesis-card").getElementsByClassName("card-main-content")[0].getElementsByTagName("h2")[0].classList.remove("rotate-title");
-  document.getElementById("genesis-card").getElementsByClassName("card-main-content")[0].getElementsByTagName("p")[0].style.display = "flex";
-  document.getElementById("project-card").style.width = "10vw";
-  document.getElementById("project-card").getElementsByClassName("card-main-content")[0].getElementsByTagName("h2")[0].classList.add("rotate-title");;
-  document.getElementById("project-card").getElementsByClassName("card-main-content")[0].getElementsByTagName("p")[0].style.display = "none";
-  document.getElementById("experience-card").style.width = "10vw";
-  document.getElementById("experience-card").getElementsByClassName("card-main-content")[0].getElementsByTagName("h2")[0].classList.add("rotate-title");
-  document.getElementById("experience-card").getElementsByClassName("card-main-content")[0].getElementsByTagName("p")[0].style.display = "none";
-}
-
-function openExperience() {
-  document.getElementById("experience-card").style.width = "80vw";
-  document.getElementById("experience-card").getElementsByClassName("card-main-content")[0].getElementsByTagName("h2")[0].classList.remove("rotate-title");
-  document.getElementById("experience-card").getElementsByClassName("card-main-content")[0].getElementsByTagName("p")[0].style.display = "flex";
-  document.getElementById("project-card").style.width = "10vw";
-  document.getElementById("project-card").getElementsByClassName("card-main-content")[0].getElementsByTagName("h2")[0].classList.add("rotate-title");
-  document.getElementById("project-card").getElementsByClassName("card-main-content")[0].getElementsByTagName("p")[0].style.display = "none";
-  document.getElementById("genesis-card").style.width = "10vw";
-  document.getElementById("genesis-card").getElementsByClassName("card-main-content")[0].getElementsByTagName("h2")[0].classList.add("rotate-title");
-  document.getElementById("genesis-card").getElementsByClassName("card-main-content")[0].getElementsByTagName("p")[0].style.display = "none";
-
-  document.getElementById("experience-card").getElementsByClassName("card-more-content")[0].style.display = "flex";
-}
-
 // Text reveal
 function textReveal(step, interval = 40) {
   let element = document.querySelector(`#${step} .story-text`)
