@@ -63,7 +63,7 @@ function nextStep(step) {
   setTimeout(() => {
     document.querySelector(`#${step} .story-text`).style.opacity = 1;
     textReveal(step);
-  }, 3000);
+  }, 2500);
 }
 
 // Back to introduction
