@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A brief description of the site">
+    <meta name="keywords" content="galerie, photo, photography, photographie, sous-marin, apnée, freediving">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css">
+    <title>Sealens | L'exposition qui retient son souffle</title>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="nav">
+        <a id="logo" href="#introduction" onclick="backToIntro()">
+            <svg width="19" height="32" viewBox="0 0 19 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M18.8663 21.9331C18.8663 24.5745 18.0243 27.0239 16.4936 28.8614C14.7717 30.89 12.2843 32 9.52875 32C6.9266 32 4.55386 31.1195 2.83199 29.5119C0.994976 27.7897 0 25.3781 0 22.5837C0 18.1817 3.17611 15.5789 6.23794 15.5789C7.88334 15.5789 9.29933 16.306 10.3708 17.5311C11.2511 18.5645 11.825 19.9426 11.978 21.5884C12.0544 22.3542 11.4422 22.9665 10.6767 22.9665H10.2174C9.45228 22.9665 8.84008 22.3542 8.72495 21.5884C8.61067 20.7462 8.34216 20.0191 7.92158 19.5598C7.34762 18.9092 6.69676 18.7562 6.23794 18.7562C4.74547 18.7562 3.21477 20.2108 3.21477 22.5837C3.21477 26.8709 6.39088 28.8231 9.52918 28.8231C12.4759 28.8231 15.6902 26.6415 15.6902 21.9331C15.6902 18.9857 13.3175 16.9187 10.83 14.6984C8.18922 12.3255 5.47237 9.8757 5.47237 6.20078C5.47237 2.79401 7.92158 0 10.9065 0C13.4322 0 15.3835 1.56932 16.4171 4.24902C16.6852 4.93785 16.2255 5.66536 15.499 5.85658L15.0394 5.97175C14.3125 6.16297 13.5856 5.66536 13.2792 4.97653C12.8582 4.0578 12.1313 3.21556 10.9069 3.21556C9.83549 3.21556 8.64891 4.40243 8.64891 6.20121C8.64891 8.45936 10.6771 10.2203 12.9734 12.2873C15.7284 14.7753 18.8663 17.5693 18.8663 21.9331Z"
+                    fill="currentColor" />
+            </svg>
+        </a>
+        <input id="nav-checkbox" type="checkbox">
+        <label id="nav-container" for="nav-checkbox">
+            <svg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M2 4.34554C2 4.34554 2.37687 4.22453 3 4.03737C4.9124 3.46297 9.1443 2.26558 11.92 2.03138C17.6019 1.55197 18.0652 6.71988 23.76 6.99035C27.8777 7.18591 34 4.34554 34 4.34554"
+                    stroke-linecap="round" />
+                <path
+                    d="M2 19.7981C2 19.7981 8.23988 17.7945 11.92 17.484C17.6019 17.0045 18.0652 22.1725 23.76 22.443C27.8777 22.6386 34 19.7981 34 19.7981"
+                    stroke-linecap="round" />
+            </svg>
+        </label>
+        <!-- Project details -->
+        <div id="nav-list">
+            <button id="project-card" onclick="openProject()">
+                <div class="card-content">
+                    <div class="card-main-content">
+                        <h2 style="transform-origin: top left;">Le projet</h2>
+                        <p>Sealens est un projet d'exposition photographique sur les fonds marins de la mer
+                            méditerranée.
+                        </p>
+                        <div class="number">1.</div>
+                    </div>
+                    <div class="card-more-content" style="display: none;">TEST</div>
+                </div>
+            </button>
+
+            <button id="genesis-card" onclick="openGenesis()">
+                <div class="card-content">
+                    <div class="card-main-content">
+                        <h2>La genèse</h2>
+                        <p>Réunis autour d'une passion commune, Agathe et Vincent sont deux amoureux de la mer et de la
+                            photographie.</p>
+                        <div class="number">2.</div>
+                        <div class="card-more-content" style="display: none;">TEST</div>
+                    </div>
+                </div>
+            </button>
+
+            <button id="experience-card" onclick="openExperience()">
+                <div class="card-content">
+                    <div class="card-main-content">
+                        <h2>L'expérience</h2>
+                        <p>Plongez dans l'univers aquatique de Sealens, une galerie digitale immersive.</p>
+                        <div class="number">3.</div>
+                    </div>
+                    <div class="card-more-content" style="display: none;">
+                        <p>Sealens est une exposition photographique aquatique qui vous invite à vivre une expérience
+                            immersive et interactive.
+                            Plongez dans les profondeurs mystérieuses de l'océan, où chaque image raconte une histoire
+                            en
+                            constante évolution. Chaque clic est une nouvelle exploration, une nouvelle découverte, une
+                            nouvelle manière de ressentir la magie des fonds marins. Venez, explorez et laissez-vous
+                            emporter par cette expérience photographique aquatique unique.</p>
+                        <a onclick="startExperience()">Plonger</a>
+                    </div>
+                </div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header id="introduction">
+        <img src="./assets/photos/introduction.webp" alt="">
+        <img src="./assets/photos/blurred_introduction.webp" alt="">
+        <div id="introduction-title">
+            <svg width="474" height="204" viewBox="0 0 474 204" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M104.069 124.228C104.069 138.798 99.4246 152.31 90.981 162.445C81.4829 173.636 67.7618 179.758 52.562 179.758C38.2081 179.758 25.1198 174.902 15.6217 166.034C5.48844 156.534 0 143.231 0 127.817C0 103.534 17.5199 89.1771 34.4094 89.1771C43.4857 89.1771 51.2965 93.1878 57.2068 99.9457C62.0625 105.646 65.2285 113.248 66.0722 122.327C66.494 126.551 63.117 129.929 58.8941 129.929H56.3608C52.1402 129.929 48.7632 126.551 48.1281 122.327C47.4977 117.681 46.0166 113.67 43.6966 111.136C40.5305 107.547 36.9403 106.704 34.4094 106.704C26.1767 106.704 17.7332 114.727 17.7332 127.817C17.7332 151.466 35.253 162.234 52.5643 162.234C68.8187 162.234 86.5495 150.2 86.5495 124.228C86.5495 107.969 73.4612 96.5679 59.7401 84.3202C45.173 71.231 30.1864 57.7176 30.1864 37.4461C30.1864 18.6538 43.6966 3.2417 60.1619 3.2417C74.0939 3.2417 84.8575 11.8983 90.5592 26.6799C92.038 30.4796 89.5023 34.4927 85.495 35.5475L82.9593 36.1827C78.9496 37.2375 74.9399 34.4927 73.2503 30.693C70.9279 25.6251 66.9182 20.9792 60.1643 20.9792C54.254 20.9792 47.7086 27.5261 47.7086 37.4485C47.7086 49.9048 58.8964 59.6186 71.563 71.0201C86.7604 84.7445 104.069 100.157 104.069 124.228Z"
+                    fill="currentColor" />
+                <path
+                    d="M133.686 59.5521V80.4706C133.686 83.7133 136.281 86.3088 139.359 86.3088H147.303C150.545 86.3088 153.14 88.9044 153.14 92.147V94.0931C153.14 97.3358 150.545 99.9313 147.303 99.9313H139.359C136.279 99.9313 133.686 102.527 133.686 105.77V123.284C133.686 126.527 136.281 129.122 139.359 129.122H157.031C160.112 129.122 162.704 131.718 162.704 134.961V136.907C162.704 140.149 160.109 142.745 157.031 142.745H125.906C122.664 142.745 120.069 140.149 120.069 136.907V45.9296C120.069 42.8481 122.664 40.2549 125.906 40.2549H157.033C160.275 40.2549 162.87 42.8481 162.87 45.9296V47.8756C162.87 51.1183 160.278 53.7138 157.033 53.7138H139.362C136.281 53.7138 133.686 56.3094 133.686 59.5521Z"
+                    fill="currentColor" />
+                <path
+                    d="M233.991 91.7429V138.119C233.991 141.362 231.397 143.957 228.318 143.957H226.373C223.131 143.957 220.536 141.362 220.536 138.119V127.742C220.536 124.499 217.941 121.904 214.699 121.904H198.163C194.921 121.904 192.326 124.499 192.326 127.742V138.119C192.326 141.362 189.733 143.957 186.653 143.957H184.707C181.465 143.957 178.87 141.362 178.87 138.119V91.7429C178.87 78.7699 178.87 39.0425 206.431 39.0425C233.991 39.0425 233.991 78.7699 233.991 91.7429ZM220.536 91.7429C220.536 65.7969 215.834 52.6626 206.433 52.6626C197.191 52.6626 192.328 65.7969 192.328 91.7429V102.606C192.328 105.849 194.923 108.445 198.165 108.445H214.701C217.943 108.445 220.538 105.851 220.538 102.606V91.7429H220.536Z"
+                    fill="currentColor" />
+                <path
+                    d="M369.723 197.489C364.234 201.762 358.113 203.336 351.146 203.336C338.904 203.336 324.761 197.939 311.672 192.99C291.619 185.34 276.841 179.941 267.343 184.442C263.542 186.241 258.899 187.142 255.523 184.217L253.622 182.643C250.245 179.943 248.977 175.669 250.878 173.645C252.989 171.396 254.89 166.671 254.89 162.398V28.0972C254.89 23.5982 258.267 20 262.276 20H264.81C269.033 20 272.41 23.6006 272.41 28.0972V156.097C272.41 160.596 275.787 163.972 280.007 164.42C292.25 165.771 305.338 170.492 317.58 175.219C334.259 181.742 346.923 185.791 354.734 184.217C358.954 183.316 363.81 182.418 367.187 185.343L369.088 186.917C372.467 189.614 373.1 194.789 369.723 197.489Z"
+                    fill="currentColor" />
+                <path
+                    d="M306.611 59.5521V80.4706C306.611 83.7133 309.206 86.3088 312.284 86.3088H320.228C323.47 86.3088 326.065 88.9044 326.065 92.147V94.0931C326.065 97.3358 323.47 99.9313 320.228 99.9313H312.284C309.203 99.9313 306.611 102.527 306.611 105.77V123.284C306.611 126.527 309.206 129.122 312.284 129.122H329.956C333.036 129.122 335.629 131.718 335.629 134.961V136.907C335.629 140.149 333.034 142.745 329.956 142.745H298.828C295.587 142.745 292.992 140.149 292.992 136.907V45.9296C292.992 42.8481 295.587 40.2549 298.828 40.2549H329.956C333.198 40.2549 335.793 42.8481 335.793 45.9296V47.8756C335.793 51.1183 333.2 53.7138 329.956 53.7138H312.284C309.206 53.7138 306.611 56.3094 306.611 59.5521Z"
+                    fill="currentColor" />
+                <path
+                    d="M403.997 45.932V136.902C403.997 140.145 401.404 142.74 398.16 142.74H396.214C393.134 142.74 390.541 140.145 390.541 136.902V97.3358C390.541 94.0932 388.759 89.5515 386.489 87.2831L369.303 68.6354C367.033 66.2034 365.248 66.8529 365.248 70.0955V136.904C365.248 140.147 362.656 142.743 359.575 142.743H357.629C354.387 142.743 351.792 140.147 351.792 136.904V45.932C351.792 42.8505 353.902 40.2573 356.655 40.2573C359.25 40.2573 363.303 42.0398 365.409 44.4742L386.486 67.3388C388.756 69.6096 390.539 68.9601 390.539 65.7175V45.9344C390.539 42.8529 393.134 40.2597 396.212 40.2597H398.157C401.404 40.2573 403.997 42.8529 403.997 45.932Z"
+                    fill="currentColor" />
+                <path
+                    d="M473.69 118.093C473.69 133.984 463.476 144.2 447.914 144.2C432.837 144.2 424.244 130.58 420.516 122.796C419.057 119.878 420.841 116.635 423.758 115.5L425.704 115.014C428.782 114.042 432.026 115.663 433.484 118.42C436.24 123.609 441.105 130.744 447.914 130.744C456.021 130.744 460.073 126.366 460.073 118.095C460.073 108.204 452.129 101.069 443.7 93.6094C434.783 85.5027 424.571 76.4195 424.571 62.9605C424.571 49.1768 434.621 38.7993 447.755 38.7993C457.644 38.7993 466.073 44.7987 470.775 54.8538C472.071 57.7718 470.126 61.0168 467.047 61.8251L465.263 62.3134C462.184 63.2852 458.94 61.3392 457.319 58.5848C455.535 55.5033 452.456 52.2607 447.755 52.2607C441.108 52.2607 438.188 57.7741 438.188 62.9629C438.188 70.4224 444.996 76.4218 452.779 83.3955C462.504 92.3104 473.69 102.202 473.69 118.093Z"
+                    fill="currentColor" />
+            </svg>
+        </div>
+        <p>L'exposition qui retient son souffle</p>
+        <button id="dive-in" onclick="startExperience()">Plonger</button>
+    </header>
+
+    <!-- Main content -->
+    <main id="">
+
+        <!-- Start -->
+        <section id="start">
+            <img src="./assets/photos/introduction.webp" alt="">
+            <p class="story-text">La prochaine respiration sera la dernière avant la fin de ce voyage.</p>
+            <div id="start-wave"></div>
+        </section>
+
+        <!-- Photo 1 -->
+        <section id="photo-1" class="story-container">
+            <img src="./assets/photos/photo-1.webp" alt="" class="story-photo">
+            <div class="story-content">
+                <p class="story-text">Ca y est.
+                    La lumière prend un ton vert bleuté, et une douce fraicheur carresse votre visage.
+                    Un son sourd rempli vos oreilles, et votre rythme cardique s'apaise légerment.
+                </p>
+                <div class="story-choices">
+                    <button class="choice choice-1" onclick="nextStep('photo-3')">Plonger plus profond</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-2')">Rester à la surface</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo 2 -->
+        <section id="photo-2" class="story-container">
+            <img src="./assets/photos/photo-2.webp" alt="" class="story-photo">
+            <div class="story-content">
+                <div class="previous-choice">
+                    <span>Vous avez choisi:</span>
+                    <span>Rester à la surface</span>
+                </div>
+                <p class="story-text">Vous restez à la surface, où l'eau fraîche et revigorante vous enveloppe.
+                    Vous remarquez une étrange silhouette à quelques mètres de vous.
+                    Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse.
+                    Que décidez-vous de faire ?
+                </p>
+                <div class="story-choices">
+                    <button class="choice choice-1" onclick="nextStep('photo-6')">Descendre dans l'obscurité</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-7')">S'approcher de la
+                        silhouette</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo 3 -->
+        <section id="photo-3" class="story-container">
+            <img src="./assets/photos/photo-3.webp" alt="" class="story-photo">
+            <div class="story-content">
+                <div class="previous-choice">
+                    <span>Vous avez choisi:</span>
+                    <span>Plonger plus profond</span>
+                </div>
+                <p class="story-text">La température de l'eau de se rafraîchit, et vous vous sentez enveloppé par la
+                    pression qui augmente.
+                    À votre gauche, une imposante formation rocheuse. À droite, un banc de sable semble vous guider vers
+                    une étrange statue immergée.
+                </p>
+                <div class="story-choices">
+                    <button class="choice choice-1" onclick="nextStep('photo-4')">S'approcher de la roche</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-5')">Se diriger vers le banc de
+                        sable</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo 4 -->
+        <section id="photo-4" class="story-container">
+            <img src="./assets/photos/photo-4.webp" alt="" class="story-photo">
+            <div class="story-content">
+                <div class="previous-choice">
+                    <span>Vous avez choisi:</span>
+                    <span>S'approcher de la roche</span>
+                </div>
+                <p class="story-text">Vous vous approchez de la roche, découvrant un écosystème diversifié.
+                    Un banc de poissons curieux s'approche de vous en longeant la roche.
+                    Vous pouvez choisir de les suivre un moment, vous laissant entraîner par leur danse aquatique, ou
+                    décider de continuer vers le banc de sable qui semble vous appeler.
+                </p>
+                <div class="story-choices">
+                    <button class="choice choice-1" onclick="nextStep('photo-1')">Suivre le banc de poissons</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-5')">Se diriger vers le banc de
+                        sable</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo 5 -->
+        <section id="photo-5" class="story-container">
+            <img src="./assets/photos/photo-5.webp" alt="" class="story-photo">
+            <div class="story-content">
+                <div class="previous-choice">
+                    <span>Vous avez choisi:</span>
+                    <span>Se diriger vers le banc de sable</span>
+                </div>
+                <p class="story-text">Alors que vous vous approchez du banc de sable, la statue émerge lentement de
+                    l'obscurité, révélant un visage sculpté recouvert par la nature, devenu un habitat pour un
+                    écosystème marin unique.
+                    En plissant les yeux, vous remarquez d'autres statues semblables un peu plus loin.
+                </p>
+                <div class="story-choices">
+                    <button class="choice choice-1" onclick="nextStep('photo-1')">Se diriger vers les statues
+                        englouties</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-1')">Suivre le banc de poissons</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo 6 -->
+        <section id="photo-6" class="story-container">
+            <img src="./assets/photos/photo-6.webp" alt="" class="story-photo">
+            <div class="story-content">
+                <div class="previous-choice">
+                    <span>Vous avez choisi:</span>
+                    <span>Plonger dans l'obsurité</span>
+                </div>
+                <p class="story-text">Vous plongez plus profondément dans les eaux sombres et revigorantes, vous sentant
+                    enveloppé par le monde sous-marin.
+                </p>
+                <div class="story-choices">
+                    <button class="choice choice-1" onclick="nextStep('photo-1')">Descendre dans l'obscurité</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-1')">S'approcher de la
+                        silhouette</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo 7 -->
+        <section id="photo-7" class="story-container">
+            <img src="./assets/photos/photo-7.webp" alt="" class="story-photo">
+            <div class="story-content">
+                <div class="previous-choice">
+                    <span>Vous avez choisi:</span>
+                    <span>Rester à la surface</span>
+                </div>
+                <p class="story-text">Vous restez à la surface, où l'eau fraîche et revigorante vous enveloppe.
+                    Vous remarquez une étrange silhouette à quelques mètres de vous.
+                    Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse.
+                </p>
+                <div class="story-choices">
+                    <button class="choice choice-1" onclick="nextStep('photo-1')">Descendre dans l'obscurité</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-1')">S'approcher de la
+                        silhouette</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo 8 -->
+        <section id="photo-8" class="story-container">
+            <img src="./assets/photos/photo-8.webp" alt="" class="story-photo">
+            <div class="story-content">
+                <div class="previous-choice">
+                    <span>Vous avez choisi:</span>
+                    <span>Rester à la surface</span>
+                </div>
+                <p class="story-text">Vous restez à la surface, où l'eau fraîche et revigorante vous enveloppe.
+                    Vous remarquez une étrange silhouette à quelques mètres de vous.
+                    Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse.
+                </p>
+                <div class="story-choices">
+                    <button class="choice choice-1" onclick="nextStep('photo-1')">Descendre dans l'obscurité</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-1')">S'approcher de la
+                        silhouette</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo 9 -->
+        <section id="photo-9" class="story-container">
+            <img src="./assets/photos/photo-9.webp" alt="" class="story-photo">
+            <div class="story-content">
+                <div class="previous-choice">
+                    <span>Vous avez choisi:</span>
+                    <span>Rester à la surface</span>
+                </div>
+                <p class="story-text">Vous restez à la surface, où l'eau fraîche et revigorante vous enveloppe.
+                    Vous remarquez une étrange silhouette à quelques mètres de vous.
+                    Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse.
+                </p>
+                <div class="story-choices">
+                    <button class="choice choice-1" onclick="nextStep('photo-1')">Descendre dans l'obscurité</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-1')">S'approcher de la
+                        silhouette</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo 10 -->
+        <section id="photo-10" class="story-container">
+            <img src="./assets/photos/photo-10.webp" alt="" class="story-photo">
+            <div class="story-content">
+                <div class="previous-choice">
+                    <span>Vous avez choisi:</span>
+                    <span>Rester à la surface</span>
+                </div>
+                <p class="story-text">
+                    Vous restez à la surface, où l'eau fraîche et revigorante vous enveloppe.
+                    Vous remarquez une étrange silhouette à quelques mètres de vous.
+                    Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse.
+                </p>
+                <div class="story-choices">
+                    <button class="choice choice-1" onclick="nextStep('photo-1')">Descendre dans l'obscurité</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-1')">S'approcher de la
+                        silhouette</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo 11 -->
+        <section id="photo-11" class="story-container">
+            <img src="./assets/photos/photo-11.webp" alt="" class="story-photo">
+            <div class="story-content">
+                <div class="previous-choice">
+                    <span>Vous avez choisi:</span>
+                    <span>Rester à la surface</span>
+                </div>
+                <p class="story-text">
+                    Vous restez à la surface, où l'eau fraîche et revigorante vous enveloppe.
+                    Vous remarquez une étrange silhouette à quelques mètres de vous.
+                    Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse.
+                </p>
+                <div class="story-choices">
+                    <button class="choice choice-1" onclick="nextStep('photo-1')">Descendre dans l'obscurité</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-1')">S'approcher de la
+                        silhouette</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo 12 -->
+        <section id="photo-12" class="story-container">
+            <img src="./assets/photos/photo-12.webp" alt="" class="story-photo">
+            <div class="story-content">
+                <div class="previous-choice">
+                    <span>Vous avez choisi:</span>
+                    <span>Rester à la surface</span>
+                </div>
+                <p class="story-text">
+                    Vous restez à la surface, où l'eau fraîche et revigorante vous enveloppe.
+                    Vous remarquez une étrange silhouette à quelques mètres de vous.
+                    Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse.
+                </p>
+                <div class="story-choices">
+                    <button class="choice choice-1" onclick="nextStep('photo-1')">Descendre dans l'obscurité</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-1')">S'approcher de la
+                        silhouette</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo 13 -->
+        <section id="photo-13" class="story-container">
+            <img src="./assets/photos/photo-13.webp" alt="" class="story-photo">
+            <div class="story-content">
+                <div class="previous-choice">
+                    <span>Vous avez choisi:</span>
+                    <span>Rester à la surface</span>
+                </div>
+                <p class="story-text">
+                    Vous restez à la surface, où l'eau fraîche et revigorante vous enveloppe.
+                    Vous remarquez une étrange silhouette à quelques mètres de vous.
+                    Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse.
+                </p>
+                <div class="story-choices">
+                    <button class="choice choice-1" onclick="nextStep('photo-1')">Descendre dans l'obscurité</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-1')">S'approcher de la
+                        silhouette</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo 14 -->
+        <section id="photo-14" class="story-container">
+            <img src="./assets/photos/photo-14.webp" alt="" class="story-photo">
+            <div class="story-content">
+                <div class="previous-choice">
+                    <span>Vous avez choisi:</span>
+                    <span>Rester à la surface</span>
+                </div>
+                <p class="story-text">
+                    Vous restez à la surface, où l'eau fraîche et revigorante vous enveloppe.
+                    Vous remarquez une étrange silhouette à quelques mètres de vous.
+                    Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse.
+                </p>
+                <div class="story-choices">
+                    <button class="choice choice-1" onclick="nextStep('photo-1')">Descendre dans l'obscurité</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-1')">S'approcher de la
+                        silhouette</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <span class="mouse-follow"></span>
+
+    <svg style="display: none;">
+        <filter id="noise">
+            <feTurbulence baseFrequency="0.02" result="NOISE" numOctaves="1" id="turbulence" />
+            <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="6"></feDisplacementMap>
+        </filter>
+    </svg>
+
+</body>
+
+<script src="./script.js"></script>
+
+</html>
