@@ -12,7 +12,7 @@
         rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="./styles.css">
-    <title>Sealens | Une exposition qui retient son souffle</title>
+    <title>Sealens | L'exposition qui retient son souffle</title>
 </head>
 
 <body>
@@ -37,18 +37,53 @@
                     stroke-linecap="round" />
             </svg>
         </label>
-        <ul id="nav-list">
-            <li>
-                <a href="#project" onclick="document.getElementById('nav-checkbox').checked = false;">Le projet</a>
-            </li>
-            <li>
-                <a href="#about" onclick="document.getElementById('nav-checkbox').checked = false;">La genèse</a>
-            </li>
-            <li>
-                <a href="#experience"
-                    onclick="document.getElementById('nav-checkbox').checked = false;">L'expérience</a>
-            </li>
-        </ul>
+        <!-- Project details -->
+        <div id="nav-list">
+            <button id="project-card" onclick="openProject()">
+                <div class="card-content">
+                    <div class="card-main-content">
+                        <h2 style="transform-origin: top left;">Le projet</h2>
+                        <p>Sealens est un projet d'exposition photographique sur les fonds marins de la mer
+                            méditerranée.
+                        </p>
+                        <div class="number">1.</div>
+                    </div>
+                    <div class="card-more-content" style="display: none;">TEST</div>
+                </div>
+            </button>
+
+            <button id="genesis-card" onclick="openGenesis()">
+                <div class="card-content">
+                    <div class="card-main-content">
+                        <h2>La genèse</h2>
+                        <p>Réunis autour d'une passion commune, Agathe et Vincent sont deux amoureux de la mer et de la
+                            photographie.</p>
+                        <div class="number">2.</div>
+                        <div class="card-more-content" style="display: none;">TEST</div>
+                    </div>
+                </div>
+            </button>
+
+            <button id="experience-card" onclick="openExperience()">
+                <div class="card-content">
+                    <div class="card-main-content">
+                        <h2>L'expérience</h2>
+                        <p>Plongez dans l'univers aquatique de Sealens, une galerie digitale immersive.</p>
+                        <div class="number">3.</div>
+                    </div>
+                    <div class="card-more-content" style="display: none;">
+                        <p>Sealens est une exposition photographique aquatique qui vous invite à vivre une expérience
+                            immersive et interactive.
+                            Plongez dans les profondeurs mystérieuses de l'océan, où chaque image raconte une histoire
+                            en
+                            constante évolution. Chaque clic est une nouvelle exploration, une nouvelle découverte, une
+                            nouvelle manière de ressentir la magie des fonds marins. Venez, explorez et laissez-vous
+                            emporter par cette expérience photographique aquatique unique.</p>
+                        <a onclick="startExperience()">Plonger</a>
+                    </div>
+                </div>
+            </button>
+        </div>
     </nav>
 
     <!-- Header -->
@@ -84,49 +119,12 @@
         <button id="dive-in" onclick="startExperience()">Plonger</button>
     </header>
 
-    <!-- Project details -->
-    <div id="#summary" style="display: none;">
-        <div class="container">
-            <input type="radio" name="slide" id="c1" checked>
-            <label for="c1" class="card">
-                <div class="row">
-                    <div class="icon">1</div>
-                    <div class="description">
-                        <h4>Le projet</h4>
-                        <p>Winter has so much to offer -
-                         creative activities</p>
-                    </div>
-                </div>
-            </label>
-            <input type="radio" name="slide" id="c2" >
-            <label for="c2" class="card">
-                <div class="row">
-                    <div class="icon">2</div>
-                    <div class="description">
-                        <h4>La genèse</h4>
-                        <p>Gets better every day -
-                         stay tuned</p>
-                    </div>
-                </div>
-            </label>
-            <input type="radio" name="slide" id="c3" >
-            <label for="c3" class="card">
-                <div class="row">
-                    <div class="icon">3</div>
-                    <div class="description">
-                        <h4>L'expérience</h4>
-                        <p>Help people all over the world</p>
-                    </div>
-                </div>
-            </label>
-        </div>
-    </div>
-
     <!-- Main content -->
     <main id="">
 
         <!-- Start -->
         <section id="start">
+            <img src="./assets/photos/introduction.webp" alt="">
             <p class="story-text">La prochaine respiration sera la dernière avant la fin de ce voyage.</p>
             <div id="start-wave"></div>
         </section>

@@ -3,7 +3,7 @@
 :root {
     --color-light: hsl(40, 60%, 95%);
     --color-dark: hsl(180, 100%, 5%);
-    --color-primary: rgb(0, 146, 209);
+    --color-primary: hsl(175, 39%, 25%);
     --color-secondary: rgb(24, 196, 173);
     --color-link: rgba(255, 255, 255);
 
@@ -32,6 +32,8 @@ body {
     font-family: 'Outfit', sans-serif;
     font-weight: 300;
     font-size: 1.2rem;
+    /* height: 100vh;
+    overflow: hidden; */
 }
 
 h1 {
@@ -78,6 +80,7 @@ button {
 /* Mouse follow */
 
 .mouse-follow {
+    display: none;
     position: absolute;
     height: 20vw;
     width: 20vw;
@@ -110,8 +113,6 @@ button {
 
 #nav-list {
     display: none;
-    list-style: none;
-    gap: 32px;
     top: 0;
     right: 0;
     z-index: -1;
@@ -123,15 +124,9 @@ button {
 
 #nav-checkbox:checked~#nav-list {
     position: absolute;
-    height: 100dvh;
     width: 100vw;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    right: 0;
-    opacity: 1;
-    background-color: var(--bg-color);
+    height: 100vh;
 }
 
 #nav-container svg {
@@ -192,8 +187,7 @@ button {
 }
 
 #introduction-title {
-    margin-bottom: 24px;
-    filter: url(#noise);
+    margin-bottom: 16px;
 }
 
 #introduction p {
@@ -203,12 +197,170 @@ button {
 
 #dive-in {
     position: relative;
-    font-size: 24px;
+    font-size: 32px;
     margin-top: 64px;
     z-index: 3;
-    /* border: solid 1px red; */
-    /* overflow: hidden; */
-    /* transition: all 1s ease-out; */
+    padding: 16px 32px;
+    border-radius: 48px;
+    border: solid 1px var(--text-color);
+    overflow: hidden;
+    transition: all 1s ease-out;
+}
+
+#dive-in:hover {
+    color: var(--bg-color);
+}
+
+#dive-in::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    transform: translateY(96px);
+    background-color: var(--text-color);
+    z-index: -1;
+    animation: diveInWaveRotate 6s ease-in infinite;
+}
+
+@keyframes diveInWaveRotate {
+    0% { transform: rotate(2deg) translateY(96px); }
+    20% { transform: rotate(1deg) translateY(93px); }
+    30% { transform: rotate(-2deg) translateY(96px); }
+    65% { transform: rotate(2deg) translateY(97px); }
+    80% { transform: rotate(-3deg) translateY(95px); }
+    100% { transform: rotate(2deg) translateY(96px); }
+}
+
+#dive-in:hover::before {
+    animation: diveInWaveRaise 2s ease-out forwards;
+}
+
+@keyframes diveInWaveRaise {
+    40% { transform: rotate(-2deg) translateY(40px); }
+    60% { transform: rotate(2deg) translateY(30px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Summary */
+
+#project-card,
+#genesis-card,
+#experience-card {
+    position: relative;
+    overflow: hidden;
+    width: 33.33%;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    transition: all ease-out .4s;
+}
+
+#project-card:hover,
+#genesis-card:hover,
+#experience-card:hover {
+    width: 36%;
+}
+
+#project-card {
+    background-image: url(./assets/photos/surface_fishes.png);
+}
+
+#genesis-card {
+    background-image: url(./assets/photos/floating.webp);
+}
+
+#experience-card {
+    background-image: url(./assets/photos/breath.webp);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    padding: 32px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--text-color);
+    backdrop-filter: blur(12px);
+    transition: all ease-out .4s;
+}
+
+.card-content:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(0);
+}
+
+.card-content h2 {
+    margin-top: auto;
+    font-size: 64px;
+    font-weight: 400;
+}
+
+.rotate-title {
+    width: 400px;
+    transform-origin: top left;
+    transform: rotate(-90deg);
+}
+
+.card-content p {
+    margin-top: 32px;
+    font-size: 24px;
+    font-weight: 100;
+    max-width: 26ch;
+}
+
+.card-content button {
+    align-self: flex-start;
+    margin-top: 24px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: solid 1px var(--text-color);
+    border-radius: 50px;
+    font-weight: 300;
+    transition: all ease-in-out .25s;
+}
+
+.card-content button:hover {
+    color: var(--bg-color);
+    background-color: var(--text-color);
+}
+
+.card-content .number {
+    margin-top: 16px;
+    font-size: 96px;
+}
+
+.card-main-content {
+    align-self: flex-end;
+}
+
+.card-more-content {
+    background-color: var(--bg-color);
+    width: 50%;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-more-content p {
+    width: 100%;
+    text-wrap: unset;
+}
+
+.card-more-content a {
+    margin-top: 32px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: solid 1px var(--text-color);
+    border-radius: 50px;
+    font-weight: 300;
 }
 
 /* Pages */
@@ -228,8 +380,18 @@ section {
     justify-content: center;
 }
 
+#start img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.6);
+    min-height: 100vw;
+    object-fit: cover;
+    z-index: -1;
+}
+
 #start p {
-    /* text-align: center; */
+    text-align: center;
     width: 80%;
     font-size: 32px;
     font-weight: 100;
@@ -237,20 +399,15 @@ section {
 
 #start-wave {
     position: absolute;
-    top: 60vh;
+    top: 100vh;
     width: 120vw;
     height: 120vh;
-    background-color: rgba(19, 41, 68, 0.5);
-    backdrop-filter: blur(8px);
-    animation: startWaveRaise 8s ease-in-out forwards;
+    background-color: var(--bg-color);
+    animation: startWaveRaise 3s ease-out 6s forwards;
 }
 
 @keyframes startWaveRaise {
-    1% { top: 61vh; transform: rotate(.5deg); }
-    20% { top: 59vh; transform: rotate(-.5deg); }
-    40% { top: 61vh; transform: rotate(.5deg); }
-    60% { top: 59vh; transform: rotate(-.5deg); }
-    100% { top: 0; }
+    to { top: 0; }
 }
 
 /* Story */
@@ -352,8 +509,8 @@ section {
 }
 
 .choice:hover {
-    background-color: hsla(40, 60%, 95%, .1);
-    border-radius: 0;
+    color: var(--bg-color);
+    background-color: var(--text-color);
 }
 
 .choice-1 {
