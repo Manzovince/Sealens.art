@@ -493,12 +493,6 @@ section {
     align-self: flex-start;
     opacity: 0;
     transition: all 1s ease-out;
-    /* animation: textFadeIn 1s ease-out forwards; */
-}
-
-@keyframes textFadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
 }
 
 .story-exif {
@@ -526,6 +520,11 @@ section {
     opacity: 0;
     animation: textFadeIn 1s ease-out forwards;
     animation-delay: 1.2s;
+}
+
+@keyframes textFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* End */
