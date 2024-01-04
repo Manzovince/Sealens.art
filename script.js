@@ -18,14 +18,13 @@
 // });
 
 // Text reveal
-function textReveal(step, interval = 40) {
+function textReveal(step, interval = 30) {
   let element = document.querySelector(`#${step} .story-text`)
   let text = element.textContent;
   let width = element.offsetWidth;
-  console.log(width);
   element.textContent = "";
   element.style.opacity = 1;
-  element.style.width = width + 24 + "px";
+  element.style.width = width + "px";
 
   let i = 0;
   
@@ -60,7 +59,6 @@ function startExperience() {
 
   setTimeout(() => {
     nextStep('photo-1');
-    // nextStep('end');
   }, 10000);
 }
 
@@ -72,6 +70,7 @@ function nextStep(step) {
   document.getElementById(step).style.opacity = 1;
 
   setTimeout(() => {
+    document.querySelector(`#${step} .previous-choice`).style.opacity = 1;
     textReveal(step);
   }, 2500);
 
