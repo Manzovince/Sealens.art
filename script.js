@@ -34,6 +34,11 @@ function textReveal(step, interval = 40) {
     }
     else { clearInterval(revealInterval); }
   }, interval);
+
+  setTimeout(() => {
+    document.querySelector(`#${step} .story-choices`).style.opacity = "1";
+  }, (interval * text.length) + 1000);
+
 }
 
 // Initiate experience
@@ -60,10 +65,12 @@ function nextStep(step) {
   Array.from(document.getElementsByTagName('main')[0].children).forEach(e => { e.style.display = "none"; });
   document.getElementById(step).style.display = "block";
   document.getElementById(step).style.opacity = 1;
+
   setTimeout(() => {
     document.querySelector(`#${step} .story-text`).style.opacity = 1;
     textReveal(step);
   }, 2500);
+
 }
 
 // Back to introduction

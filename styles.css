@@ -129,8 +129,9 @@ button {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(.6);
-    min-height: 100vw;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     z-index: -1;
 }
@@ -140,7 +141,9 @@ button {
 }
 
 @keyframes backgroundFadeOut {
-    to { opacity: 0; }
+    to {
+        opacity: 0;
+    }
 }
 
 #introduction-title {
@@ -182,12 +185,29 @@ button {
 }
 
 @keyframes diveInWaveRotate {
-    0% { transform: rotate(2deg) translateY(96px); }
-    20% { transform: rotate(1deg) translateY(93px); }
-    30% { transform: rotate(-2deg) translateY(96px); }
-    65% { transform: rotate(2deg) translateY(97px); }
-    80% { transform: rotate(-1deg) translateY(95px); }
-    100% { transform: rotate(2deg) translateY(96px); }
+    0% {
+        transform: rotate(2deg) translateY(96px);
+    }
+
+    20% {
+        transform: rotate(1deg) translateY(93px);
+    }
+
+    30% {
+        transform: rotate(-2deg) translateY(96px);
+    }
+
+    65% {
+        transform: rotate(2deg) translateY(97px);
+    }
+
+    80% {
+        transform: rotate(-1deg) translateY(95px);
+    }
+
+    100% {
+        transform: rotate(2deg) translateY(96px);
+    }
 }
 
 #dive-in:hover::before {
@@ -195,9 +215,17 @@ button {
 }
 
 @keyframes diveInWaveRaise {
-    40% { transform: rotate(-2deg) translateY(40px); }
-    60% { transform: rotate(1deg) translateY(30px); }
-    100% { transform: translateY(0px); }
+    40% {
+        transform: rotate(-2deg) translateY(40px);
+    }
+
+    60% {
+        transform: rotate(1deg) translateY(30px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 #dive-in:active {
@@ -222,7 +250,7 @@ button {
     background-position: center;
     background-size: cover;
     /* background-blend-mode: saturation; */
-    transition: all .6s cubic-bezier(.28,-0.03,0,.99);
+    transition: all .6s cubic-bezier(.28, -0.03, 0, .99);
 }
 
 .card:hover {
@@ -233,12 +261,12 @@ button {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color:rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     transition: all .25s ease-in-out;
 }
 
 .card-body:hover {
-    background-color:rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .card-collapsed {
@@ -273,11 +301,11 @@ button {
     display: none;
 }
 
-#project-details input:checked + .card {
+#project-details input:checked+.card {
     /* width: 100vw; */
 }
 
-#project-details input:checked + .card .card-expanded {
+#project-details input:checked+.card .card-expanded {
     opacity: 1;
     transform: translateY(0);
 }
@@ -285,16 +313,18 @@ button {
 .card[for="c1"] {
     background-image: url('./assets/photos/nav-1.png');
 }
+
 .card[for="c2"] {
     background-image: url('./assets/photos/nav-2.webp');
 }
+
 .card[for="c3"] {
     background-image: url('./assets/photos/nav-3.webp');
 }
 
 /* Pages */
 
-main > * {
+main>* {
     display: none;
 }
 
@@ -313,8 +343,9 @@ section {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(.6);
-    min-height: 100vw;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     z-index: -1;
 }
@@ -331,11 +362,29 @@ section {
     width: 120vw;
     height: 120vh;
     background-color: var(--bg-color);
-    animation: startWaveRaise 3s ease-in-out 6s forwards;
+    animation: startWaveRaise 3s ease-out 6s forwards;
 }
 
 @keyframes startWaveRaise {
-    100% { top: 0; }
+    50% {
+        transform: rotate(2deg);
+    }
+
+    70% {
+        transform: rotate(-2deg);
+    }
+
+    80% {
+        transform: rotate(1deg);
+    }
+
+    90% {
+        transform: rotate(0);
+    }
+
+    100% {
+        top: 0;
+    }
 }
 
 /* Story */
@@ -361,10 +410,11 @@ section {
 }
 
 @keyframes photoFadeIn {
-    from { 
+    from {
         opacity: 0;
     }
-    to { 
+
+    to {
         opacity: 1;
     }
 }
@@ -374,13 +424,13 @@ section {
     left: 50%;
     transform: translateX(-50%);
     width: 100vw;
-    height: 20vh;
+    height: 30vh;
     bottom: 0;
     padding: 0 64px 24px 64px;
-    background: linear-gradient(0deg, rgba(0,26,26,.9) 10%, rgba(0,26,26,0) 100%);
+    background: linear-gradient(0deg, rgba(0, 26, 26, .9) 10%, rgba(0, 26, 26, 0) 100%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     gap: 24px;
     z-index: 4;
@@ -388,7 +438,6 @@ section {
 
 .story-text {
     opacity: 0;
-    /* max-width: 1000px; */
     font-size: 18px;
     font-weight: 100;
     /* text-wrap: balance; */
@@ -412,8 +461,8 @@ section {
     display: flex;
     justify-content: center;
     gap: 4px;
-    /* opacity: 0; */
-    overflow: hidden;
+    opacity: 0;
+    transition: all 1s ease-out;
 }
 
 .choice {
@@ -422,18 +471,8 @@ section {
     background-color: hsla(40, 60%, 95%, .05);
     border-radius: 24px;
     font-weight: 200;
-    transform: translateY(48px);
     transition: all 1s ease;
-    opacity: 0;
-    backdrop-filter: blur(4px);
-    animation: choiceFadeIn 2s ease-in-out 8s forwards;
-}
-
-@keyframes choiceFadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    backdrop-filter: blur(2px);
 }
 
 .choice:hover {
@@ -449,6 +488,7 @@ section {
 .choice-2 {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    animation-delay: 8.5s;
 }
 
 .previous-choice {
@@ -457,8 +497,13 @@ section {
 }
 
 @keyframes textFadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .story-exif {

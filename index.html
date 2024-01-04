@@ -29,8 +29,11 @@
         </a>
         <button id="know-more" onclick="toggleDetails()">
             <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 6C2 6 6.09476 2 10 2C13.9052 2 18 6 18 6C18 6 22.0948 10 26 10C29.9052 10 34 6 34 6" stroke="white" stroke-width="3" stroke-linecap="round" />
-                <path d="M2 22C2 22 6.09476 18 10 18C13.9052 18 18 22 18 22C18 22 22.0948 26 26 26C29.9052 26 34 22 34 22" stroke="white" stroke-width="3" stroke-linecap="round" />
+                <path d="M2 6C2 6 6.09476 2 10 2C13.9052 2 18 6 18 6C18 6 22.0948 10 26 10C29.9052 10 34 6 34 6"
+                    stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+                <path
+                    d="M2 22C2 22 6.09476 18 10 18C13.9052 18 18 22 18 22C18 22 22.0948 26 26 26C29.9052 26 34 22 34 22"
+                    stroke="currentColor" stroke-width="3" stroke-linecap="round" />
             </svg>
         </button>
     </nav>
@@ -102,7 +105,7 @@
         <label for="c3" class="card">
             <div class="card-body">
                 <div class="card-collapsed">
-                    <div class="card-number">2.</div>
+                    <div class="card-number">3.</div>
                     <h2 class="card-title">L'expérience</h2>
                     <p class="card-description">Plongez dans l’univers aquatique de Sealens, une galerie digitale
                         immersive.</p>
@@ -126,7 +129,7 @@
 
         <!-- Photo 1 -->
         <section id="photo-1" class="story-container">
-            <img src="./assets/photos/sealens-17.webp" alt="" class="story-photo">
+            <img src="./assets/photos/sealens-1.webp" alt="" class="story-photo">
             <div class="story-exif">
                 <div class="exif-focal">F/5.6</div>
                 <div class="exif-iso">ISO 600</div>
@@ -138,40 +141,15 @@
                     Un son sourd rempli vos oreilles, et votre rythme cardique s'apaise légèrement.
                 </p>
                 <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-3')">Plonger plus profond</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-2')">Rester à la surface</button>
+                    <button class="choice choice-1" onclick="nextStep('photo-2')">Plonger plus profond</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-3')">Rester à la surface</button>
                 </div>
             </div>
         </section>
 
         <!-- Photo 2 -->
         <section id="photo-2" class="story-container">
-            <img src="./assets/photos/sealens-7.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi:</span>
-                    <span>Rester à la surface</span>
-                </div>
-                <p class="story-text">Vous restez à la surface, où l'eau fraîche et revigorante vous enveloppe.
-                    Vous remarquez une étrange silhouette à quelques mètres de vous.
-                    Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse.
-                </p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-6')">Descendre dans l'obscurité</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-7')">S'approcher de la
-                        silhouette</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 3 -->
-        <section id="photo-3" class="story-container">
-            <img src="./assets/photos/photo-3.webp" alt="" class="story-photo">
+            <img src="./assets/photos/sealens-2.webp" alt="" class="story-photo">
             <div class="story-exif">
                 <div class="exif-focal">F/5.6</div>
                 <div class="exif-iso">ISO 600</div>
@@ -182,10 +160,9 @@
                     <span>Vous avez choisi:</span>
                     <span>Plonger plus profond</span>
                 </div>
-                <p class="story-text">La température de l'eau de se rafraîchit, et vous vous sentez enveloppé par la
-                    pression qui augmente.
-                    À votre gauche, une imposante formation rocheuse. À droite, un banc de sable semble vous guider vers
-                    une étrange statue immergée.
+                <p class="story-text">À présent, vous vous trouvez à un carrefour.
+                    À votre gauche, une imposante formation rocheuse abrite tout un écosystème marin, regorgeant de créatures fascinantes.
+                    À votre droite, un banc de sable semble vous guider vers une étrange statue immergée dans l'obscurité. 
                 </p>
                 <div class="story-choices">
                     <button class="choice choice-1" onclick="nextStep('photo-4')">S'approcher de la roche</button>
@@ -195,9 +172,32 @@
             </div>
         </section>
 
+        <!-- Photo 3 -->
+        <section id="photo-3" class="story-container">
+            <img src="./assets/photos/sealens-3.webp" alt="" class="story-photo">
+            <div class="story-exif">
+                <div class="exif-focal">F/5.6</div>
+                <div class="exif-iso">ISO 600</div>
+                <div class="exif-speed">1/2000s</div>
+            </div>
+            <div class="story-content">
+                <div class="previous-choice">
+                    <span>Vous avez choisi:</span>
+                    <span>Rester à la surface</span>
+                </div>
+                <p class="story-text">Alors que vous flottez paisiblement, vous remarquez une étrange silhouette à quelques mètres de vous.
+                    Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse.
+                </p>
+                <div class="story-choices">
+                    <button class="choice choice-1" onclick="nextStep('photo-6')">Descendre dans l'obscurité</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-7')">S'approcher de la silhouette</button>
+                </div>
+            </div>
+        </section>
+
         <!-- Photo 4 -->
         <section id="photo-4" class="story-container">
-            <img src="./assets/photos/photo-4.webp" alt="" class="story-photo">
+            <img src="./assets/photos/sealens-4.webp" alt="" class="story-photo">
             <div class="story-exif">
                 <div class="exif-focal">F/5.6</div>
                 <div class="exif-iso">ISO 600</div>
@@ -214,7 +214,7 @@
                     décider de continuer vers le banc de sable qui semble vous appeler.
                 </p>
                 <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-1')">Suivre le banc de poissons</button>
+                    <button class="choice choice-1" onclick="nextStep('photo-8')">Suivre le banc de poissons</button>
                     <button class="choice choice-2" onclick="nextStep('photo-5')">Se diriger vers le banc de
                         sable</button>
                 </div>
@@ -223,7 +223,7 @@
 
         <!-- Photo 5 -->
         <section id="photo-5" class="story-container">
-            <img src="./assets/photos/photo-5.webp" alt="" class="story-photo">
+            <img src="./assets/photos/sealens-5.webp" alt="" class="story-photo">
             <div class="story-exif">
                 <div class="exif-focal">F/5.6</div>
                 <div class="exif-iso">ISO 600</div>
@@ -240,9 +240,9 @@
                     En plissant les yeux, vous remarquez d'autres statues semblables un peu plus loin.
                 </p>
                 <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-1')">Se diriger vers les statues
+                    <button class="choice choice-1" onclick="nextStep('photo-9')">Se diriger vers les statues
                         englouties</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-1')">Suivre le banc de poissons</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-8')">Suivre le banc de poissons</button>
                 </div>
             </div>
         </section>
@@ -264,16 +264,16 @@
                     enveloppé par le monde sous-marin.
                 </p>
                 <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-1')">Descendre dans l'obscurité</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-1')">S'approcher de la
-                        silhouette</button>
+                    <button class="choice choice-1" onclick="nextStep('photo-4')">S'approcher de la roche</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-5')">Se diriger vers le banc de
+                        sable</button>
                 </div>
             </div>
         </section>
 
         <!-- Photo 7 -->
         <section id="photo-7" class="story-container">
-            <img src="./assets/photos/photo-7.webp" alt="" class="story-photo">
+            <img src="./assets/photos/sealens-7.webp" alt="" class="story-photo">
             <div class="story-exif">
                 <div class="exif-focal">F/5.6</div>
                 <div class="exif-iso">ISO 600</div>
@@ -282,23 +282,22 @@
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
-                    <span>Rester à la surface</span>
+                    <span>S'approcher de la silhouette</span>
                 </div>
-                <p class="story-text">Vous restez à la surface, où l'eau fraîche et revigorante vous enveloppe.
-                    Vous remarquez une étrange silhouette à quelques mètres de vous.
-                    Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse.
+                <p class="story-text">Vous décidez de vous approcher de la silhouette, mais alors que vous vous dirigez
+                    vers elle, le vent se lève brusquement, créant des vagues difficiles à surmonter.
+                    Vous luttez contre les éléments, sentant vos forces diminuer rapidement.
                 </p>
                 <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-1')">Descendre dans l'obscurité</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-1')">S'approcher de la
-                        silhouette</button>
+                    <button class="choice choice-1" onclick="nextStep('photo-10')">Suivre le plongeur</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-11')">Rester immobile</button>
                 </div>
             </div>
         </section>
 
         <!-- Photo 8 -->
         <section id="photo-8" class="story-container">
-            <img src="./assets/photos/photo-8.webp" alt="" class="story-photo">
+            <img src="./assets/photos/sealens-8.webp" alt="" class="story-photo">
             <div class="story-exif">
                 <div class="exif-focal">F/5.6</div>
                 <div class="exif-iso">ISO 600</div>
@@ -307,23 +306,23 @@
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
-                    <span>Rester à la surface</span>
+                    <span>Suivre le banc de poissons</span>
                 </div>
-                <p class="story-text">Vous restez à la surface, où l'eau fraîche et revigorante vous enveloppe.
-                    Vous remarquez une étrange silhouette à quelques mètres de vous.
-                    Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse.
+                <p class="story-text">En suivant le banc de poissons, vous vous retrouvez entouré de petits poissons
+                    noirs qui virevoltent autour de vous, créant un ballet aquatique enchanteur.
+                    Soudain, vous repérez au loin une petite méduse qui flotte gracieusement dans une direction que la
+                    marée semble avoir choisie pour elle.
                 </p>
                 <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-1')">Descendre dans l'obscurité</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-1')">S'approcher de la
-                        silhouette</button>
+                    <button class="choice choice-1" onclick="nextStep('photo-12')">Admirer la méduse</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-13')">Se diriger vers la lumière</button>
                 </div>
             </div>
         </section>
 
         <!-- Photo 9 -->
         <section id="photo-9" class="story-container">
-            <img src="./assets/photos/photo-9.webp" alt="" class="story-photo">
+            <img src="./assets/photos/sealens-9.webp" alt="" class="story-photo">
             <div class="story-exif">
                 <div class="exif-focal">F/5.6</div>
                 <div class="exif-iso">ISO 600</div>
@@ -332,23 +331,23 @@
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
-                    <span>Rester à la surface</span>
+                    <span>Se diriger vers les statues englouties</span>
                 </div>
-                <p class="story-text">Vous restez à la surface, où l'eau fraîche et revigorante vous enveloppe.
-                    Vous remarquez une étrange silhouette à quelques mètres de vous.
-                    Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse.
+                <p class="story-text">Alors que vous explorez ce musée aquatique improvisé, une petite méduse se met à
+                    danser gracieusement devant vos yeux.
+                    Cependant, vous commencez à ressentir le poids du temps et le besoin pressant de remonter à la
+                    surface pour reprendre de l'air.
                 </p>
                 <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-1')">Descendre dans l'obscurité</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-1')">S'approcher de la
-                        silhouette</button>
+                    <button class="choice choice-1" onclick="nextStep('photo-14')">Entreprendre la remontée</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-12')">Admirer la méduse</button>
                 </div>
             </div>
         </section>
 
         <!-- Photo 10 -->
         <section id="photo-10" class="story-container">
-            <img src="./assets/photos/photo-10.webp" alt="" class="story-photo">
+            <img src="./assets/photos/sealens-10.webp" alt="" class="story-photo">
             <div class="story-exif">
                 <div class="exif-focal">F/5.6</div>
                 <div class="exif-iso">ISO 600</div>
@@ -357,24 +356,24 @@
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
-                    <span>Rester à la surface</span>
+                    <span>Suivre le plongeur</span>
                 </div>
-                <p class="story-text">
-                    Vous restez à la surface, où l'eau fraîche et revigorante vous enveloppe.
-                    Vous remarquez une étrange silhouette à quelques mètres de vous.
-                    Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse.
+                <p class="story-text">Malgré vos efforts, la silhouette s'est éloignée progressivement pendant que les
+                    vagues se calmaient.
+                    Au loin, vous apercevez une grande roche abritant une vie marine.
+                    En observant attentivement sous l'eau, à travers les algues et les rochers, vous remarquez un chemin
+                    de sable sinueux qui s'étend vers une direction inconnue.
                 </p>
                 <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-1')">Descendre dans l'obscurité</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-1')">S'approcher de la
-                        silhouette</button>
+                    <button class="choice choice-1" onclick="nextStep('photo-4')">S'approcher de la roche</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-5')">Suivre le banc de sable</button>
                 </div>
             </div>
         </section>
 
         <!-- Photo 11 -->
         <section id="photo-11" class="story-container">
-            <img src="./assets/photos/photo-11.webp" alt="" class="story-photo">
+            <img src="./assets/photos/sealens-11.webp" alt="" class="story-photo">
             <div class="story-exif">
                 <div class="exif-focal">F/5.6</div>
                 <div class="exif-iso">ISO 600</div>
@@ -383,24 +382,24 @@
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
-                    <span>Rester à la surface</span>
+                    <span>Rester immobile</span>
                 </div>
-                <p class="story-text">
-                    Vous restez à la surface, où l'eau fraîche et revigorante vous enveloppe.
-                    Vous remarquez une étrange silhouette à quelques mètres de vous.
-                    Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse.
+                <p class="story-text">Vous avez choisi de ne pas prendre de risque et de reprendre votre souffle,
+                    laissant derrière vous le plongeur.
+                    Vous vous retrouvez seul à la surface de l'eau.
+                    En observant attentivement sous l'eau, à travers les algues et les rochers, vous remarquez un chemin
+                    de sable sinueux qui s'étend vers une direction inconnue.
                 </p>
                 <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-1')">Descendre dans l'obscurité</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-1')">S'approcher de la
-                        silhouette</button>
+                    <button class="choice choice-1" onclick="nextStep('photo-4')">S'approcher de la roche</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-5')">Suivre le banc de sable</button>
                 </div>
             </div>
         </section>
 
         <!-- Photo 12 -->
         <section id="photo-12" class="story-container">
-            <img src="./assets/photos/photo-12.webp" alt="" class="story-photo">
+            <img src="./assets/photos/sealens-12.webp" alt="" class="story-photo">
             <div class="story-exif">
                 <div class="exif-focal">F/5.6</div>
                 <div class="exif-iso">ISO 600</div>
@@ -409,24 +408,25 @@
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
-                    <span>Rester à la surface</span>
+                    <span>Admirer la méduse</span>
                 </div>
-                <p class="story-text">
-                    Vous restez à la surface, où l'eau fraîche et revigorante vous enveloppe.
-                    Vous remarquez une étrange silhouette à quelques mètres de vous.
-                    Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse.
+                <p class="story-text">Fasciné par ce ballet aquatique, vous vous perdez dans sa grâce hypnotisante.
+                    Mais il devient impératif de remonter car vous commencez à ressentir des spasmes par le manque
+                    d'oxygène.
+                    Au loin, une corde se dessine.
+                    Elle pourrait vous permettre de remonter plus rapidement, mais elle semble encore hors de portée.
                 </p>
                 <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-1')">Descendre dans l'obscurité</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-1')">S'approcher de la
-                        silhouette</button>
+                    <button class="choice choice-1" onclick="nextStep('photo-15')">Remonter par ses propres
+                        moyens</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-16')">Essayer d'atteindre la corde</button>
                 </div>
             </div>
         </section>
 
         <!-- Photo 13 -->
         <section id="photo-13" class="story-container">
-            <img src="./assets/photos/photo-13.webp" alt="" class="story-photo">
+            <img src="./assets/photos/sealens-13.webp" alt="" class="story-photo">
             <div class="story-exif">
                 <div class="exif-focal">F/5.6</div>
                 <div class="exif-iso">ISO 600</div>
@@ -435,24 +435,25 @@
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
-                    <span>Rester à la surface</span>
+                    <span>Se diriger vers la lumière</span>
                 </div>
-                <p class="story-text">
-                    Vous restez à la surface, où l'eau fraîche et revigorante vous enveloppe.
-                    Vous remarquez une étrange silhouette à quelques mètres de vous.
-                    Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse.
+                <p class="story-text">Alors que vous vous dirigez vers la lumière, vous réalisez que c'est un faisceau
+                    de lumière qui a percé les nuages.
+                    Néanmoins, vos poumons sont presque vides, provoquant des spasmes dans tout votre corps.
+                    Au loin, une corde se dessine.
+                    Elle pourrait vous permettre de remonter plus rapidement, mais elle semble encore hors de portée.
                 </p>
                 <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-1')">Descendre dans l'obscurité</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-1')">S'approcher de la
-                        silhouette</button>
+                    <button class="choice choice-1" onclick="nextStep('photo-15')">Remonter par ses propres
+                        moyens</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-16')">Essayer d'atteindre la corde</button>
                 </div>
             </div>
         </section>
 
         <!-- Photo 14 -->
         <section id="photo-14" class="story-container">
-            <img src="./assets/photos/photo-14.webp" alt="" class="story-photo">
+            <img src="./assets/photos/sealens-14.webp" alt="" class="story-photo">
             <div class="story-exif">
                 <div class="exif-focal">F/5.6</div>
                 <div class="exif-iso">ISO 600</div>
@@ -461,17 +462,126 @@
             <div class="story-content">
                 <div class="previous-choice">
                     <span>Vous avez choisi:</span>
-                    <span>Rester à la surface</span>
+                    <span>Entreprendre la remontée</span>
                 </div>
-                <p class="story-text">
-                    Vous restez à la surface, où l'eau fraîche et revigorante vous enveloppe.
-                    Vous remarquez une étrange silhouette à quelques mètres de vous.
-                    Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse.
+                <p class="story-text">Votre décision de remonter est prise alors que vos poumons se sont presque
+                    entièrement vidés de leur air.
+                    Au loin, une corde apparaît.
+                    Vous vous demandez si elle pourrait vous permettre de remonter plus rapidement, mais elle semble
+                    encore hors de portée.
                 </p>
                 <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-1')">Descendre dans l'obscurité</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-1')">S'approcher de la
-                        silhouette</button>
+                    <button class="choice choice-1" onclick="nextStep('photo-15')">Remonter par ses propres
+                        moyens</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-16')">Essayer d'atteindre la corde</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo 15 -->
+        <section id="photo-15" class="story-container">
+            <img src="./assets/photos/sealens-15.webp" alt="" class="story-photo">
+            <div class="story-exif">
+                <div class="exif-focal">F/5.6</div>
+                <div class="exif-iso">ISO 600</div>
+                <div class="exif-speed">1/2000s</div>
+            </div>
+            <div class="story-content">
+                <div class="previous-choice">
+                    <span>Vous avez choisi:</span>
+                    <span>Entreprendre la remontée</span>
+                </div>
+                <p class="story-text">Votre décision de remonter est prise alors que vos poumons se sont presque
+                    entièrement vidés de leur air.
+                    Au loin, une corde apparaît.
+                    Vous vous demandez si elle pourrait vous permettre de remonter plus rapidement, mais elle semble
+                    encore hors de portée.
+                </p>
+                <div class="story-choices">
+                    <button class="choice choice-1" onclick="nextStep('photo-15')">Remonter par ses propres
+                        moyens</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-16')">Essayer d'atteindre la corde</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo 16 -->
+        <section id="photo-16" class="story-container">
+            <img src="./assets/photos/sealens-16.webp" alt="" class="story-photo">
+            <div class="story-exif">
+                <div class="exif-focal">F/5.6</div>
+                <div class="exif-iso">ISO 600</div>
+                <div class="exif-speed">1/2000s</div>
+            </div>
+            <div class="story-content">
+                <div class="previous-choice">
+                    <span>Vous avez choisi:</span>
+                    <span>Entreprendre la remontée</span>
+                </div>
+                <p class="story-text">Votre décision de remonter est prise alors que vos poumons se sont presque
+                    entièrement vidés de leur air.
+                    Au loin, une corde apparaît.
+                    Vous vous demandez si elle pourrait vous permettre de remonter plus rapidement, mais elle semble
+                    encore hors de portée.
+                </p>
+                <div class="story-choices">
+                    <button class="choice choice-1" onclick="nextStep('photo-15')">Remonter par ses propres
+                        moyens</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-16')">Essayer d'atteindre la corde</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo 17 -->
+        <section id="photo-17" class="story-container">
+            <img src="./assets/photos/sealens-17.webp" alt="" class="story-photo">
+            <div class="story-exif">
+                <div class="exif-focal">F/5.6</div>
+                <div class="exif-iso">ISO 600</div>
+                <div class="exif-speed">1/2000s</div>
+            </div>
+            <div class="story-content">
+                <div class="previous-choice">
+                    <span>Vous avez choisi:</span>
+                    <span>Entreprendre la remontée</span>
+                </div>
+                <p class="story-text">Votre décision de remonter est prise alors que vos poumons se sont presque
+                    entièrement vidés de leur air.
+                    Au loin, une corde apparaît.
+                    Vous vous demandez si elle pourrait vous permettre de remonter plus rapidement, mais elle semble
+                    encore hors de portée.
+                </p>
+                <div class="story-choices">
+                    <button class="choice choice-1" onclick="nextStep('photo-15')">Remonter par ses propres
+                        moyens</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-16')">Essayer d'atteindre la corde</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo 18 -->
+        <section id="photo-18" class="story-container">
+            <img src="./assets/photos/sealens-18.webp" alt="" class="story-photo">
+            <div class="story-exif">
+                <div class="exif-focal">F/5.6</div>
+                <div class="exif-iso">ISO 600</div>
+                <div class="exif-speed">1/2000s</div>
+            </div>
+            <div class="story-content">
+                <div class="previous-choice">
+                    <span>Vous avez choisi:</span>
+                    <span>Entreprendre la remontée</span>
+                </div>
+                <p class="story-text">Votre décision de remonter est prise alors que vos poumons se sont presque
+                    entièrement vidés de leur air.
+                    Au loin, une corde apparaît.
+                    Vous vous demandez si elle pourrait vous permettre de remonter plus rapidement, mais elle semble
+                    encore hors de portée.
+                </p>
+                <div class="story-choices">
+                    <button class="choice choice-1" onclick="nextStep('photo-15')">Remonter par ses propres
+                        moyens</button>
+                    <button class="choice choice-2" onclick="nextStep('photo-16')">Essayer d'atteindre la corde</button>
                 </div>
             </div>
         </section>
