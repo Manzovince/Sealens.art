@@ -33,7 +33,7 @@ body {
     font-weight: 300;
     font-size: 1.2rem;
     height: 100vh;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 h1 {
@@ -185,29 +185,12 @@ button {
 }
 
 @keyframes diveInWaveRotate {
-    0% {
-        transform: rotate(2deg) translateY(96px);
-    }
-
-    20% {
-        transform: rotate(1deg) translateY(93px);
-    }
-
-    30% {
-        transform: rotate(-2deg) translateY(96px);
-    }
-
-    65% {
-        transform: rotate(2deg) translateY(97px);
-    }
-
-    80% {
-        transform: rotate(-1deg) translateY(95px);
-    }
-
-    100% {
-        transform: rotate(2deg) translateY(96px);
-    }
+    0% { transform: rotate(2deg) translateY(96px); }
+    20% { transform: rotate(1deg) translateY(93px); }
+    30% { transform: rotate(-2deg) translateY(96px); }
+    65% { transform: rotate(2deg) translateY(97px); }
+    80% { transform: rotate(-1deg) translateY(95px); }
+    100% { transform: rotate(2deg) translateY(96px); }
 }
 
 #dive-in:hover::before {
@@ -215,17 +198,9 @@ button {
 }
 
 @keyframes diveInWaveRaise {
-    40% {
-        transform: rotate(-2deg) translateY(40px);
-    }
-
-    60% {
-        transform: rotate(1deg) translateY(30px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
+    40% { transform: rotate(-2deg) translateY(40px);}
+    60% { transform: rotate(1deg) translateY(30px);}
+    100% { transform: translateY(0px);}
 }
 
 #dive-in:active {
@@ -246,7 +221,7 @@ button {
 }
 
 #about-us {
-    background-image: url(./assets/photos/nav-2.webp);
+    background-image: url(./assets/photos/sealens-7.webp);
 }
 
 #experience {
@@ -257,7 +232,8 @@ button {
     width: 33vw;
     height: 100%;
     padding: 64px;
-    background-color: rgba(0, 26, 26, 0.8);
+    background-color: rgba(0, 26, 26, 0.6);
+    backdrop-filter: blur(8px);
     display: flex;
     flex-direction: column;
 }
@@ -317,30 +293,19 @@ section {
     top: 100vh;
     width: 120vw;
     height: 120vh;
+    opacity: .5;
+    backdrop-filter: blur(16px);
+    filter: blur(16px);
     background-color: var(--bg-color);
     animation: startWaveRaise 3s ease-out 6s forwards;
 }
 
 @keyframes startWaveRaise {
-    40% {
-        transform: rotate(1deg);
-    }
-
-    60% {
-        transform: rotate(-1deg);
-    }
-
-    80% {
-        transform: rotate(1deg);
-    }
-
-    90% {
-        transform: rotate(0);
-    }
-
-    100% {
-        top: 0;
-    }
+    40% { transform: rotate(1deg); }
+    60% { transform: rotate(-1deg); }
+    80% { transform: rotate(1deg); opacity: 1; }
+    90% { transform: rotate(0); opacity: 1; }
+    100% { top: 0; opacity: 1; filter: blur(0);}
 }
 
 /* Story */
