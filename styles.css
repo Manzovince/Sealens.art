@@ -470,7 +470,7 @@ section {
     border-radius: 24px;
     font-weight: 200;
     transition: all 1s ease;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(8px);
 }
 
 .choice:hover {
@@ -529,6 +529,23 @@ section {
     opacity: 0;
     animation: textFadeIn 1s ease-out forwards;
     animation-delay: 1.2s;
+}
+
+/* End */
+
+#end-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#end-content p {
+    margin-bottom: 32px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 400;
 }
 
 /* Footer */

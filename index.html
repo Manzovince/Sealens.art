@@ -612,10 +612,34 @@
             </div>
         </section>
 
-        <!-- End / Retry -->
-        <section id="end" class="story-container">
-            <img src="./assets/photos/end.webp" alt="" class="story-photo">
+        <!-- Photo 21 -->
+        <section id="photo-21" class="story-container">
+            <img src="./assets/photos/sealens-21.webp" alt="" class="story-photo">
+            <div class="story-exif">
+                <div class="exif-focal">F/5.6</div>
+                <div class="exif-iso">ISO 600</div>
+                <div class="exif-speed">1/2000s</div>
+            </div>
             <div class="story-content">
+                <div class="previous-choice">
+                    <span>Vous avez choisi:</span>
+                    <span>S'abandonner à la mer</span>
+                </div>
+                <p class="story-text">Une dernière bulle d'air s'échappe de vos poumons dans l'immensité de la mer, marquant la fin de cette expédition sous-marine. <br>
+                    Vous avez bravé les profondeurs et fait des choix courageux, mais cette histoire se termine ici. <br>
+                    Souhaitez-vous mettre fin à cette aventure maintenant, ou êtes-vous prêt à tenter une nouvelle plongée, en espérant qu'elle se déroule d'une manière différente ?
+                </p>
+                <div class="story-choices">
+                    <button class="choice choice-1" onclick="nextStep('end')">Mettre fin à l'aventure</button>
+                    <button class="choice choice-2" onclick="nextStep('start')">Retenter ma chance</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- End / Retry -->
+        <section id="end">
+            <div class="" id="end-content">
+                <img src="./assets/photos/sealens-22.webp" alt="" class="story-photo">
                 <p class="story-text">Vous pouvez respirer.</p>
                 <div class="story-choices">
                     <button class="choice choice-1" onclick="backToIntro()">Retourner à l'accueil</button>

@@ -59,7 +59,8 @@ function startExperience() {
   }, 500);
 
   setTimeout(() => {
-    nextStep('photo-1');
+    // nextStep('photo-1');
+    nextStep('end');
   }, 10000);
 }
 
