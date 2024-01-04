@@ -18,7 +18,7 @@
 // });
 
 // Text reveal
-function textReveal(step, interval = 30) {
+function textReveal(step, interval = 25) {
   let element = document.querySelector(`#${step} .story-text`)
   let text = element.textContent;
   element.textContent = "";
