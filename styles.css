@@ -366,12 +366,12 @@ section {
 }
 
 @keyframes startWaveRaise {
-    50% {
-        transform: rotate(2deg);
+    40% {
+        transform: rotate(1deg);
     }
 
-    70% {
-        transform: rotate(-2deg);
+    60% {
+        transform: rotate(-1deg);
     }
 
     80% {
@@ -440,8 +440,6 @@ section {
     opacity: 0;
     font-size: 18px;
     font-weight: 100;
-    /* text-wrap: balance; */
-    white-space: pre-line;
 }
 
 .letter {
@@ -513,6 +511,24 @@ section {
     font-size: 16px;
     font-weight: 100;
     text-align: right;
+}
+
+.exif-focal {
+    opacity: 0;
+    animation: textFadeIn 1s ease-out forwards;
+    animation-delay: .4s;
+}
+
+.exif-iso {
+    opacity: 0;
+    animation: textFadeIn 1s ease-out forwards;
+    animation-delay: .8s;
+}
+
+.exif-speed {
+    opacity: 0;
+    animation: textFadeIn 1s ease-out forwards;
+    animation-delay: 1.2s;
 }
 
 /* Footer */

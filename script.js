@@ -21,7 +21,11 @@
 function textReveal(step, interval = 40) {
   let element = document.querySelector(`#${step} .story-text`)
   let text = element.textContent;
+  let width = element.offsetWidth;
+  console.log(width);
   element.textContent = "";
+  element.style.opacity = 1;
+  element.style.width = width + 24 + "px";
 
   let i = 0;
   
@@ -67,7 +71,6 @@ function nextStep(step) {
   document.getElementById(step).style.opacity = 1;
 
   setTimeout(() => {
-    document.querySelector(`#${step} .story-text`).style.opacity = 1;
     textReveal(step);
   }, 2500);
 
