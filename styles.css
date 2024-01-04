@@ -33,7 +33,7 @@ body {
     font-weight: 300;
     font-size: 1.2rem;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 h1 {
@@ -167,9 +167,9 @@ button {
     transition: all 1s ease-out;
 }
 
-#dive-in:hover {
+/* #dive-in:hover {
     color: var(--bg-color);
-}
+} */
 
 #dive-in::before {
     content: "";
@@ -179,7 +179,7 @@ button {
     height: 100px;
     width: 100%;
     transform: translateY(96px);
-    background-color: var(--text-color);
+    background-color: hsla(40, 60%, 95%, .2);
     z-index: -1;
     animation: diveInWaveRotate 6s ease-in infinite;
 }
@@ -234,92 +234,48 @@ button {
 
 /* Project details */
 
-#project-details {
-    display: none;
-    position: absolute;
-    top: 0;
+.project-card {
     height: 100vh;
-    width: 100vw;
-    display: flex;
-    z-index: 998;
-}
-
-.card {
-    width: calc(100vw / 3);
-    height: 100vh;
-    background-position: center;
     background-size: cover;
-    /* background-blend-mode: saturation; */
-    transition: all .6s cubic-bezier(.28, -0.03, 0, .99);
+    background-position: center;
+    display: flex;
 }
 
-.card:hover {
-    width: calc((100vw / 3) + 50px);
+#project {
+    background-image: url(./assets/photos/sealens-16.webp);
 }
 
-.card-body {
-    height: 100vh;
+#about-us {
+    background-image: url(./assets/photos/nav-2.webp);
+}
+
+#experience {
+    background-image: url(./assets/photos/sealens-22.webp);
+}
+
+.sidepanel {
+    width: 33vw;
+    height: 100%;
+    padding: 64px;
+    background-color: rgba(0, 26, 26, 0.8);
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.6);
-    transition: all .25s ease-in-out;
 }
 
-.card-body:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.card-collapsed {
+.sidepanel h3 {
     margin-top: auto;
-    /* border: solid 1px red; */
-    padding: 2rem;
+    font-weight: 500;
+    margin-bottom: 32px;
 }
 
-.card-title {
-    font-weight: 400;
+.sidepanel p {
+    font-size: 20px;
+    font-weight: 200;
+    text-wrap: balance;
 }
 
-.card-description {
-    font-weight: 100;
-    font-size: 24px;
-}
-
-.card-number {
-    font-size: 64px;
-    font-weight: 900;
-}
-
-.card-expanded {
-    border: solid 1px yellow;
-    opacity: 0;
-    transform: translateY(30px);
-    /* width: 60vw; */
-    transition: all .25s ease-out;
-}
-
-#project-details input {
-    display: none;
-}
-
-#project-details input:checked+.card {
-    /* width: 100vw; */
-}
-
-#project-details input:checked+.card .card-expanded {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.card[for="c1"] {
-    background-image: url('./assets/photos/nav-1.webp');
-}
-
-.card[for="c2"] {
-    background-image: url('./assets/photos/nav-2.webp');
-}
-
-.card[for="c3"] {
-    background-image: url('./assets/photos/nav-3.webp');
+.card-content {
+    padding: 64px;
 }
 
 /* Pages */
