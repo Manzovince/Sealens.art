@@ -21,10 +21,8 @@
 function textReveal(step, interval = 30) {
   let element = document.querySelector(`#${step} .story-text`)
   let text = element.textContent;
-  let width = element.offsetWidth;
   element.textContent = "";
   element.style.opacity = 1;
-  element.style.width = width + "px";
 
   let i = 0;
   
