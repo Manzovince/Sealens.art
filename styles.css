@@ -104,6 +104,7 @@ button {
     justify-content: space-between;
     align-items: center;
     padding: 32px;
+    background: linear-gradient(180deg, rgba(0,26,27,1) 0%, rgba(0,26,27,0) 100%);
     z-index: 999;
 }
 
@@ -151,7 +152,6 @@ button {
     color: var(--color-secondary);
 }
 
-
 /* Header */
 
 #introduction {
@@ -198,7 +198,7 @@ button {
 
 #dive-in {
     position: relative;
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-top: 64px;
     z-index: 3;
     padding: 16px 32px;
@@ -207,10 +207,6 @@ button {
     overflow: hidden;
     transition: all 1s ease-out;
 }
-
-/* #dive-in:hover {
-    color: var(--bg-color);
-} */
 
 #dive-in::before {
     content: "";
