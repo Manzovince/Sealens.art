@@ -511,7 +511,7 @@ section {
     font-size: 1.2rem;
     font-weight: 100;
     white-space: unset;
-    text-wrap: balance;
+    /* text-wrap: balance; */
 }
 
 .letter {
