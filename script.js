@@ -28,7 +28,11 @@ function showPage(page) {
   document.getElementById('gallery').style.display = "none";
   if (page == 'introduction') {
     backToIntro();
+  } else if (page == 'gallery') {
+    document.getElementsByTagName('body')[0].style.overflow = "auto";
+    document.getElementById(page).style.display = "flex";
   } else {
+    document.getElementsByTagName('body')[0].style.overflow = "hidden";
     document.getElementById(page).style.display = "flex";
   }
 }
@@ -64,6 +68,7 @@ function textReveal(step, interval = 25) {
 // Initiate experience
 function startExperience() {
   showPage('story');
+  document.getElementById('nav').style.background = "transparent";
   document.getElementById('introduction').style.opacity = "0";
   setTimeout(() => {
     document.getElementById('introduction').style.display = "none";
@@ -97,6 +102,7 @@ function nextStep(step) {
 // Back to introduction
 function backToIntro() {
   document.getElementById('nav-list').style.display = "flex";
+  document.getElementById('nav').style.background = "linear-gradient(180deg, rgba(0,26,27,1) 0%, rgba(0,26,27,0) 100%)";
   document.getElementById('start').style.display = "none";
   Array.from(document.getElementsByTagName('main')[0].children).forEach(e => { e.style.display = "none"; });
   document.getElementById('introduction').style.display = "flex";
