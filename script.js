@@ -17,6 +17,22 @@
 //   }, 250);
 // });
 
+// Show page
+
+function showPage(page) {
+  document.getElementById('introduction').style.display = "none";
+  document.getElementById('project').style.display = "none";
+  document.getElementById('about-us').style.display = "none";
+  document.getElementById('experience').style.display = "none";
+  document.getElementById('story').style.display = "none";
+  document.getElementById('gallery').style.display = "none";
+  if (page == 'introduction') {
+    backToIntro();
+  } else {
+    document.getElementById(page).style.display = "flex";
+  }
+}
+
 // Text reveal
 function textReveal(step, interval = 25) {
   let element = document.querySelector(`#${step} .story-text`)
@@ -25,7 +41,7 @@ function textReveal(step, interval = 25) {
   element.style.opacity = 1;
 
   let i = 0;
-  
+
   const revealInterval = setInterval(() => {
     if (i < text.length) {
       let span = document.createElement('span');
@@ -40,10 +56,14 @@ function textReveal(step, interval = 25) {
     document.querySelector(`#${step} .story-choices`).style.opacity = "1";
   }, (interval * text.length) + 1000);
 
+  setTimeout(() => {
+    element.textContent = text;
+  }, (interval * text.length) + 2000);
 }
 
 // Initiate experience
 function startExperience() {
+  showPage('story');
   document.getElementById('introduction').style.opacity = "0";
   setTimeout(() => {
     document.getElementById('introduction').style.display = "none";
@@ -62,7 +82,7 @@ function startExperience() {
 
 // Next step
 function nextStep(step) {
-  document.getElementById('know-more').style.display = "none";
+  document.getElementById('nav-list').style.display = "none";
   Array.from(document.getElementsByTagName('main')[0].children).forEach(e => { e.style.display = "none"; });
   document.getElementById(step).style.display = "block";
   document.getElementById(step).style.opacity = 1;
@@ -76,7 +96,7 @@ function nextStep(step) {
 
 // Back to introduction
 function backToIntro() {
-  document.getElementById('know-more').style.display = "block";
+  document.getElementById('nav-list').style.display = "flex";
   document.getElementById('start').style.display = "none";
   Array.from(document.getElementsByTagName('main')[0].children).forEach(e => { e.style.display = "none"; });
   document.getElementById('introduction').style.display = "flex";
@@ -84,7 +104,7 @@ function backToIntro() {
 }
 
 // Show details cards
-let detailsOpened = 0; 
+let detailsOpened = 0;
 
 function toggleDetails() {
   if (!detailsOpened) {
@@ -95,3 +115,51 @@ function toggleDetails() {
     detailsOpened = 0;
   }
 }
+
+// Gallery
+
+const images = [
+  'sealens-1',
+  'sealens-2',
+  'sealens-3',
+  'sealens-4',
+  'sealens-5',
+  'sealens-6',
+  'sealens-7',
+  'sealens-8',
+  'sealens-9',
+  'sealens-10',
+  'sealens-11',
+  'sealens-12',
+  'sealens-13',
+  'sealens-14',
+  'sealens-15',
+  'sealens-16',
+  'sealens-17',
+  'sealens-18',
+  'sealens-19',
+  'sealens-20',
+  'sealens-21',
+  'sealens-22'
+];
+
+function displayGalleryLayout(imageArray) {
+  const galleryLayout = document.getElementById('galleryLayout');
+  const shuffledImages = imageArray.sort(() => 0.5 - Math.random());
+
+  shuffledImages.forEach((src, index) => {
+    const box = document.createElement('div');
+    box.classList.add("box");
+    box.style.height = (Math.random() * 300) + 400 + "px";
+
+    const img = document.createElement('img');
+    img.src = "./assets/photos/" + src + ".webp";
+    img.loading = "lazy";
+
+    galleryLayout.appendChild(box);
+    box.appendChild(img);
+
+  });
+}
+
+displayGalleryLayout(images);
