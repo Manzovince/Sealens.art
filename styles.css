@@ -35,7 +35,12 @@ body {
     font-weight: 300;
     font-size: 1.2rem;
     height: 100vh;
-    overflow: hidden;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        overflow: hidden;
+    }
 }
 
 h1 {
@@ -105,7 +110,7 @@ button {
     justify-content: space-between;
     align-items: center;
     padding: 32px;
-    background: linear-gradient(180deg, rgba(0,26,27,1) 0%, rgba(0,26,27,0) 100%);
+    background: linear-gradient(180deg, rgba(0, 26, 27, 1) 0%, rgba(0, 26, 27, 0) 100%);
     z-index: 999;
 }
 
@@ -280,14 +285,17 @@ button {
 }
 
 #project {
+    display: none;
     background-image: url(./assets/photos/sealens-16.webp);
 }
 
 #about-us {
+    display: none;
     background-image: url(./assets/photos/sealens-7.webp);
 }
 
 #experience {
+    display: none;
     background-image: url(./assets/photos/sealens-22.webp);
 }
 
@@ -315,25 +323,40 @@ button {
 
 .card-content {
     padding: 64px;
-}
-
-#about-us .card-content {
-    display: flex;
-    justify-content: space-around;
-}
-
-.profil {
-    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+}
+
+#project img {
+    aspect-ratio: auto;
+    height: 80%;
+}
+
+#about-us .card-content {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1.5rem;
+}
+
+.profil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profil img {
+    aspect-ratio: 1/1;
+    min-width: 20vw;
 }
 
 .profil-desc {
     max-width: 60ch;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 200;
     text-align: center;
     text-wrap: pretty;
@@ -592,6 +615,7 @@ section {
 /* Gallery */
 
 #gallery {
+    display: none;
     flex-direction: column;
 }
 
@@ -657,6 +681,45 @@ section {
     cursor: pointer;
     transition: all 250ms ease-in;
     animation: fadeIn 1s ease-in;
+}
+
+/* For mobiles */
+
+#mobile-message {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #logo {
+        pointer-events: none;
+    }
+
+    #introduction {
+        display: none;
+    }
+
+    #nav-list {
+        display: none;
+    }
+
+    #gallery {
+        display: block;
+    }
+
+    #mobile-message {
+        margin: 0 1rem 2rem 1rem;
+        padding: 1rem;
+        font-weight: 100;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        border: solid 1px var(--text-color);
+        border-radius: 16px;
+    }
+
+    #gallery-introduction {
+        padding: 6rem 2rem 2rem 2rem;
+    }
 }
 
 /* Footer */
