@@ -195,20 +195,20 @@ button {
 }
 
 #introduction-title {
-    margin-bottom: 16px;
+    transform: scale(.8);
 }
 
 #introduction p {
     font-weight: 100;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 #dive-in {
     position: relative;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     margin-top: 64px;
     z-index: 3;
-    padding: 16px 32px;
+    padding: 8px 16px;
     border-radius: 48px;
     border: solid 1px var(--text-color);
     overflow: hidden;
@@ -255,7 +255,7 @@ button {
 }
 
 #dive-in:hover::before {
-    animation: diveInWaveRaise 2s ease-out forwards;
+    animation: diveInWaveRaise 4s ease-out forwards;
 }
 
 @keyframes diveInWaveRaise {
@@ -367,6 +367,7 @@ button {
     width: 100%;
     display: grid;
     place-items: center;
+    background-color: rgba(0, 26, 26, 0.6);
 }
 
 .experience-card {
@@ -374,10 +375,6 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 64px;
-    backdrop-filter: blur(8px);
-    border-radius: 32px;
-    background-color: rgba(0, 26, 26, 0.6);
 }
 
 /* Pages */
@@ -509,9 +506,10 @@ section {
 
 .story-text {
     opacity: 0;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 100;
     white-space: unset;
+    text-align: center;
     /* text-wrap: balance; */
 }
 
@@ -568,6 +566,7 @@ section {
 }
 
 .story-exif {
+    display: none;
     position: absolute;
     top: 32px;
     right: 32px;
