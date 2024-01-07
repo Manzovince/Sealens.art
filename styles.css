@@ -112,6 +112,7 @@ button {
     padding: 32px;
     background: linear-gradient(180deg, rgba(0, 26, 27, 1) 0%, rgba(0, 26, 27, 0) 100%);
     z-index: 999;
+    transition: all .25s ease-out;
 }
 
 #logo {
@@ -516,13 +517,13 @@ section {
 
 .letter {
     opacity: 0;
-    transform: rotate(-4deg);
-    animation: letterFadeIn 1s ease-out .5s forwards;
+    transform: translateY(-20px);
+    animation: letterFadeIn 1.5s ease-out .5s forwards;
 }
 
 @keyframes letterFadeIn {
     to {
-        transform: rotate(0);
+        transform: translateY(0);
         opacity: 1;
     }
 }

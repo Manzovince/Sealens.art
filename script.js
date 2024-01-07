@@ -39,10 +39,13 @@ function showPage(page) {
 
 // Text reveal
 function textReveal(step, interval = 25) {
-  let element = document.querySelector(`#${step} .story-text`)
+  let element = document.querySelector(`#${step} .story-text`);
+  element.style.opacity = 0;
   let text = element.textContent;
   element.textContent = "";
-  element.style.opacity = 1;
+  setTimeout(() => {
+    element.style.opacity = 1;
+  }, 500);
 
   let i = 0;
 
@@ -69,6 +72,8 @@ function textReveal(step, interval = 25) {
 function startExperience() {
   showPage('story');
   document.getElementById('nav').style.background = "transparent";
+  document.getElementById('nav').style.pointerEvents = "none";
+  document.getElementById('nav').style.opacity = "0";
   document.getElementById('introduction').style.opacity = "0";
   setTimeout(() => {
     document.getElementById('introduction').style.display = "none";
@@ -82,12 +87,16 @@ function startExperience() {
 
   setTimeout(() => {
     nextStep('photo-1');
+    document.getElementById('nav').style.opacity = "1";
+    document.getElementById('nav').style.pointerEvents = "initial";
   }, 10000);
 }
 
 // Next step
 function nextStep(step) {
   document.getElementById('nav-list').style.display = "none";
+  Array.from(document.getElementsByClassName('story-text')).forEach(e => { e.style.opacity = "0"; });
+  Array.from(document.getElementsByClassName('story-choices')).forEach(e => { e.style.opacity = "0"; });
   Array.from(document.getElementsByTagName('main')[0].children).forEach(e => { e.style.display = "none"; });
   document.getElementById(step).style.display = "block";
   document.getElementById(step).style.opacity = 1;
@@ -96,7 +105,6 @@ function nextStep(step) {
     document.querySelector(`#${step} .previous-choice`).style.opacity = 1;
     textReveal(step);
   }, 2500);
-
 }
 
 // Back to introduction
