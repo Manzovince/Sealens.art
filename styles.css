@@ -209,8 +209,8 @@ button {
     font-size: 1.2rem;
     margin-top: 64px;
     z-index: 3;
-    padding: 8px 16px;
-    border-radius: 48px;
+    padding: 12px 32px;
+    /* border-radius: 48px; */
     border: solid 1px var(--text-color);
     overflow: hidden;
     transition: all 1s ease-out;
