@@ -2,13 +2,14 @@
 
 :root {
     --color-light: hsl(40, 60%, 95%);
-    --color-dark: #001a1a;
+    --color-dark: hsl(180, 100%, 5%);
     --color-primary: hsl(175, 39%, 25%);
     --color-secondary: rgb(24, 196, 173);
     --color-link: rgba(255, 255, 255);
 
     --bg-color: var(--color-dark);
     --text-color: var(--color-light);
+    --border-color: hsla(40, 60%, 95%, 0.5);
 
     --mosaic-gap: .8em;
 }
@@ -492,24 +493,29 @@ section {
     left: 50%;
     transform: translateX(-50%);
     width: 100vw;
-    height: 30vh;
+    height: auto;
     bottom: 0;
-    padding: 0 6rem 24px 6rem;
+    padding: 0 2rem 24px 2rem;
     background: linear-gradient(0deg, rgba(0, 26, 26, .9) 10%, rgba(0, 26, 26, 0) 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    /* gap: 24px; */
     z-index: 4;
 }
 
 .story-text {
+    width: 100%;
+    border: solid 1px var(--border-color);
+    padding: 24px;
     opacity: 0;
     font-size: 1.3rem;
     font-weight: 100;
     white-space: unset;
-    text-align: center;
+    backdrop-filter: blur(4px);
+    transition: all 1s ease;
+    /* text-align: center; */
     /* text-wrap: balance; */
 }
 
@@ -527,26 +533,36 @@ section {
 }
 
 .story-choices {
+    border: solid 1px var(--border-color);
+    border-top: 0;
+    width: 100%;
+
     display: flex;
     justify-content: center;
-    gap: 4px;
+    /* gap: 4px; */
     opacity: 0;
     transition: all 1s ease-out;
 }
 
 .choice {
-    padding: 12px 24px;
+    /* padding: 12px 24px; */
     /* border: solid 1px var(--text-color); */
-    background-color: hsla(40, 60%, 95%, .05);
-    border-radius: 24px;
+    /* background-color: hsla(40, 60%, 95%, .05); */
+    width: 100%;
+    text-align: center;
+    padding: 16px 0;
+    /* border-radius: 24px; */
     font-weight: 200;
     transition: all 1s ease;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(4px);
 }
 
 .choice:hover {
     color: var(--bg-color);
     background-color: var(--text-color);
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
 }
 
 .choice-1 {
@@ -555,6 +571,7 @@ section {
 }
 
 .choice-2 {
+    border-left: solid 1px var(--border-color);
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     animation-delay: 8.5s;
@@ -563,6 +580,8 @@ section {
 .previous-choice {
     opacity: 0;
     transition: all 1s ease-out;
+    align-self: flex-start;
+    margin-bottom: 16px;
 }
 
 .story-exif {
