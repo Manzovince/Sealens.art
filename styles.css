@@ -177,6 +177,8 @@ header {
     display: none;
 }
 
+@media (max-width: 767px) { #playPauseBtn { display: none; } }
+
 #playPauseBtn {
     color: var(--text-color);
     padding: 16px;
@@ -184,8 +186,6 @@ header {
     bottom: 0;
     left: 0;
 }
-
-@media (max-width: 767px) { #playPauseBtn { display: none; } }
 
 /* Sections */
 
