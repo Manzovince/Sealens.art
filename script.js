@@ -1,179 +1,170 @@
-// Mouse turbulence effect
-// let mouseFollow = document.getElementsByClassName('mouse-follow')[0];
-// let hideTimeout;
+// Languages
 
-// document.addEventListener('mousemove', (event) => {
-//   let mouseX = event.clientX;
-//   let mouseY = event.clientY;
+let language = navigator.language.slice(0, 2) || 'fr';
+// language = 'fr';
+fetch(`./languages/${language}.json`)
+    .then(response => response.json())
+    .then(translations => {
+        // Store translations in a global variable or state management system
+        window.translations = translations;
+        updatePageContent();
+    });
 
-//   mouseFollow.style.top = mouseY - mouseFollow.offsetHeight / 2 + "px";
-//   mouseFollow.style.left = mouseX - mouseFollow.offsetWidth / 2 + "px";
-
-//   mouseFollow.style.opacity = 1;
-
-//   clearTimeout(hideTimeout);
-//   hideTimeout = setTimeout(() => {
-//     mouseFollow.style.opacity = 0;
-//   }, 250);
-// });
-
-// Show page
-
-function showPage(page) {
-  document.getElementById('introduction').style.display = "none";
-  document.getElementById('project').style.display = "none";
-  document.getElementById('about-us').style.display = "none";
-  document.getElementById('experience').style.display = "none";
-  document.getElementById('story').style.display = "none";
-  document.getElementById('gallery').style.display = "none";
-  if (page == 'introduction') {
-    backToIntro();
-  } else if (page == 'gallery') {
-    document.getElementsByTagName('body')[0].style.overflow = "auto";
-    document.getElementById(page).style.display = "flex";
-  } else {
-    document.getElementsByTagName('body')[0].style.overflow = "hidden";
-    document.getElementById(page).style.display = "flex";
-  }
+function updatePageContent() {
+    document.querySelectorAll('[data-lg]').forEach(element => {
+        const key = element.getAttribute('data-lg');
+        element.textContent = window.translations[key] || key;
+    });
 }
 
-// Text reveal
-function textReveal(step, interval = 25) {
-  let element = document.querySelector(`#${step} .story-text`);
-  element.style.opacity = 0;
-  let text = element.textContent;
-  element.textContent = "";
-  setTimeout(() => {
-    element.style.opacity = 1;
-  }, 500);
+// Toggle pages
 
-  let i = 0;
+document.querySelectorAll('.nav-item, #logo').forEach(item => {
+    item.addEventListener('click', function () {
+        const targetId = this.getAttribute('data-section');
 
-  const revealInterval = setInterval(() => {
-    if (i < text.length) {
-      let span = document.createElement('span');
-      span.classList.add('letter');
-      span.innerText = text.charAt(i++);
-      element.appendChild(span);
+        document.querySelectorAll('section, header').forEach(el => {
+            el.style.display = el.id === targetId ? 'block' : 'none';
+        });
+
+        if (targetId === 'header') {
+            document.querySelector('header').style.display = 'flex';
+        }
+
+        if (targetId === 'story') {
+            startStory();
+        }
+    });
+});
+
+// Initially show header, hide sections
+// document.querySelector('header').style.display = 'flex';
+// document.querySelectorAll('section').forEach(section => section.style.display = 'none');
+
+// Music player
+
+let player;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        height: '0',
+        width: '0',
+        videoId: 'cQEcydiTQdo',
+        playerVars: {
+            'controls': 0,
+            'disablekb': 1,
+            'autoplay': 0
+        },
+        events: {
+            'onReady': onPlayerReady
+        }
+    });
+}
+
+function onPlayerReady(event) {
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    playPauseBtn.addEventListener('click', togglePlayPause);
+}
+
+const playIcon = document.getElementById('playing-icon');
+const pauseIcon = document.getElementById('muted-icon');
+
+function togglePlayPause() {
+    if (player.getPlayerState() == YT.PlayerState.PLAYING) {
+        player.pauseVideo();
+        playIcon.style.display = "none";
+        pauseIcon.style.display = "block";
+    } else {
+        player.playVideo();
+        playIcon.style.display = "block";
+        pauseIcon.style.display = "none";
     }
-    else { clearInterval(revealInterval); }
-  }, interval);
-
-  setTimeout(() => {
-    document.querySelector(`#${step} .story-choices`).style.opacity = "1";
-  }, (interval * text.length) + 1000);
-
-  setTimeout(() => {
-    element.textContent = text;
-  }, (interval * text.length) + 2000);
 }
 
-// Initiate experience
-function startExperience() {
-  showPage('story');
-  document.getElementById('nav').style.background = "transparent";
-  document.getElementById('nav').style.pointerEvents = "none";
-  document.getElementById('nav').style.opacity = "0";
-  document.getElementById('introduction').style.opacity = "0";
-  setTimeout(() => {
-    document.getElementById('introduction').style.display = "none";
-  }, 1000);
+// Story
 
-  document.getElementById('start').style.display = "flex";
-  setTimeout(() => {
-    document.querySelector(`#start .story-text`).style.opacity = 1;
-    textReveal('start');
-  }, 500);
+let storyData = [];
+let fullStory = new Array();
+let i = 0;
 
-  setTimeout(() => {
-    nextStep('photo-1');
-    document.getElementById('nav').style.opacity = "1";
-    document.getElementById('nav').style.pointerEvents = "initial";
-  }, 10000);
+fetch('./story.json')
+    .then(response => response.json())
+    .then(data => {
+        storyData = data;
+        startStory();
+    });
+
+function startStory() {
+    i = 0;
+    fullStory = new Array();
+    const introStories = storyData.filter(story => story.tags.includes("intro"));
+    updateStory(introStories[Math.floor(Math.random() * introStories.length)]);
 }
 
-// Next step
-function nextStep(step) {
-  document.getElementById('nav-list').style.display = "none";
-  Array.from(document.getElementsByClassName('story-text')).forEach(e => { e.style.opacity = "0"; });
-  Array.from(document.getElementsByClassName('story-choices')).forEach(e => { e.style.opacity = "0"; });
-  Array.from(document.getElementsByTagName('main')[0].children).forEach(e => { e.style.display = "none"; });
-  document.getElementById(step).style.display = "block";
-  document.getElementById(step).style.opacity = 1;
+const storyImage = document.getElementById('story-image');
+const storyText = document.getElementById('story-text');
 
-  setTimeout(() => {
-    document.querySelector(`#${step} .previous-choice`).style.opacity = 1;
-    textReveal(step);
-  }, 2500);
+function updateStory(story) {
+    i++;
+    fullStory.push(story.name);
+    console.log(story, fullStory);
+
+    if (i > 5) {
+        console.log("End story!");
+        endStory();
+        return;
+    }
+    storyImage.src = `./photos/${story.name}.png`;
+    storyText.innerHTML = story.text;
+    selectNextChoices();
 }
 
-// Back to introduction
-function backToIntro() {
-  document.getElementById('nav-list').style.display = "flex";
-  document.getElementById('nav').style.background = "linear-gradient(180deg, rgba(0,26,27,1) 0%, rgba(0,26,27,0) 100%)";
-  document.getElementById('start').style.display = "none";
-  Array.from(document.getElementsByTagName('main')[0].children).forEach(e => { e.style.display = "none"; });
-  document.getElementById('introduction').style.display = "flex";
-  document.getElementById('introduction').style.opacity = 1;
+const storyChoice1 = document.getElementById('story-choice-1');
+const storyChoice2 = document.getElementById('story-choice-2');
+
+function selectNextChoices() {
+    const availableStories = storyData.filter(story =>
+        !story.tags.includes("intro") &&
+        !story.tags.includes("end") &&
+        !fullStory.includes(story.name) &&
+        story.choice // Ensure the story has a choice text
+    );
+
+    // Shuffle and select 2 stories
+    const selectedChoices = availableStories
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 2);
+
+    // Update choices content
+    storyChoice1.innerHTML = selectedChoices[0].choice;
+    storyChoice2.innerHTML = selectedChoices[1].choice;
+    storyChoice1.onclick = () => updateStory(selectedChoices[0]);
+    storyChoice2.onclick = () => updateStory(selectedChoices[1]);
 }
 
-// Show details cards
-let detailsOpened = 0;
+function endStory() {
+    const endStories = storyData.filter(story => story.tags.includes("end"));
+    console.log(endStories[Math.floor(Math.random() * endStories.length)]);
 
-function toggleDetails() {
-  if (!detailsOpened) {
-    document.getElementById('project-details').style.display = "flex";
-    detailsOpened = 1;
-  } else {
-    document.getElementById('project-details').style.display = "none";
-    detailsOpened = 0;
-  }
+    // Shuffle and select 2 stories
+    const selectedChoices = endStories
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 2);
+
+    // Update choices content
+    storyChoice1.innerHTML = selectedChoices[0].choice;
+    storyChoice2.innerHTML = selectedChoices[1].choice;
+    storyChoice1.onclick = () => updateStory(selectedChoices[0]);
+    storyChoice2.onclick = () => updateStory(selectedChoices[1]);
 }
 
-// Gallery
+// on click of a choice (id)
+//     updateStory (id)
+//     select next choices
 
-const images = [
-  'sealens-1',
-  'sealens-2',
-  'sealens-3',
-  'sealens-4',
-  'sealens-5',
-  'sealens-6',
-  'sealens-7',
-  'sealens-8',
-  'sealens-9',
-  'sealens-10',
-  'sealens-11',
-  'sealens-12',
-  'sealens-13',
-  'sealens-14',
-  'sealens-15',
-  'sealens-16',
-  'sealens-17',
-  'sealens-18',
-  'sealens-19',
-  'sealens-20',
-  'sealens-21',
-  'sealens-22'
-];
 
-function displayGalleryLayout(imageArray) {
-  const galleryLayout = document.getElementById('galleryLayout');
-  const shuffledImages = imageArray.sort(() => 0.5 - Math.random());
+// Get next story
 
-  shuffledImages.forEach((src, index) => {
-    const box = document.createElement('div');
-    box.classList.add("box");
-    box.style.height = (Math.random() * 300) + 400 + "px";
-
-    const img = document.createElement('img');
-    img.src = "./assets/photos/" + src + ".webp";
-    img.loading = "lazy";
-
-    galleryLayout.appendChild(box);
-    box.appendChild(img);
-
-  });
+function getNextStory() {
+    // take 2 random objects from story.json
 }
-
-displayGalleryLayout(images);

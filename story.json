@@ -1,0 +1,138 @@
+[
+    {
+        "name": "intro_agathe_1",
+        "tags": [
+            "intro"
+        ],
+        "text": "Vous prenez votre dernière inspiration, emplissant vos poumons d'air comme un ultime lien avec le monde d'en haut. Puis, dans un geste presque rituel, vous plongez votre tête sous l'eau. Le silence vous enveloppe soudain.",
+        "description": "",
+        "choice": "",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "intro_agathe_2",
+        "tags": [
+            "intro"
+        ],
+        "text": "Le fond n'est pas visible depuis votre hauteur. Il laisse place à un bleu profond, opaque et uniforme. Il vous laisse un sentiment mélangé de crainte et de curiosité. Que peux-t-il bien se trouver en dessous, à l'abri des regards ?",
+        "description": "",
+        "choice": "",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "landscape_1",
+        "tags": [
+            "landscape"
+        ],
+        "text": "La couleur des algues et plantes marines est directement liée à la manière dont elles captent la lumière.",
+        "description": "",
+        "choice": "Rester observer l'écosystème riche d'un rocher proche de vous",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "landscape_2",
+        "tags": [
+            "landscape"
+        ],
+        "text": "Dans ce paysage minéral baigné d'une lumière ambrée, un petit coquillage trône, sentinelle solitaire d'un monde sous-marin mystérieux.",
+        "description": "",
+        "choice": "S'approcher d'une pointe qui se détache d'un rocher",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "landscape_3",
+        "tags": [
+            "landscape"
+        ],
+        "text": "Sous l'eau, quand il y a du relief, il y a de la vie. Chaque recoin d'un rocher se transforme en jardin ou en maison, arbitant une joyeuse colocation d'espèces d'une nuit, une vie ou même plusieurs générations.",
+        "description": "",
+        "choice": "Se balader prêt d'un massif de roche",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "landscape_4",
+        "tags": [
+            "landscape"
+        ],
+        "text": "La lumière fait ressortir l'architecture naturelle des fonds marins. Sans elle, ",
+        "description": "",
+        "choice": "Se diriger vers une pointe recouverte d'algue",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "end_1",
+        "tags": [
+            "end"
+        ],
+        "text": "TEXT END 1",
+        "description": "",
+        "choice": "CHOICE END 1",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "end_2",
+        "tags": [
+            "end"
+        ],
+        "text": "TEXT END 2",
+        "description": "",
+        "choice": "CHOICE END 2",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    }
+]

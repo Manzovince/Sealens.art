@@ -10,670 +10,108 @@
         content="galerie, photo, photography, photographie, sous-marin, apnée, freediving, underwater, océan, mer, histoire, exploration, immersion">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link href="http://fonts.cdnfonts.com/css/la-belle-aurore" rel="stylesheet">
-    <!-- Styles -->
-    <link rel="stylesheet" href="./styles.css">
     <title>Sealens | L'exposition qui retient son souffle</title>
 </head>
 
 <body>
-
-    <!-- Navigation -->
-    <nav id="nav">
-        <button id="logo" onclick="showPage('introduction')">
-            <svg width="19" height="32" viewBox="0 0 19 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <nav>
+        <button id="logo" data-section="header">
+            <svg style="display: none" width="32" height="24" viewBox="0 0 32 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path
-                    d="M18.8663 21.9331C18.8663 24.5745 18.0243 27.0239 16.4936 28.8614C14.7717 30.89 12.2843 32 9.52875 32C6.9266 32 4.55386 31.1195 2.83199 29.5119C0.994976 27.7897 0 25.3781 0 22.5837C0 18.1817 3.17611 15.5789 6.23794 15.5789C7.88334 15.5789 9.29933 16.306 10.3708 17.5311C11.2511 18.5645 11.825 19.9426 11.978 21.5884C12.0544 22.3542 11.4422 22.9665 10.6767 22.9665H10.2174C9.45228 22.9665 8.84008 22.3542 8.72495 21.5884C8.61067 20.7462 8.34216 20.0191 7.92158 19.5598C7.34762 18.9092 6.69676 18.7562 6.23794 18.7562C4.74547 18.7562 3.21477 20.2108 3.21477 22.5837C3.21477 26.8709 6.39088 28.8231 9.52918 28.8231C12.4759 28.8231 15.6902 26.6415 15.6902 21.9331C15.6902 18.9857 13.3175 16.9187 10.83 14.6984C8.18922 12.3255 5.47237 9.8757 5.47237 6.20078C5.47237 2.79401 7.92158 0 10.9065 0C13.4322 0 15.3835 1.56932 16.4171 4.24902C16.6852 4.93785 16.2255 5.66536 15.499 5.85658L15.0394 5.97175C14.3125 6.16297 13.5856 5.66536 13.2792 4.97653C12.8582 4.0578 12.1313 3.21556 10.9069 3.21556C9.83549 3.21556 8.64891 4.40243 8.64891 6.20121C8.64891 8.45936 10.6771 10.2203 12.9734 12.2873C15.7284 14.7753 18.8663 17.5693 18.8663 21.9331Z"
+                    d="M13.499 15.6932C13.499 17.5832 12.8965 19.3357 11.8013 20.6505C10.5693 22.102 8.78947 22.8962 6.81788 22.8962C4.95603 22.8962 3.25832 22.2662 2.02631 21.116C0.711912 19.8836 0 18.1582 0 16.1587C0 13.0091 2.27253 11.1468 4.46328 11.1468C5.64058 11.1468 6.65374 11.667 7.42036 12.5436C8.0502 13.283 8.46088 14.2691 8.57031 15.4466C8.62502 15.9945 8.18699 16.4327 7.63922 16.4327H7.31063C6.76317 16.4327 6.32514 15.9945 6.24276 15.4466C6.16099 14.844 5.96887 14.3238 5.66794 13.9951C5.25727 13.5296 4.79158 13.4201 4.46328 13.4201C3.39542 13.4201 2.30019 14.4609 2.30019 16.1587C2.30019 19.2263 4.57271 20.6231 6.81819 20.6231C8.92657 20.6231 11.2265 19.0621 11.2265 15.6932C11.2265 13.5843 9.52874 12.1054 7.74896 10.5168C5.85944 8.81895 3.91552 7.0661 3.91552 4.43667C3.91552 1.9991 5.66794 -3.05176e-05 7.80368 -3.05176e-05C9.61082 -3.05176e-05 11.007 1.12283 11.7466 3.04017C11.9384 3.53303 11.6095 4.05357 11.0897 4.19039L10.7608 4.27279C10.2407 4.40961 9.72055 4.05357 9.50139 3.56071C9.20015 2.90335 8.68004 2.30072 7.80399 2.30072C7.03736 2.30072 6.18835 3.14993 6.18835 4.43698C6.18835 6.0527 7.63953 7.31269 9.28253 8.79159C11.2538 10.5718 13.499 12.5709 13.499 15.6932Z"
+                    fill="currentColor" />
+                <path
+                    d="M31.5471 23.2415C30.8352 23.7959 30.0412 24 29.1375 24C27.5495 24 25.715 23.3 24.0173 22.658C21.4162 21.6658 19.4993 20.9654 18.2673 21.5493C17.7742 21.7826 17.172 21.8995 16.734 21.52L16.4875 21.3159C16.0495 20.9657 15.885 20.4113 16.1315 20.1488C16.4054 19.857 16.6519 19.2442 16.6519 18.6898V1.26956C16.6519 0.685999 17.09 0.219269 17.6101 0.219269H17.9387C18.4864 0.219269 18.9245 0.686306 18.9245 1.26956V17.8726C18.9245 18.4562 19.3625 18.894 19.9099 18.9521C21.4979 19.1274 23.1956 19.7398 24.7836 20.3529C26.947 21.1991 28.5897 21.7242 29.6028 21.52C30.1503 21.4032 30.7801 21.2867 31.2182 21.6661L31.4647 21.8702C31.903 22.2201 31.9851 22.8913 31.5471 23.2415Z"
                     fill="currentColor" />
             </svg>
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                <circle cx="12" cy="5" r="3"></circle>
+                <line x1="12" y1="22" x2="12" y2="8"></line>
+                <path d="M5 12H2a10 10 0 0 0 20 0h-3"></path>
+            </svg>
         </button>
-        <ul id="nav-list">
-            <li>
-                <button onclick="showPage('project')">Projet</button>
-            </li>
-            <li>
-                <button onclick="showPage('about-us')">Genèse</button>
-            </li>
-            <li>
-                <button onclick="showPage('experience')">Expérience</button>
-            </li>
-            <li>
-                <button onclick="showPage('gallery')">Galerie</button>
-            </li>
+        <ul class="nav-list">
+            <!-- <li><button class="nav-item" data-lg="nav-experience" data-section="story"></button></li>
+            <li><button class="nav-item" data-lg="nav-about" data-section="about"></button></li>
+            <li><button class="nav-item" data-lg="nav-shop" data-section="shop"></button></li> -->
+            <li><a href="https://www.instagram.com/sealens.art/" target="_blank" class="nav-item">
+                    <div data-lg="nav-gallery"></div>
+                    <svg style="display:none;" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                        stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a></li>
         </ul>
     </nav>
 
-    <!-- Header -->
-    <header id="introduction">
-        <img src="./assets/photos/introduction.webp" alt="">
-        <img src="./assets/photos/blurred_introduction.webp" alt="">
-        <div id="introduction-title">
-            <svg width="474" height="204" viewBox="0 0 474 204" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M104.069 124.228C104.069 138.798 99.4246 152.31 90.981 162.445C81.4829 173.636 67.7618 179.758 52.562 179.758C38.2081 179.758 25.1198 174.902 15.6217 166.034C5.48844 156.534 0 143.231 0 127.817C0 103.534 17.5199 89.1771 34.4094 89.1771C43.4857 89.1771 51.2965 93.1878 57.2068 99.9457C62.0625 105.646 65.2285 113.248 66.0722 122.327C66.494 126.551 63.117 129.929 58.8941 129.929H56.3608C52.1402 129.929 48.7632 126.551 48.1281 122.327C47.4977 117.681 46.0166 113.67 43.6966 111.136C40.5305 107.547 36.9403 106.704 34.4094 106.704C26.1767 106.704 17.7332 114.727 17.7332 127.817C17.7332 151.466 35.253 162.234 52.5643 162.234C68.8187 162.234 86.5495 150.2 86.5495 124.228C86.5495 107.969 73.4612 96.5679 59.7401 84.3202C45.173 71.231 30.1864 57.7176 30.1864 37.4461C30.1864 18.6538 43.6966 3.2417 60.1619 3.2417C74.0939 3.2417 84.8575 11.8983 90.5592 26.6799C92.038 30.4796 89.5023 34.4927 85.495 35.5475L82.9593 36.1827C78.9496 37.2375 74.9399 34.4927 73.2503 30.693C70.9279 25.6251 66.9182 20.9792 60.1643 20.9792C54.254 20.9792 47.7086 27.5261 47.7086 37.4485C47.7086 49.9048 58.8964 59.6186 71.563 71.0201C86.7604 84.7445 104.069 100.157 104.069 124.228Z"
-                    fill="currentColor" />
-                <path
-                    d="M133.686 59.5521V80.4706C133.686 83.7133 136.281 86.3088 139.359 86.3088H147.303C150.545 86.3088 153.14 88.9044 153.14 92.147V94.0931C153.14 97.3358 150.545 99.9313 147.303 99.9313H139.359C136.279 99.9313 133.686 102.527 133.686 105.77V123.284C133.686 126.527 136.281 129.122 139.359 129.122H157.031C160.112 129.122 162.704 131.718 162.704 134.961V136.907C162.704 140.149 160.109 142.745 157.031 142.745H125.906C122.664 142.745 120.069 140.149 120.069 136.907V45.9296C120.069 42.8481 122.664 40.2549 125.906 40.2549H157.033C160.275 40.2549 162.87 42.8481 162.87 45.9296V47.8756C162.87 51.1183 160.278 53.7138 157.033 53.7138H139.362C136.281 53.7138 133.686 56.3094 133.686 59.5521Z"
-                    fill="currentColor" />
-                <path
-                    d="M233.991 91.7429V138.119C233.991 141.362 231.397 143.957 228.318 143.957H226.373C223.131 143.957 220.536 141.362 220.536 138.119V127.742C220.536 124.499 217.941 121.904 214.699 121.904H198.163C194.921 121.904 192.326 124.499 192.326 127.742V138.119C192.326 141.362 189.733 143.957 186.653 143.957H184.707C181.465 143.957 178.87 141.362 178.87 138.119V91.7429C178.87 78.7699 178.87 39.0425 206.431 39.0425C233.991 39.0425 233.991 78.7699 233.991 91.7429ZM220.536 91.7429C220.536 65.7969 215.834 52.6626 206.433 52.6626C197.191 52.6626 192.328 65.7969 192.328 91.7429V102.606C192.328 105.849 194.923 108.445 198.165 108.445H214.701C217.943 108.445 220.538 105.851 220.538 102.606V91.7429H220.536Z"
-                    fill="currentColor" />
-                <path
-                    d="M369.723 197.489C364.234 201.762 358.113 203.336 351.146 203.336C338.904 203.336 324.761 197.939 311.672 192.99C291.619 185.34 276.841 179.941 267.343 184.442C263.542 186.241 258.899 187.142 255.523 184.217L253.622 182.643C250.245 179.943 248.977 175.669 250.878 173.645C252.989 171.396 254.89 166.671 254.89 162.398V28.0972C254.89 23.5982 258.267 20 262.276 20H264.81C269.033 20 272.41 23.6006 272.41 28.0972V156.097C272.41 160.596 275.787 163.972 280.007 164.42C292.25 165.771 305.338 170.492 317.58 175.219C334.259 181.742 346.923 185.791 354.734 184.217C358.954 183.316 363.81 182.418 367.187 185.343L369.088 186.917C372.467 189.614 373.1 194.789 369.723 197.489Z"
-                    fill="currentColor" />
-                <path
-                    d="M306.611 59.5521V80.4706C306.611 83.7133 309.206 86.3088 312.284 86.3088H320.228C323.47 86.3088 326.065 88.9044 326.065 92.147V94.0931C326.065 97.3358 323.47 99.9313 320.228 99.9313H312.284C309.203 99.9313 306.611 102.527 306.611 105.77V123.284C306.611 126.527 309.206 129.122 312.284 129.122H329.956C333.036 129.122 335.629 131.718 335.629 134.961V136.907C335.629 140.149 333.034 142.745 329.956 142.745H298.828C295.587 142.745 292.992 140.149 292.992 136.907V45.9296C292.992 42.8481 295.587 40.2549 298.828 40.2549H329.956C333.198 40.2549 335.793 42.8481 335.793 45.9296V47.8756C335.793 51.1183 333.2 53.7138 329.956 53.7138H312.284C309.206 53.7138 306.611 56.3094 306.611 59.5521Z"
-                    fill="currentColor" />
-                <path
-                    d="M403.997 45.932V136.902C403.997 140.145 401.404 142.74 398.16 142.74H396.214C393.134 142.74 390.541 140.145 390.541 136.902V97.3358C390.541 94.0932 388.759 89.5515 386.489 87.2831L369.303 68.6354C367.033 66.2034 365.248 66.8529 365.248 70.0955V136.904C365.248 140.147 362.656 142.743 359.575 142.743H357.629C354.387 142.743 351.792 140.147 351.792 136.904V45.932C351.792 42.8505 353.902 40.2573 356.655 40.2573C359.25 40.2573 363.303 42.0398 365.409 44.4742L386.486 67.3388C388.756 69.6096 390.539 68.9601 390.539 65.7175V45.9344C390.539 42.8529 393.134 40.2597 396.212 40.2597H398.157C401.404 40.2573 403.997 42.8529 403.997 45.932Z"
-                    fill="currentColor" />
-                <path
-                    d="M473.69 118.093C473.69 133.984 463.476 144.2 447.914 144.2C432.837 144.2 424.244 130.58 420.516 122.796C419.057 119.878 420.841 116.635 423.758 115.5L425.704 115.014C428.782 114.042 432.026 115.663 433.484 118.42C436.24 123.609 441.105 130.744 447.914 130.744C456.021 130.744 460.073 126.366 460.073 118.095C460.073 108.204 452.129 101.069 443.7 93.6094C434.783 85.5027 424.571 76.4195 424.571 62.9605C424.571 49.1768 434.621 38.7993 447.755 38.7993C457.644 38.7993 466.073 44.7987 470.775 54.8538C472.071 57.7718 470.126 61.0168 467.047 61.8251L465.263 62.3134C462.184 63.2852 458.94 61.3392 457.319 58.5848C455.535 55.5033 452.456 52.2607 447.755 52.2607C441.108 52.2607 438.188 57.7741 438.188 62.9629C438.188 70.4224 444.996 76.4218 452.779 83.3955C462.504 92.3104 473.69 102.202 473.69 118.093Z"
-                    fill="currentColor" />
-            </svg>
+    <header>
+        <video autoplay loop muted plays-inline id="bg-video" poster="">
+            <source src="./assets/homepage_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="logo-main" class="text-reveal-1">
+            <img src="./assets/sealens_animation.gif" alt="">
         </div>
-        <p>L'exposition qui retient son souffle</p>
-        <button id="dive-in" onclick="startExperience()">Plonger</button>
+        <h2 id="sub-heading" class="text-reveal-2" data-lg="header-subhead"></h2>
+        <p class="coming-soon text-reveal-3" data-lg="header-date"></p>
     </header>
 
-    <!-- Project details -->
-    <div id="project" class="project-card">
-        <div class="sidepanel">
-            <h3>Le projet</h3>
-            <p>Bienvenue dans Sealens, une exploration immersive sous-marine. <br> Cette collection de
-                photographies est née d'une passion pour les fonds marins, révélant la richesse des paysages
-                subaquatiques. Plongez dans une palette infinie de couleurs, de formes
-                et d'interactions fascinantes que seule la mer peut offrir. Que vous soyez un plongeur
-                chevronné ou un amoureux de la nature, cette galerie vous invite à partager cette passion pour l'océan.
-            </p>
-        </div>
-        <div class="card-content">
-            <img src="./assets/showcase.png" alt="">
-        </div>
-    </div>
+    <section id="about">
+        A propos du projet
+    </section>
 
-    <div id="about-us" class="project-card">
-        <div class="sidepanel">
-            <h3>La genèse</h3>
-            <p>Leur histoire est celle d'une fusion de passions, où la créativité d'Agathe a rencontré la fascination de
-                Vincent pour l'océan. Ensemble, ils ont créé cette galerie aquatique, où chaque image est le fruit de
-                leur amour partagé pour l'exploration, la découverte et la préservation de notre planète bleue.</p>
-        </div>
-        <div class="card-content">
-            <div class="profil">
-                <img src="./assets/agathe.png" alt="">
-                <h4>Agathe</h4>
-                <p class="profil-desc">
-                    Agathe trouve l'inspiration dans les petits détails du quotidien. Sa passion pour la photographie et la vidéo lui permet de capturer les moments de vies marines qui nous entourent.
-                </p>
-            </div>
-            <div class="profil">
-                <img src="./assets/vincent.png" alt="">
-                <h4>Vincent</h4>
-                <p class="profil-desc">
-                    Vincent est un explorateur du monde marin. Grâce à sa pratique de l'apnée, il partage son amour pour l'océan, invitant les autres à se joindre à lui dans son voyage dans le monde aquatique.
-                </p>
+    <section id="shop">
+        Boutique
+    </section>
+
+    <section id="story">
+        <img id="story-image" src="./photos/intro_agathe_1.png" alt="">
+        <div id="story-content">
+            <div id="story-text" data-lg="story-text"></div>
+            <div id="story-choices">
+                <button id="story-choice-1" class="choice-item">Choice A</button>
+                <button id="story-choice-2" class="choice-item">Choice B</button>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="experience" class="project-card">
-        <div class="sidepanel">
-            <h3>L'expérience</h3>
-            <p>Sealens est une exposition photographique aquatique qui vous invite à vivre une expérience immersive et
-                interactive. <br> <br> Plongez dans les profondeurs mystérieuses de l'océan, où chaque image raconte une
-                histoire en constante évolution. Chaque clic est une nouvelle exploration, une nouvelle découverte, une
-                nouvelle manière de ressentir la magie des fonds marins. Venez, explorez et laissez-vous emporter par
-                cette expérience photographique aquatique.</p>
+    <div id="player"></div>
+
+    <button id="playPauseBtn">
+        <div id="playing-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
         </div>
-        <div class="card-content">
-            <div class="experience-card">
-                <div id="introduction-title">
-                    <svg width="474" height="204" viewBox="0 0 474 204" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M104.069 124.228C104.069 138.798 99.4246 152.31 90.981 162.445C81.4829 173.636 67.7618 179.758 52.562 179.758C38.2081 179.758 25.1198 174.902 15.6217 166.034C5.48844 156.534 0 143.231 0 127.817C0 103.534 17.5199 89.1771 34.4094 89.1771C43.4857 89.1771 51.2965 93.1878 57.2068 99.9457C62.0625 105.646 65.2285 113.248 66.0722 122.327C66.494 126.551 63.117 129.929 58.8941 129.929H56.3608C52.1402 129.929 48.7632 126.551 48.1281 122.327C47.4977 117.681 46.0166 113.67 43.6966 111.136C40.5305 107.547 36.9403 106.704 34.4094 106.704C26.1767 106.704 17.7332 114.727 17.7332 127.817C17.7332 151.466 35.253 162.234 52.5643 162.234C68.8187 162.234 86.5495 150.2 86.5495 124.228C86.5495 107.969 73.4612 96.5679 59.7401 84.3202C45.173 71.231 30.1864 57.7176 30.1864 37.4461C30.1864 18.6538 43.6966 3.2417 60.1619 3.2417C74.0939 3.2417 84.8575 11.8983 90.5592 26.6799C92.038 30.4796 89.5023 34.4927 85.495 35.5475L82.9593 36.1827C78.9496 37.2375 74.9399 34.4927 73.2503 30.693C70.9279 25.6251 66.9182 20.9792 60.1643 20.9792C54.254 20.9792 47.7086 27.5261 47.7086 37.4485C47.7086 49.9048 58.8964 59.6186 71.563 71.0201C86.7604 84.7445 104.069 100.157 104.069 124.228Z"
-                            fill="currentColor" />
-                        <path
-                            d="M133.686 59.5521V80.4706C133.686 83.7133 136.281 86.3088 139.359 86.3088H147.303C150.545 86.3088 153.14 88.9044 153.14 92.147V94.0931C153.14 97.3358 150.545 99.9313 147.303 99.9313H139.359C136.279 99.9313 133.686 102.527 133.686 105.77V123.284C133.686 126.527 136.281 129.122 139.359 129.122H157.031C160.112 129.122 162.704 131.718 162.704 134.961V136.907C162.704 140.149 160.109 142.745 157.031 142.745H125.906C122.664 142.745 120.069 140.149 120.069 136.907V45.9296C120.069 42.8481 122.664 40.2549 125.906 40.2549H157.033C160.275 40.2549 162.87 42.8481 162.87 45.9296V47.8756C162.87 51.1183 160.278 53.7138 157.033 53.7138H139.362C136.281 53.7138 133.686 56.3094 133.686 59.5521Z"
-                            fill="currentColor" />
-                        <path
-                            d="M233.991 91.7429V138.119C233.991 141.362 231.397 143.957 228.318 143.957H226.373C223.131 143.957 220.536 141.362 220.536 138.119V127.742C220.536 124.499 217.941 121.904 214.699 121.904H198.163C194.921 121.904 192.326 124.499 192.326 127.742V138.119C192.326 141.362 189.733 143.957 186.653 143.957H184.707C181.465 143.957 178.87 141.362 178.87 138.119V91.7429C178.87 78.7699 178.87 39.0425 206.431 39.0425C233.991 39.0425 233.991 78.7699 233.991 91.7429ZM220.536 91.7429C220.536 65.7969 215.834 52.6626 206.433 52.6626C197.191 52.6626 192.328 65.7969 192.328 91.7429V102.606C192.328 105.849 194.923 108.445 198.165 108.445H214.701C217.943 108.445 220.538 105.851 220.538 102.606V91.7429H220.536Z"
-                            fill="currentColor" />
-                        <path
-                            d="M369.723 197.489C364.234 201.762 358.113 203.336 351.146 203.336C338.904 203.336 324.761 197.939 311.672 192.99C291.619 185.34 276.841 179.941 267.343 184.442C263.542 186.241 258.899 187.142 255.523 184.217L253.622 182.643C250.245 179.943 248.977 175.669 250.878 173.645C252.989 171.396 254.89 166.671 254.89 162.398V28.0972C254.89 23.5982 258.267 20 262.276 20H264.81C269.033 20 272.41 23.6006 272.41 28.0972V156.097C272.41 160.596 275.787 163.972 280.007 164.42C292.25 165.771 305.338 170.492 317.58 175.219C334.259 181.742 346.923 185.791 354.734 184.217C358.954 183.316 363.81 182.418 367.187 185.343L369.088 186.917C372.467 189.614 373.1 194.789 369.723 197.489Z"
-                            fill="currentColor" />
-                        <path
-                            d="M306.611 59.5521V80.4706C306.611 83.7133 309.206 86.3088 312.284 86.3088H320.228C323.47 86.3088 326.065 88.9044 326.065 92.147V94.0931C326.065 97.3358 323.47 99.9313 320.228 99.9313H312.284C309.203 99.9313 306.611 102.527 306.611 105.77V123.284C306.611 126.527 309.206 129.122 312.284 129.122H329.956C333.036 129.122 335.629 131.718 335.629 134.961V136.907C335.629 140.149 333.034 142.745 329.956 142.745H298.828C295.587 142.745 292.992 140.149 292.992 136.907V45.9296C292.992 42.8481 295.587 40.2549 298.828 40.2549H329.956C333.198 40.2549 335.793 42.8481 335.793 45.9296V47.8756C335.793 51.1183 333.2 53.7138 329.956 53.7138H312.284C309.206 53.7138 306.611 56.3094 306.611 59.5521Z"
-                            fill="currentColor" />
-                        <path
-                            d="M403.997 45.932V136.902C403.997 140.145 401.404 142.74 398.16 142.74H396.214C393.134 142.74 390.541 140.145 390.541 136.902V97.3358C390.541 94.0932 388.759 89.5515 386.489 87.2831L369.303 68.6354C367.033 66.2034 365.248 66.8529 365.248 70.0955V136.904C365.248 140.147 362.656 142.743 359.575 142.743H357.629C354.387 142.743 351.792 140.147 351.792 136.904V45.932C351.792 42.8505 353.902 40.2573 356.655 40.2573C359.25 40.2573 363.303 42.0398 365.409 44.4742L386.486 67.3388C388.756 69.6096 390.539 68.9601 390.539 65.7175V45.9344C390.539 42.8529 393.134 40.2597 396.212 40.2597H398.157C401.404 40.2573 403.997 42.8529 403.997 45.932Z"
-                            fill="currentColor" />
-                        <path
-                            d="M473.69 118.093C473.69 133.984 463.476 144.2 447.914 144.2C432.837 144.2 424.244 130.58 420.516 122.796C419.057 119.878 420.841 116.635 423.758 115.5L425.704 115.014C428.782 114.042 432.026 115.663 433.484 118.42C436.24 123.609 441.105 130.744 447.914 130.744C456.021 130.744 460.073 126.366 460.073 118.095C460.073 108.204 452.129 101.069 443.7 93.6094C434.783 85.5027 424.571 76.4195 424.571 62.9605C424.571 49.1768 434.621 38.7993 447.755 38.7993C457.644 38.7993 466.073 44.7987 470.775 54.8538C472.071 57.7718 470.126 61.0168 467.047 61.8251L465.263 62.3134C462.184 63.2852 458.94 61.3392 457.319 58.5848C455.535 55.5033 452.456 52.2607 447.755 52.2607C441.108 52.2607 438.188 57.7741 438.188 62.9629C438.188 70.4224 444.996 76.4218 452.779 83.3955C462.504 92.3104 473.69 102.202 473.69 118.093Z"
-                            fill="currentColor" />
-                    </svg>
-                </div>
-                <p>L'exposition qui retient son souffle</p>
-                <button id="dive-in" onclick="startExperience()">Plonger</button>
-            </div>
+        <div id="muted-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <line x1="23" y1="9" x2="17" y2="15"></line>
+                <line x1="17" y1="9" x2="23" y2="15"></line>
+            </svg>
         </div>
-    </div>
-
-    <!-- Main content -->
-    <main id="story">
-
-        <!-- Start -->
-        <section id="start">
-            <img src="./assets/photos/introduction.webp" alt="">
-            <p class="story-text">La prochaine respiration sera la dernière avant la fin de ce voyage.</p>
-            <div id="start-wave"></div>
-        </section>
-
-        <!-- Photo 1 -->
-        <section id="photo-1" class="story-container">
-            <img src="./assets/photos/sealens-1.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice"></div>
-                <p class="story-text">Vous êtes prêt, plongeur intrépide, à vous lancer dans une expérience unique au cœur des profondeurs océaniques. Les eaux cristallines s'étendent devant vous, un monde mystérieux où chaque image raconte une histoire fascinante. Allez-vous plonger plus profondément pour explorer les recoins les plus secrets de cet océan, ou préférez-vous rester à la surface et apprécier la beauté des vagues qui dansent à la lumière du jour ?
-                </p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-2')">Plonger plus profond</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-3')">Rester à la surface</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 2 -->
-        <section id="photo-2" class="story-container">
-            <img src="./assets/photos/sealens-2.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi :</span>
-                    <span>Plonger plus profond</span>
-                </div>
-                <p class="story-text">À présent, vous vous trouvez à un carrefour. À votre gauche, une imposante formation rocheuse abrite tout un écosystème marin. À votre droite, un banc de sable semble vous guider vers une étrange statue immergée dans l'obscurité. Lequel de ces chemins mystérieux choisissez-vous d'explorer ?
-                </p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-4')">S'approcher de la roche</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-5')">Se diriger vers le banc de sable</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 3 -->
-        <section id="photo-3" class="story-container">
-            <img src="./assets/photos/sealens-3.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi :</span>
-                    <span>Rester à la surface</span>
-                </div>
-                <p class="story-text">Alors que vous flottez paisiblement, vous remarquez une étrange silhouette à quelques mètres de vous. Elle semble émerger des profondeurs, mais sa forme reste encore mystérieuse. Que décidez-vous de faire ? Voulez-vous vous aventurer dans l'obscurité de l'eau pour explorer les mystères sous-marins, ou préférez-vous vous diriger vers cette silhouette intrigante à la surface ?
-                </p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-6')">Descendre dans l'obscurité</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-7')">S'approcher de la silhouette</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 4 -->
-        <section id="photo-4" class="story-container">
-            <img src="./assets/photos/sealens-4.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi :</span>
-                    <span>S'approcher de la roche</span>
-                </div>
-                <p class="story-text">Vous vous approchez de la roche, découvrant un écosystème diversifié. Des coraux multicolores égayent le paysage, tandis qu'un banc de poissons curieux s'approche de vous en longeant la roche. Vous pouvez choisir de les suivre un moment, vous laissant entraîner par leur danse aquatique, ou décider de continuer vers le banc de sable qui semble vous appeler. Quelle option préférez-vous ?
-                </p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-8')">Suivre le banc de poissons</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-5')">Se diriger vers le banc de sable</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 5 -->
-        <section id="photo-5" class="story-container">
-            <img src="./assets/photos/sealens-5.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi :</span>
-                    <span>Se diriger vers le banc de sable</span>
-                </div>
-                <p class="story-text">Alors que vous vous approchez du banc de sable, la statue émerge lentement de l'obscurité, révélant un visage sculpté recouvert par la nature. En plissant les yeux, vous remarquez d'autres statues semblables un peu plus loin. Devez-vous vous aventurer plus profondément dans ce dédale mystérieux, malgré le risque de se perdre, ou préférez-vous suivre le banc de poissons qui vient d'apparaître devant vous ?
-                </p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-9')">Se diriger vers les statues englouties</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-8')">Suivre le banc de poissons</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 6 -->
-        <section id="photo-6" class="story-container">
-            <img src="./assets/photos/sealens-6.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi :</span>
-                    <span>Plonger dans l'obsurité</span>
-                </div>
-                <p class="story-text">Vous plongez plus profondément dans les eaux sombres et revigorantes, vous sentant enveloppé par le monde sous-marin. À présent, vous vous trouvez à un carrefour. À votre gauche, une imposante formation rocheuse abrite tout un écosystème marin. À votre droite, un banc de sable semble vous guider vers une étrange statue immergée dans l'obscurité. Lequel de ces chemins mystérieux choisissez-vous d'explorer ?
-                </p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-4')">S'approcher de la roche</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-5')">Se diriger vers le banc de
-                        sable</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 7 -->
-        <section id="photo-7" class="story-container">
-            <img src="./assets/photos/sealens-7.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi :</span>
-                    <span>S'approcher de la silhouette</span>
-                </div>
-                <p class="story-text">Vous décidez de vous approcher de la silhouette, mais alors que vous vous dirigez vers elle, le vent se lève brusquement, créant des vagues difficiles à surmonter. Vous luttez contre les éléments, sentant vos forces diminuer rapidement. Allez-vous puiser dans vos dernières forces pour tenter de suivre le plongeur qui s'éloigne, ou choisissez-vous de rester immobile, prenant le temps de reprendre votre souffle dans ces eaux agitées ?
-                </p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-10')">Suivre le plongeur</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-11')">Rester immobile</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 8 -->
-        <section id="photo-8" class="story-container">
-            <img src="./assets/photos/sealens-8.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi :</span>
-                    <span>Suivre le banc de poissons</span>
-                </div>
-                <p class="story-text">En suivant le banc de poissons, vous vous retrouvez entouré de petits poissons noirs qui virevoltent autour de vous, créant un ballet aquatique enchanteur. Soudain, vous repérez au loin une petite méduse qui flotte gracieusement dans une direction que la marée semble avoir choisie pour elle. Face à ce choix inattendu, décidez-vous de rester pour admirer la méduse ou préférez-vous vous diriger vers cette lumière qui vient d'apparaître ?
-                </p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-12')">Admirer la méduse</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-13')">Se diriger vers la lumière</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 9 -->
-        <section id="photo-9" class="story-container">
-            <img src="./assets/photos/sealens-9.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi :</span>
-                    <span>Se diriger vers les statues englouties</span>
-                </div>
-                <p class="story-text">Alors que vous explorez ce musée aquatique improvisé, une petite méduse se met à danser gracieusement devant vos yeux. Cependant, vous commencez à ressentir le poids du temps et le besoin pressant de remonter à la surface pour reprendre de l'air. Face à ce dilemme, vous avez deux options : être raisonnable et remonter à la surface pour assurer votre sécurité, ou décider d'aller au-delà de vos limites pour contempler la méduse.
-                </p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-14')">Entreprendre la remontée</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-12')">Admirer la méduse</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 10 -->
-        <section id="photo-10" class="story-container">
-            <img src="./assets/photos/sealens-10.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi :</span>
-                    <span>Suivre le plongeur</span>
-                </div>
-                <p class="story-text">Malgré vos efforts, la silhouette s'est éloignée progressivement pendant que les vagues se calmaient. Au loin, vous apercevez une roche qui semble être un refuge pour la vie marine. À cet instant précis, un petit groupe de poissons vient danser à la surface de l'eau juste devant vos yeux. Voulez-vous vous enfoncer dans la mer pour explorer la roche ou préférez-vous rester à la surface et observer ces poissons qui dansent devant vous ?
-                </p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-15')">S'approcher de l'écosystème</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-16')">Observer les poissons</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 11 -->
-        <section id="photo-11" class="story-container">
-            <img src="./assets/photos/sealens-11.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi :</span>
-                    <span>Rester immobile</span>
-                </div>
-                <p class="story-text">Vous avez choisi de ne pas prendre de risque et de reprendre votre souffle, laissant derrière vous le plongeur. Vous vous retrouvez seul à la surface de l'eau. Soudain, un groupe de poissons surgit de nulle part, créant un ballet aquatique enchanteur. Au loin, vous apercevez une imposante roche qui semble promettre la découverte d'un écosystème marin fascinant. Préférez-vous continuer à observer les poissons ou vous approcher de la roche ?
-                </p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-15')">S'approcher de l'écosystème</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-5')">Suivre le banc de sable</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 12 -->
-        <section id="photo-12" class="story-container">
-            <img src="./assets/photos/sealens-12.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi :</span>
-                    <span>Admirer la méduse</span>
-                </div>
-                <p class="story-text">Fasciné par ce ballet aquatique, vous vous perdez dans sa grâce hypnotisante. Mais il devient impératif de remonter car vous commencez à ressentir des spasmes par le manque d'oxygène. Au loin, une corde se dessine. Elle pourrait vous permettre de remonter plus rapidement, mais elle semble encore hors de portée. Tenterez-vous de remonter par vos propres moyens, ou bien essayerez-vous d'atteindre la corde pour vous hisser ?
-                </p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-17')">Remonter par ses propres moyens</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-18')">Essayer d'atteindre la corde</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 13 -->
-        <section id="photo-13" class="story-container">
-            <img src="./assets/photos/sealens-13.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi :</span>
-                    <span>Se diriger vers la lumière</span>
-                </div>
-                <p class="story-text">Alors que vous vous dirigez vers la lumière, vous réalisez que c’est un faisceau de lumière qui a percé les nuages. Néanmoins, vos poumons sont presque vides, provoquant des spasmes dans tout votre corps. Au loin, une corde se dessine. Elle permettrait de remonter plus rapidement, mais elle semble encore hors de portée. Tenterez-vous de remonter par vos propres moyens, ou bien essayerez-vous d'atteindre la corde pour vous hisser ?
-                </p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-17')">Remonter par ses propres moyens</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-18')">Essayer d'atteindre la corde</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 14 -->
-        <section id="photo-14" class="story-container">
-            <img src="./assets/photos/sealens-14.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi :</span>
-                    <span>Entreprendre la remontée</span>
-                </div>
-                <p class="story-text">Votre décision de remonter est prise alors que vos poumons se sont presque entièrement vidés de leur air. Au loin, une corde apparaît. Vous vous demandez si elle pourrait vous permettre de remonter plus rapidement, mais elle semble encore hors de portée. Vous êtes confronté à un dilemme : tentez-vous de remonter par vos propres moyens malgré la douleur et les spasmes, ou bien essayez-vous d'atteindre la corde pour vous hisser ?
-                </p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-17')">Remonter par ses propres moyens</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-18')">Essayer d'atteindre la corde</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 15 -->
-        <section id="photo-15" class="story-container">
-            <img src="./assets/photos/sealens-15.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi :</span>
-                    <span>S'approcher de l'écosystème'</span>
-                </div>
-                <p class="story-text">Vous choisissez de vous approcher de la roche, et vous découvrez une anémone colorée qui danse gracieusement au gré des vagues. Mais le temps s'assombrit et il est difficile de voir que ce soit dans l'eau. Vous vous rappelez que vous avez une lampe torche et il serait dommage de remonter à la surface si tôt. Au loin, un faisceau de lumière apparaît. Allez-vous vous saisir de la lampe torche ou vous diriger vers le faisceau de lumière ?
-                </p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-19')">Se saisir de la lampe torche</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-13')">Se diriger vers la lumière</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 16 -->
-        <section id="photo-16" class="story-container">
-            <img src="./assets/photos/sealens-16.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi :</span>
-                    <span>Observer les poissons</span>
-                </div>
-                <p class="story-text">Vous choisissez d'observer les poissons, et vous vous perdez à observer leur danse gracieuse au gré des vagues. Mais le temps s'assombrit et il est difficile de voir que ce soit dans l'eau. Vous vous rappelez que vous avez une lampe torche et il serait dommage de remonter à la surface si tôt. Au loin, un faisceau de lumière apparaît. Allez-vous vous saisir de la lampe torche ou vous diriger vers le faisceau de lumière ?
-                </p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-19')">Se saisir de la lampe torche</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-13')">Se diriger vers la lumière</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 17 -->
-        <section id="photo-17" class="story-container">
-            <img src="./assets/photos/sealens-17.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi :</span>
-                    <span>Remonter par ses propres moyens</span>
-                </div>
-                <p class="story-text">Avec les dernières forces qui vous restent, vous décidez de tenter de remonter par vous-même. Vos poumons sont comprimés, et chaque mouvement devient un véritable défi, mais vous persistez. Heureusement, vous n'étiez pas très profond, et tant bien que mal, vous parvenez à atteindre la surface. Vous n'avez plus qu'un seul choix à faire : un dernier coup de palme, et enfin, vous pourrez respirer.
-                </p>
-                <div class="story-choices">
-                    <button class="choice" onclick="nextStep('photo-20')">Donner un dernier coup de palme</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 18 -->
-        <section id="photo-18" class="story-container">
-            <img src="./assets/photos/sealens-18.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi :</span>
-                    <span>Atteindre la corde</span>
-                </div>
-                <p class="story-text">Vous avez pris la décision de tenter d'atteindre la corde, mais à mesure que vous vous en rapprochez, vous sentez que vous êtes sur le point de perdre connaissance. Dans cet état critique, vous n'avez plus d'autre choix que de vous laisser porter par le courant. Votre vision se trouble alors que vous vous abandonnez à la mer, votre sort désormais incertain.
-                </p>
-                <div class="story-choices">
-                    <button class="choice" onclick="nextStep('photo-21')">S'abandonner à la mer</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 19 -->
-        <section id="photo-19" class="story-container">
-            <img src="./assets/photos/sealens-19.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi :</span>
-                    <span>Se saisir de la lampe torche</span>
-                </div>
-                <p class="story-text">Vous décidez de vous saisir de la lampe torche pour éclairer l'obscurité grandissante. Cependant, cela fait un moment que vous êtes sous l'eau et que l'air commence à se faire rare dans vos poumons. Alors que vous commencez à ressentir l'urgence de remonter, une corde mystérieuse apparaît au loin. Devriez-vous tenter de nager vers cette corde malgré le manque d'air, ou est-il plus prudent de remonter par vos propres moyens ?
-                </p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('photo-17')">Remonter par ses propres moyens</button>
-                    <button class="choice choice-2" onclick="nextStep('photo-18')">Essayer d'atteindre la corde</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 20 -->
-        <section id="photo-20" class="story-container">
-            <img src="./assets/photos/sealens-20.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi :</span>
-                    <span>Donner un dernier coup de palme</span>
-                </div>
-                <p class="story-text">Avec une détermination inébranlable, vous avez donné un dernier coup de palme. Vous pouvez enfin respirer à pleins poumons. L'air doux caresse vos joues mouillées, et chaque inspiration vous semble être une renaissance. Vous avez réussi votre mission, mais vous êtes persuadé que la mer cache encore d'innombrables mystères. Allez-vous de nouveau tenter de plonger plus profondément ou préférez-vous rentrer avec toutes les photos que vous avez prises au cours de ce périple extraordinaire ?
-                </p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('end')">Retourner sur la terre ferme</button>
-                    <button class="choice choice-2" onclick="startExperience()">Retenter ma chance</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Photo 21 -->
-        <section id="photo-21" class="story-container">
-            <img src="./assets/photos/sealens-21.webp" alt="" class="story-photo">
-            <div class="story-exif">
-                <div class="exif-focal">F/5.6</div>
-                <div class="exif-iso">ISO 600</div>
-                <div class="exif-speed">1/2000s</div>
-            </div>
-            <div class="story-content">
-                <div class="previous-choice">
-                    <span>Vous avez choisi :</span>
-                    <span>S'abandonner à la mer</span>
-                </div>
-                <p class="story-text">Une dernière bulle d'air s'échappe de vos poumons dans l'immensité de la mer, marquant la fin de cette expédition sous-marine. Vous avez bravé les profondeurs et fait des choix courageux, mais cette histoire se termine ici. Souhaitez-vous mettre fin à cette aventure maintenant, ou êtes-vous prêt à tenter une nouvelle plongée, en espérant qu'elle se déroule d'une manière différente ?
-                </p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="nextStep('end')">Mettre fin à l'aventure</button>
-                    <button class="choice choice-2" onclick="startExperience()">Retenter ma chance</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- End / Retry -->
-        <section id="end">
-            <img src="./assets/photos/sealens-22.webp" alt="" class="story-photo">
-            <div class="story-content">
-                <div class="previous-choice"></div>
-                <p class="story-text">Vous pouvez respirer.</p>
-                <div class="story-choices">
-                    <button class="choice choice-1" onclick="backToIntro()">Retourner à l'accueil</button>
-                    <button class="choice choice-2" onclick="showPage('gallery')">Explorer la galerie</button>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <div id="gallery">
-        <div id="gallery-introduction">
-            Ceci est un récit silencieux capturé sous les vagues. <br> <br>
-            À travers notre galerie, flottez parmi les murmures de l'océan et les danses d'ombres et de lumière, là
-            où un monde mystérieux garde ses plus précieux secrets.
-        </div>
-        <div id="mobile-message">
-            <i class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-aperture"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
-            </i>
-            <p>Profitez de l'expérience complète en allant sur ce site depuis un ordinateur.</p>
-        </div>
-        <div id="galleryLayout"></div>
-        <div id="gallery-footer">
-            Agathe & Vincent
-        </div>
-    </div>
-
-    <!-- <span class="mouse-follow"></span>
-
-    <svg style="display: none;">
-        <filter id="noise">
-            <feTurbulence baseFrequency="0.02" result="NOISE" numOctaves="1" id="turbulence" />
-            <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="6"></feDisplacementMap>
-        </filter>
-    </svg> -->
-
+    </button>
 </body>
 
 <script src="./script.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
 
 </html>
