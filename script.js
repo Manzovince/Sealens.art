@@ -19,23 +19,23 @@ function updatePageContent() {
 
 // Toggle pages
 
-document.querySelectorAll('.nav-item, #logo').forEach(item => {
-    item.addEventListener('click', function () {
-        const targetId = this.getAttribute('data-section');
+// document.querySelectorAll('.nav-item, #logo').forEach(item => {
+//     item.addEventListener('click', function () {
+//         const targetId = this.getAttribute('data-section');
 
-        document.querySelectorAll('section, header').forEach(el => {
-            el.style.display = el.id === targetId ? 'block' : 'none';
-        });
+//         document.querySelectorAll('section, header').forEach(el => {
+//             el.style.display = el.id === targetId ? 'block' : 'none';
+//         });
 
-        if (targetId === 'header' || targetId === 'gallery') {
-            document.querySelector('header').style.display = 'flex';
-        }
+//         if (targetId === 'header' || targetId === 'gallery') {
+//             document.querySelector('header').style.display = 'flex';
+//         }
 
-        if (targetId === 'story') {
-            startStory();
-        }
-    });
-});
+//         if (targetId === 'story') {
+//             startStory();
+//         }
+//     });
+// });
 
 // Initially show header, hide sections
 // document.querySelector('header').style.display = 'flex';
