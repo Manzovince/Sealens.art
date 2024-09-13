@@ -185,6 +185,8 @@ header {
     left: 0;
 }
 
+@media (max-width: 767px) { #playPauseBtn { display: none; } }
+
 /* Sections */
 
 section {
