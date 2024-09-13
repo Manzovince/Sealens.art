@@ -27,7 +27,7 @@ document.querySelectorAll('.nav-item, #logo').forEach(item => {
             el.style.display = el.id === targetId ? 'block' : 'none';
         });
 
-        if (targetId === 'header') {
+        if (targetId === 'header' || targetId === 'gallery') {
             document.querySelector('header').style.display = 'flex';
         }
 
