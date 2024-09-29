@@ -334,7 +334,6 @@ section {
         text-shadow: none;
         background-color: rgba(0, 0, 0, 0.4);
         backdrop-filter: blur(16px);
-        margin-bottom: 64px;
     }
 }
 
