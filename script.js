@@ -1,7 +1,7 @@
 // Languages
 
 let language = navigator.language.slice(0, 2) || 'fr';
-// language = 'fr';
+language = 'fr';
 fetch(`./languages/${language}.json`)
     .then(response => response.json())
     .then(translations => {
@@ -19,27 +19,27 @@ function updatePageContent() {
 
 // Toggle pages
 
-// document.querySelectorAll('.nav-item, #logo').forEach(item => {
-//     item.addEventListener('click', function () {
-//         const targetId = this.getAttribute('data-section');
+document.querySelectorAll('.nav-item, #logo').forEach(item => {
+    item.addEventListener('click', function () {
+        const targetId = this.getAttribute('data-section');
 
-//         document.querySelectorAll('section, header').forEach(el => {
-//             el.style.display = el.id === targetId ? 'block' : 'none';
-//         });
+        document.querySelectorAll('section, header').forEach(el => {
+            el.style.display = el.id === targetId ? 'block' : 'none';
+        });
 
-//         if (targetId === 'header' || targetId === 'gallery') {
-//             document.querySelector('header').style.display = 'flex';
-//         }
+        if (targetId === 'header' || targetId === 'gallery') {
+            document.querySelector('header').style.display = 'flex';
+        }
 
-//         if (targetId === 'story') {
-//             startStory();
-//         }
-//     });
-// });
+        if (targetId === 'story') {
+            startStory();
+        }
+    });
+});
 
 // Initially show header, hide sections
-// document.querySelector('header').style.display = 'flex';
-// document.querySelectorAll('section').forEach(section => section.style.display = 'none');
+document.querySelector('header').style.display = 'flex';
+document.querySelectorAll('section').forEach(section => section.style.display = 'none');
 
 // Music player
 
@@ -85,86 +85,176 @@ function togglePlayPause() {
 
 let storyData = [];
 let fullStory = new Array();
-let i = 0;
 
 fetch('./story.json')
     .then(response => response.json())
     .then(data => {
         storyData = data;
-        startStory();
+        // startStory();
     });
 
+const storyTimeline = document.getElementById('story-timeline');
+
 function startStory() {
-    i = 0;
-    fullStory = new Array();
-    const introStories = storyData.filter(story => story.tags.includes("intro"));
-    updateStory(introStories[Math.floor(Math.random() * introStories.length)]);
+    console.log("Starting story");
+
+    document.querySelector('header').style.display = 'none';
+    document.querySelectorAll('section').forEach(section => section.style.display = 'none');
+    document.getElementById('intro').style.display = 'block';
+    setTimeout(() => {
+        document.getElementById('intro').classList.add('intro-out');
+    }, 4000);
+    setTimeout(() => {
+        document.getElementById('intro').classList.remove('intro-out');
+        document.getElementById('intro').style.display = 'none';
+        document.getElementById('story').style.display = 'block';
+        fullStory = new Array();
+        storyTimeline.innerHTML = "";
+        const introStories = storyData.filter(story => story.tags.includes("intro"));
+        updateStory(introStories[Math.floor(Math.random() * introStories.length)]);
+    }, 6000);
 }
 
 const storyImage = document.getElementById('story-image');
 const storyText = document.getElementById('story-text');
 
+function updatePhoto(name) {
+    storyImage.src = `./photos/${name}.png`;
+}
+
 function updateStory(story) {
-    i++;
     fullStory.push(story.name);
-    console.log(story, fullStory);
+    console.log(fullStory);
 
-    if (i > 5) {
-        console.log("End story!");
+    updatePhoto(story.name);
+
+    storyTimeline.appendChild(Object.assign(document.createElement("div"), {
+        textContent: story.text,
+        classList: "timeline-event story-reveal-in"
+    }));
+    if (fullStory.length < 4) {
+        var randomChoices = storyData
+            .filter(s => !s.tags.includes("intro") && !s.tags.includes("outro") && !s.tags.includes("end") && !fullStory.includes(s.name) && s.choice)
+            .sort(() => 0.5 - Math.random())
+            .slice(0, 2);
+        displayNextChoices(fullStory, randomChoices);
+    } else {
         endStory();
-        return;
     }
-    storyImage.src = `./photos/${story.name}.png`;
-    storyText.innerHTML = story.text;
-    selectNextChoices();
+
+    document.getElementsByClassName('story-previous-choice')[fullStory.length - 2].classList.replace("story-reveal-in", "story-reveal-out");
+    document.getElementsByClassName('story-previous-choice')[fullStory.length - 2].style.display = "none";
 }
 
-const storyChoice1 = document.getElementById('story-choice-1');
-const storyChoice2 = document.getElementById('story-choice-2');
-
-function selectNextChoices() {
-    const availableStories = storyData.filter(story =>
-        !story.tags.includes("intro") &&
-        !story.tags.includes("end") &&
-        !fullStory.includes(story.name) &&
-        story.choice // Ensure the story has a choice text
-    );
-
-    // Shuffle and select 2 stories
-    const selectedChoices = availableStories
-        .sort(() => 0.5 - Math.random())
-        .slice(0, 2);
-
-    // Update choices content
-    storyChoice1.innerHTML = selectedChoices[0].choice;
-    storyChoice2.innerHTML = selectedChoices[1].choice;
-    storyChoice1.onclick = () => updateStory(selectedChoices[0]);
-    storyChoice2.onclick = () => updateStory(selectedChoices[1]);
+function displayNextChoices(fullStory, list) {
+    setTimeout(() => {
+        storyTimeline.appendChild(Object.assign(document.createElement("button"), {
+            textContent: list[0].choice + "...",
+            classList: "story-choice story-reveal-in",
+            onclick: () => {
+                document.getElementsByClassName('timeline-event')[fullStory.length - 1].style.display = "none";
+                removeUnselectedChoice(0);
+                updateStory(list[0]);
+            }
+        }));
+        storyTimeline.appendChild(Object.assign(document.createElement("button"), {
+            textContent: list[1].choice + "...",
+            classList: "story-choice story-reveal-in",
+            onclick: () => {
+                document.getElementsByClassName('timeline-event')[fullStory.length - 1].style.display = "none";
+                removeUnselectedChoice(1);
+                updateStory(list[1]);
+            }
+        }));
+    }, 6000);
 }
+
+function removeUnselectedChoice(selectedIndex) {
+    const choices = document.querySelectorAll('.story-choice');
+    choices.forEach((choice, index) => {
+        if (index !== selectedIndex) {
+            choice.remove();
+        } else {
+            choice.onclick = null;
+            choice.classList.replace('story-choice', 'story-previous-choice');
+            choice.textContent = choice.textContent.slice(0, -3);
+        }
+    });
+}
+
+function backToHome() {
+    document.querySelector('header').style.display = 'flex';
+    document.querySelectorAll('section').forEach(section => section.style.display = 'none');
+}
+
+function restartOrQuit() {
+    storyTimeline.appendChild(Object.assign(document.createElement("button"), {
+        textContent: "Prendre une nouvelle inspiration et replongez...",
+        classList: "story-choice story-reveal-in",
+        onclick: () => {
+            startStory();
+        }
+    }));
+    storyTimeline.appendChild(Object.assign(document.createElement("button"), {
+        textContent: "Retourner à la page d'accueil",
+        classList: "story-choice story-reveal-in",
+        onclick: () => {
+            document.querySelector('header').style.display = 'flex';
+            document.querySelectorAll('section').forEach(section => section.style.display = 'none');
+        }
+    }));
+}
+
+const endTextList = [
+    "Vous commencez à sentir des contractions, il est temps de sortir de l'eau.",
+    "Attention, il ne vous reste plus beaucoup d'air.",
+    "Mais la fin de ce voyage approche, prenez vite une décision.",
+    "Il est temps de remonter, vous manquez d'oxygène.",
+    "Mais ces rencontres ne durent qu'un instant, et il va falloir rentrer."]
 
 function endStory() {
-    const endStories = storyData.filter(story => story.tags.includes("end"));
-    console.log(endStories[Math.floor(Math.random() * endStories.length)]);
 
-    // Shuffle and select 2 stories
-    const selectedChoices = endStories
+    var endChoice = storyData
+        .filter(s => s.tags.includes("outro"))
         .sort(() => 0.5 - Math.random())
         .slice(0, 2);
 
-    // Update choices content
-    storyChoice1.innerHTML = selectedChoices[0].choice;
-    storyChoice2.innerHTML = selectedChoices[1].choice;
-    storyChoice1.onclick = () => updateStory(selectedChoices[0]);
-    storyChoice2.onclick = () => updateStory(selectedChoices[1]);
-}
+    document.getElementsByClassName('timeline-event')[document.getElementsByClassName('timeline-event').length - 1].textContent += "\n" + endTextList[Math.floor(Math.random() * endTextList.length)];
 
-// on click of a choice (id)
-//     updateStory (id)
-//     select next choices
+    setTimeout(() => {
+        storyTimeline.appendChild(Object.assign(document.createElement("button"), {
+            textContent: endChoice[0].choice + "...",
+            classList: "story-choice story-reveal-in",
+            onclick: () => {
+                document.getElementsByClassName('timeline-event')[fullStory.length - 1].style.display = "none";
+                document.querySelectorAll('.story-choice').forEach(choice => choice.style.display = 'none');
+                updatePhoto(endChoice[0].name);
+                storyTimeline.appendChild(Object.assign(document.createElement("div"), {
+                    textContent: endChoice[0].text,
+                    classList: "timeline-event story-reveal-in"
+                }));
+                setTimeout(() => {
+                    restartOrQuit();
+                }, 4000);
+            }
+        }));
+        storyTimeline.appendChild(Object.assign(document.createElement("button"), {
+            textContent: endChoice[1].choice + "...",
+            classList: "story-choice story-reveal-in",
+            onclick: () => {
+                document.getElementsByClassName('timeline-event')[fullStory.length - 1].style.display = "none";
+                document.querySelectorAll('.story-choice').forEach(choice => choice.style.display = 'none');
+                updatePhoto(endChoice[1].name);
+                storyTimeline.appendChild(Object.assign(document.createElement("div"), {
+                    textContent: endChoice[1].text,
+                    classList: "timeline-event story-reveal-in"
+                }));
+                setTimeout(() => {
+                    restartOrQuit();
+                }, 4000);
+            }
+        }));
+    }, 6000);
 
-
-// Get next story
-
-function getNextStory() {
-    // take 2 random objects from story.json
+    console.log("End of story");
 }
