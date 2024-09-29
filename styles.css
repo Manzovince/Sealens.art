@@ -329,7 +329,7 @@ section {
     backdrop-filter: blur(16px);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     #story-content {
         text-shadow: none;
         background-color: rgba(0, 0, 0, 0.4);
