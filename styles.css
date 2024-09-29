@@ -88,7 +88,7 @@ nav {
 /* Header */
 
 header {
-    height: 100dvh;
+    height: 100svh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,7 +104,7 @@ header {
 #bg-video {
     object-fit: cover;
     min-width: 100%;
-    height: 100dvh;
+    height: 100svh;
     position: fixed;
     top: 0;
     left: 0;
@@ -215,7 +215,7 @@ header {
 
 section {
     display: none;
-    height: 100dvh;
+    height: 100svh;
 }
 
 /* About */
@@ -229,7 +229,7 @@ section {
 /* Start experience */
 
 #intro {
-    height: 100dvh;
+    height: 100svh;
     width: 100%;
     overflow: hidden;
 }
@@ -237,7 +237,7 @@ section {
 #intro-video {
     object-fit: cover;
     min-width: 100%;
-    height: 100dvh;
+    height: 100svh;
     position: fixed;
     top: 0;
     left: 0;
@@ -285,7 +285,7 @@ section {
 
 #story {
     position: relative;
-    height: 100dvh;
+    height: 100svh;
     overflow: hidden;
 }
 
@@ -293,7 +293,7 @@ section {
     object-fit: cover;
     object-position: center;
     width: 100%;
-    height: 100dvh;
+    height: 100svh;
     position: fixed;
     top: 0;
     left: 0;
