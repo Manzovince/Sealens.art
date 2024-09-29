@@ -298,7 +298,6 @@ section {
     top: 0;
     left: 0;
     z-index: -1;
-    margin-bottom: -6px;
 }
 
 .fade-in {
@@ -335,6 +334,7 @@ section {
         text-shadow: none;
         background-color: rgba(0, 0, 0, 0.4);
         backdrop-filter: blur(16px);
+        margin-bottom: 32px;
     }
 }
 
