@@ -1,0 +1,597 @@
+[
+    {
+        "name": "intro1",
+        "tags": [
+            "intro"
+        ],
+        "text": "L'obscurité des fonds marins vous hypnotisent et semblent vous appeler. Leurs ombres mystérieuses dansent autour de vous, ensorcelantes et insondables. Chaque mouvement vous rapproche de l'inconnu, où les secrets des abysses se murmurent dans un silence liquide.",
+        "description": "",
+        "choice": "",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "intro2",
+        "tags": [
+            "intro"
+        ],
+        "text": "Le fond n'est pas visible depuis votre hauteur. Il laisse place à un bleu profond, opaque et uniforme. Il vous laisse un sentiment mélangé de crainte et de curiosité. Que peux-t-il bien se trouver en dessous, à l'abri des regards ?",
+        "description": "",
+        "choice": "",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "intro3",
+        "tags": [
+            "intro"
+        ],
+        "text": "Vous prenez votre dernière inspiration, emplissant vos poumons d'air comme un ultime lien avec le monde d'en haut. Puis, dans un geste presque rituel, vous plongez votre tête sous l'eau. Le silence vous enveloppe soudain.",
+        "description": "",
+        "choice": "",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "landscape1",
+        "tags": [
+            "landscape"
+        ],
+        "text": "Les algues dansent doucement, balancées par le souffle de l'océan. Elles forment des vagues vertes qui vous invitent à découvrir leur monde secret, où chaque feuille cache un fragment d'histoire sous-marine.",
+        "description": "",
+        "choice": "Se perdre dans les vagues d'algues flottantes",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "landscape2",
+        "tags": [
+            "landscape"
+        ],
+        "text": "Dans ce paysage minéral baigné d'une lumière ambrée, un petit coquillage trône, sentinelle solitaire d'un monde sous-marin mystérieux.",
+        "description": "",
+        "choice": "S'approcher d'une pointe qui se détache d'un rocher",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "landscape4",
+        "tags": [
+            "landscape"
+        ],
+        "text": "Sous l'eau, quand il y a du relief, il y a de la vie. Chaque recoin d'un rocher se transforme en jardin ou en maison, arbitant une joyeuse colocation d'espèces d'une nuit, une vie ou même plusieurs générations.",
+        "description": "",
+        "choice": "Se balader prêt d'un massif de roche",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "landscape5",
+        "tags": [
+            "landscape"
+        ],
+        "text": "La lumière fait ressortir l'architecture naturelle des fonds marins. Sans elle, pas de vie. Les rayons tapissent le sol sablonneux et sublime ses reliefs.",
+        "description": "",
+        "choice": "Se diriger vers une pointe recouverte d'algue",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "landscape6",
+        "tags": [
+            "landscape", "statue"
+        ],
+        "text": "Des personnes venu de contrées lointaines contemples la surface comme si elles regardaient le ciel.",
+        "description": "",
+        "choice": "Continuer à avancer le long du sable",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "landscape7",
+        "tags": [
+            "landscape", "statue"
+        ],
+        "text": "La statue de Neptune se dresse fièrement, figée dans l'eau. Ses traits imposants surveillent l'océan comme un roi silencieux. La nature et l'art se rencontrent ici, où l'océan prend lentement possession de ce qui a été créé par l'homme.",
+        "description": "",
+        "choice": "Vous vous sentez observer sur votre gauche",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "landscape9",
+        "tags": [
+            "landscape", "statue"
+        ],
+        "text": "En face de cette silhouette, le temps semble s'arrêter, témoin d'un passé oublié. L'eau effleure doucement ses contours, comme pour lui redonner vie, mais il reste immobile, observant les mystères des profondeurs.",
+        "description": "",
+        "choice": "Se tenir face à l'éternité",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "landscape11",
+        "tags": [
+            "landscape", "statue"
+        ],
+        "text": "Un groupe de statues repose sur le fond marin, comme figé dans un instant éternel. Autour d'eux, l'océan continue son cycle infini, ignorant leur présence et les recouvrant peu à peu d'un écosystème prolifique.",
+        "description": "",
+        "choice": "Approcher une scène figée sous les vagues",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "landscape13",
+        "tags": [
+            "landscape", "statue", "animal"
+        ],
+        "text": "Des pagures, plus communément appelées \"Bernard-L'ermite\", se sont appropriées les lieux, surplombant le reste de l'écosystème.",
+        "description": "",
+        "choice": "S'approcher d'une zone en mouvement",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "landscape14",
+        "tags": [
+            "landscape", "statue"
+        ],
+        "text": "Une statue de femme repose sous la mer, ses traits doucement effacés par le temps. Elle semble attendre quelque chose ou quelqu'un, figée dans ce royaume aquatique où le temps s'étire sans fin.",
+        "description": "",
+        "choice": "Découvrir une silhouette oubliée",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "landscape16",
+        "tags": [
+            "landscape", "statue"
+        ],
+        "text": "Elle trône au milieu d'un fond sableux. Libérée de son atatche, elle conserve les voyages d'un autre temps.",
+        "description": "",
+        "choice": "Vous apercevez l'ancre d'un bateau",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "landscape17",
+        "tags": [
+            "landscape"
+        ],
+        "text": "Un vaste paysage s'étend sous vos yeux, rempli d'une vie colorée. Chaque recoin semble abriter une nouvelle merveille, et vous vous sentez à la fois perdu et émerveillé dans cette toile vivante que tisse l'océan.",
+        "description": "",
+        "choice": "S'abandonner à la beauté du paysage",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal1",
+        "tags": [
+            "animal"
+        ],
+        "text": "Elle sort de sa carapace, et vous observe avec un drôle d'air. Ces petits animaux survivent grâce à leurs coquilles honteusement volées, même si celle-ci arbore fièrement la sienne.",
+        "description": "",
+        "choice": "S'approcher d'une pagure",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal2",
+        "tags": [
+            "animal"
+        ],
+        "text": "Entre les rochers, une forme changeante. Un œil attentif et des tentacules prêts à réagir en un éclair, invisible aux regards inattentifs.",
+        "description": "",
+        "choice": "Rencontrer le maître du camouflage",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal3",
+        "tags": [
+            "animal"
+        ],
+        "text": "Ses tentacules se déploient lentement, dessinant des arabesques hypnotiques dans l'eau. La pieuvre est un spectre silencieux, une danseuse dans un ballet que seul l'océan connaît, imprévisible et gracieuse dans sa quête éternelle.",
+        "description": "",
+        "choice": "Observer la grâce d'une pieuvre en mouvement",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal4",
+        "tags": [
+            "animal"
+        ],
+        "text": "Elle avance lentement, majestueuse et mystérieuse, la cigale des mers semble presque irréelle. Sa carapace raconte les millénaires, chaque pas sur le sable résonne comme un souvenir lointain, ancré dans les profondeurs.",
+        "description": "",
+        "choice": "Approcher une créature surprenante",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal5",
+        "tags": [
+            "animal"
+        ],
+        "text": "Tapie sur le fond marin, elle attend, immobile.",
+        "description": "",
+        "choice": "S'avancer vers silhouette allongée",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal7",
+        "tags": [
+            "animal"
+        ],
+        "text": "Le poisson glisse entre les rochers, vous invitant à suivre son chemin secret. Chaque pierre raconte une histoire, et sous les algues se cachent des trésors insoupçonnés. Vous vous laissez guider, en harmonie avec ce monde invisible à la surface.",
+        "description": "",
+        "choice": "Suivre un habitant furtif",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal8",
+        "tags": [
+            "animal"
+        ],
+        "text": "Un poisson solitaire glisse entre les rochers, ses écailles captant la lumière en éclats fugaces. Son chemin semble sans fin, emportant avec lui une partie de l'océan à chaque battement de nageoire.",
+        "description": "",
+        "choice": "Suivre une ombre vive",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal9",
+        "tags": [
+            "animal"
+        ],
+        "text": "Invisible à première vue, la pieuvre se fond dans son environnement, maître du camouflage. À chaque mouvement subtil, elle révèle sa présence, et avec elle, les secrets de l'océan.",
+        "description": "",
+        "choice": "Observer une forme insaisissable",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal10",
+        "tags": [
+            "animal"
+        ],
+        "text": "La blennie vous observe, cachée entre les rochers. Ses yeux vifs guettent chaque mouvement, témoin discret du monde sous-marin. Vous vous sentez comme un intrus dans son royaume secret, où chaque recoin cache une histoire.",
+        "description": "",
+        "choice": "Échanger un regard furtif",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal11",
+        "tags": [
+            "animal"
+        ],
+        "text": "La murène vous observe depuis son antre rocheux, son corps serpentant dans les ombres. Elle est la gardienne des profondeurs, et sa présence vous rappelle que l'océan cache bien plus qu'il ne révèle.",
+        "description": "",
+        "choice": "Observer une créature dissimulée",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal12",
+        "tags": [
+            "animal"
+        ],
+        "text": "C'est un banc de barracuda, qui a décidé de faire de votre zone d'exploration un terrain de chasse. Si vous restez discret ils ne vont pas vous déranger, mais restez quand même sur vos gardes.",
+        "description": "",
+        "choice": "Il semble y avoir du mouvement sur votre gauche",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal14",
+        "tags": [
+            "animal"
+        ],
+        "text": "Un immense banc de Castagnolles se dresse devant vous, comme une seule entitée. La cohésion de ces petits poissons forme un voile souple qui se déforme au gré des courants.",
+        "description": "",
+        "choice": "Il y a de l'agitation derrière vous",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal16",
+        "tags": [
+            "animal"
+        ],
+        "text": "L'étoile de mer repose, immobile, sur le fond sablonneux. Ses bras s'étirent lentement, touchant la mer comme pour en mesurer l'infini. Dans son immobilité, elle capte le mystère de l'océan, gardienne éternelle de ses secrets.",
+        "description": "",
+        "choice": "Admirer un être géométrique",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal18",
+        "tags": [
+            "animal"
+        ],
+        "text": "La méduse flotte, insaisissable et fragile, tel un rêve ondoyant sous les vagues. Ses mouvements sont une mélodie douce, un écho du rythme paisible de l'océan, presque hors du temps",
+        "description": "",
+        "choice": "S'émerveiller devant une danse flottante",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal35",
+        "tags": [
+            "animal"
+        ],
+        "text": "Le mérou nage, imposant et paisible, sa silhouette massive se détachant dans le bleu profond. Il est le roi silencieux de ces eaux, et vous vous sentez tout petit dans son royaume infini, où chaque mouvement est une démonstration de force tranquille.",
+        "description": "",
+        "choice": "Rencontrer un habitant des profondeurs",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "outro1",
+        "tags": [
+            "outro"
+        ],
+        "text": "En pleine ascension, votre silhouette s'élève doucement. Un moment figé entre l'ombre des profondeurs et la lumière qui vous appelle à la surface.",
+        "description": "",
+        "choice": "Retourner vers la lumière",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "outro2",
+        "tags": [
+            "outro"
+        ],
+        "text": "Vous apercevez au loin les bulles d'un groupe plongeurs, formant un rideau tout le long du bleu profond qui vous encercle.",
+        "description": "",
+        "choice": "Remonter tranquillement à la surface",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "outro3",
+        "tags": [
+            "outro"
+        ],
+        "text": "Vous pouvez enfin respirez, contemplatif de la courte aventure qui c'est dessinée sous vos yeux.",
+        "description": "",
+        "choice": "Se diriger vers l'extérieur",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "outro4",
+        "tags": [
+            "outro"
+        ],
+        "text": "Vos poumons réclament de l'air, et vous gravissez les profondeurs avec urgence, sentant la surface approcher comme une promesse. L'eau devient plus légère, et avec elle, votre cœur s'ouvre à la lumière qui vous attend.",
+        "description": "",
+        "choice": "Rester encore un instant",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "outro5",
+        "tags": [
+            "outro"
+        ],
+        "text": "L'air se fait rare, mais avant de remonter, vous partagez un instant magique avec vos compagnons aquatiques, silencieux témoins de cet univers secret. Leur présence vous invite à rester encore un peu, à goûter la quiétude de ce royaume silencieux.",
+        "description": "",
+        "choice": "Profiter d'un moment de communion avec des poissons",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    }
+]
