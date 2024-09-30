@@ -86,11 +86,10 @@ function togglePlayPause() {
 let storyData = [];
 let fullStory = new Array();
 
-fetch('./story.json')
+fetch(`./story-${language}.json`)
     .then(response => response.json())
     .then(data => {
-        storyData = data;
-        // startStory();
+        storyData = data
     });
 
 const storyTimeline = document.getElementById('story-timeline');
