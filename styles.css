@@ -112,6 +112,10 @@ header {
     z-index: -1;
 }
 
+video::-webkit-media-controls-start-playback-button {
+    display: none;
+}
+
 #logo-main {
     display: flex;
     align-items: center;
