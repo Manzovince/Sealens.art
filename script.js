@@ -41,6 +41,8 @@ document.querySelectorAll('.nav-item, #logo').forEach(item => {
 document.querySelector('header').style.display = 'flex';
 document.querySelectorAll('section').forEach(section => section.style.display = 'none');
 
+document.querySelector('video').setAttribute("playsinline", true);
+
 // Music player
 
 let player;
