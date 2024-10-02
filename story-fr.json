@@ -4,7 +4,7 @@
         "tags": [
             "intro"
         ],
-        "text": "L'obscurité des fonds marins vous hypnotisent et semblent vous appeler. Leurs ombres mystérieuses dansent autour de vous, ensorcelantes et insondables. Chaque mouvement vous rapproche de l'inconnu, où les secrets des abysses se murmurent dans un silence liquide.",
+        "text": "L'obscurité des fonds marins vous hypnotisent et semblent vous appeler. Leurs ombres mystérieuses dansent autour de vous, ensorcelantes et insondables. Chaque mouvement vous rapproche de l'inconnu, où les secrets des profondeurs se murmurent dans un silence liquide.",
         "description": "",
         "choice": "",
         "exif": {
@@ -89,7 +89,7 @@
         "tags": [
             "landscape"
         ],
-        "text": "Sous l'eau, quand il y a du relief, il y a de la vie. Chaque recoin d'un rocher se transforme en jardin ou en maison, arbitant une joyeuse colocation d'espèces d'une nuit, une vie ou même plusieurs générations.",
+        "text": "Sous l'océan, le relief engendre la vie. Chaque creux rocheux devient un écosystème foisonnant, abritant une diversité d'espèces. De l'éphémère au permanent, ces micro-habitats sous-marins témoignent de la richesse de la vie aquatique.",
         "description": "",
         "choice": "Se balader prêt d'un massif de roche",
         "exif": {
@@ -106,7 +106,7 @@
         "tags": [
             "landscape"
         ],
-        "text": "La lumière fait ressortir l'architecture naturelle des fonds marins. Sans elle, pas de vie. Les rayons tapissent le sol sablonneux et sublime ses reliefs.",
+        "text": "La lumière, source vitale, révèle la beauté des fonds marins. Ses rayons sculptent le paysage sous-marin, illuminant le sable et magnifiant ses contours.",
         "description": "",
         "choice": "Se diriger vers une pointe recouverte d'algue",
         "exif": {
@@ -121,9 +121,10 @@
     {
         "name": "landscape6",
         "tags": [
-            "landscape", "statue"
+            "landscape",
+            "statue"
         ],
-        "text": "Des personnes venu de contrées lointaines contemples la surface comme si elles regardaient le ciel.",
+        "text": "Des voyageurs lointains contemplent la surface marine, comme on admirerait un ciel étoilé.",
         "description": "",
         "choice": "Continuer à avancer le long du sable",
         "exif": {
@@ -138,7 +139,8 @@
     {
         "name": "landscape7",
         "tags": [
-            "landscape", "statue"
+            "landscape",
+            "statue"
         ],
         "text": "La statue de Neptune se dresse fièrement, figée dans l'eau. Ses traits imposants surveillent l'océan comme un roi silencieux. La nature et l'art se rencontrent ici, où l'océan prend lentement possession de ce qui a été créé par l'homme.",
         "description": "",
@@ -155,7 +157,8 @@
     {
         "name": "landscape9",
         "tags": [
-            "landscape", "statue"
+            "landscape",
+            "statue"
         ],
         "text": "En face de cette silhouette, le temps semble s'arrêter, témoin d'un passé oublié. L'eau effleure doucement ses contours, comme pour lui redonner vie, mais il reste immobile, observant les mystères des profondeurs.",
         "description": "",
@@ -172,7 +175,8 @@
     {
         "name": "landscape11",
         "tags": [
-            "landscape", "statue"
+            "landscape",
+            "statue"
         ],
         "text": "Un groupe de statues repose sur le fond marin, comme figé dans un instant éternel. Autour d'eux, l'océan continue son cycle infini, ignorant leur présence et les recouvrant peu à peu d'un écosystème prolifique.",
         "description": "",
@@ -189,9 +193,11 @@
     {
         "name": "landscape13",
         "tags": [
-            "landscape", "statue", "animal"
+            "landscape",
+            "statue",
+            "animal"
         ],
-        "text": "Des pagures, plus communément appelées \"Bernard-L'ermite\", se sont appropriées les lieux, surplombant le reste de l'écosystème.",
+        "text": "Les pagures, ces crustacés mieux connus sous le nom de \"bernard-l'ermite\", règnent en maîtres sur ce microcosme marin. Nichés dans leurs coquilles d'emprunt, ils arpentent les sommets de l'écosystème, dominant le paysage sous-marin de leur présence singulière.",
         "description": "",
         "choice": "S'approcher d'une zone en mouvement",
         "exif": {
@@ -206,7 +212,8 @@
     {
         "name": "landscape14",
         "tags": [
-            "landscape", "statue"
+            "landscape",
+            "statue"
         ],
         "text": "Une statue de femme repose sous la mer, ses traits doucement effacés par le temps. Elle semble attendre quelque chose ou quelqu'un, figée dans ce royaume aquatique où le temps s'étire sans fin.",
         "description": "",
@@ -223,9 +230,10 @@
     {
         "name": "landscape16",
         "tags": [
-            "landscape", "statue"
+            "landscape",
+            "statue"
         ],
-        "text": "Elle trône au milieu d'un fond sableux. Libérée de son attache, elle conserve les voyages d'un autre temps.",
+        "text": "Majestueuse, elle trône au cœur d'un vaste tapis de sable. Cette ancre, désormais libérée de son navire, repose immobile. Témoin silencieux d'une époque révolue, elle conserve en son métal les empreintes de voyages lointains et d'aventures maritimes d'antan.",
         "description": "",
         "choice": "Vous apercevez l'ancre d'un bateau",
         "exif": {
@@ -259,7 +267,7 @@
         "tags": [
             "animal"
         ],
-        "text": "Elle sort de sa carapace, et vous observe avec un drôle d'air. Ces petits animaux survivent grâce à leurs coquilles honteusement volées, même si celle-ci arbore fièrement la sienne.",
+        "text": "Émergent de sa carapace, elle vous scrute d'un regard intrigué. Cette petite créature, comme ses congénères, survit grâce à une coquille empruntée. Pourtant, celle-ci semble arborer fièrement son propre abri naturel.",
         "description": "",
         "choice": "S'approcher d'une pagure",
         "exif": {
@@ -327,7 +335,7 @@
         "tags": [
             "animal"
         ],
-        "text": "Tapie sur le fond marin, elle attend, immobile.",
+        "text": "Tapie dans les profondeurs obscures de l'océan, la murène demeure immobile, patiente et à l'affût, attendant le moment propice pour surgir de son repaire sous-marin.",
         "description": "",
         "choice": "S'avancer vers silhouette allongée",
         "exif": {
@@ -429,9 +437,9 @@
         "tags": [
             "animal"
         ],
-        "text": "C'est un banc de barracuda, qui a décidé de faire de votre zone d'exploration un terrain de chasse. Si vous restez discret ils ne vont pas vous déranger, mais restez quand même sur vos gardes.",
+        "text": "Un imposant banc de barracudas a élu domicile dans votre zone d'exploration, transformant ce paisible récif en un redoutable terrain de chasse. Leurs silhouettes argentées et effilées glissent silencieusement dans l'eau cristalline, leurs yeux vigilants scrutant les alentours. Bien qu'ils ne soient pas naturellement agressifs envers les plongeurs, la prudence reste de mise.",
         "description": "",
-        "choice": "Il semble y avoir du mouvement sur votre gauche",
+        "choice": "Il semble y avoir du mouvement sur votre droite",
         "exif": {
             "camera": "Sony A7C",
             "date_taken": "N/A",
@@ -446,7 +454,7 @@
         "tags": [
             "animal"
         ],
-        "text": "Un immense banc de Castagnolles se dresse devant vous, comme une seule entitée. La cohésion de ces petits poissons forme un voile souple qui se déforme au gré des courants.",
+        "text": "Un immense banc de castagnoles se dresse devant vous, formant un mur vivant qui ondule dans les eaux azurées. Ces milliers de petits poissons se meuvent à l'unisson, créant un voile souple et mouvant qui se déforme gracieusement au gré des courants, tel un rideau de soie marine pulsant au rythme de l'océan.",
         "description": "",
         "choice": "Il y a de l'agitation derrière vous",
         "exif": {
@@ -531,7 +539,7 @@
         "tags": [
             "outro"
         ],
-        "text": "Vous apercevez au loin les bulles d'un groupe plongeurs, formant un rideau tout le long du bleu profond qui vous encercle.",
+        "text": "Au loin, des bulles argentées s'élèvent en colonnes scintillantes, trahissant la présence d'un groupe de plongeurs invisibles dans les profondeurs. Ces sphères éphémères forment un rideau délicat qui s'étire le long du bleu intense de l'océan, créant une frontière éthérée entre votre monde sous-marin et la surface.",
         "description": "",
         "choice": "Remonter tranquillement à la surface",
         "exif": {
@@ -548,7 +556,7 @@
         "tags": [
             "outro"
         ],
-        "text": "Vous pouvez enfin respirez, contemplatif de la courte aventure qui c'est dessinée sous vos yeux.",
+        "text": "Vous pouvez enfin respirer, prenant un moment pour apprécier la brève mais intense aventure qui s'est déployée devant vous. Les souvenirs des événements qui viennent de s'écouler dansent encore dans votre esprit, laissant une empreinte indélébile sur votre cœur.",
         "description": "",
         "choice": "Se diriger vers l'extérieur",
         "exif": {
@@ -585,6 +593,57 @@
         "text": "L'air se fait rare, mais avant de remonter, vous partagez un instant magique avec vos compagnons aquatiques, silencieux témoins de cet univers secret. Leur présence vous invite à rester encore un peu, à goûter la quiétude de ce royaume silencieux.",
         "description": "",
         "choice": "Profiter d'un moment de communion avec des poissons",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "outro6",
+        "tags": [
+            "outro"
+        ],
+        "text": "En remontant à la surface, vous laissez échapper quelques bulles d'air qui s'échappent comme des souvenirs éphémères. Peu à peu, tout s'estompe autour de vous, tel un rideau qui tombe lentement à la fin d'une pièce de théâtre, laissant derrière lui une aura de mystère et d'émotion.",
+        "description": "",
+        "choice": "Rester encore un instant",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "outro7",
+        "tags": [
+            "outro"
+        ],
+        "text": "Vous voilà enfin la tête hors de l'eau, le souffle court mais libéré. La journée tire à sa fin, et les teintes orangées du soleil couchant se mirent délicatement à la surface, créant un tableau vivant de douceur et de sérénité.",
+        "description": "",
+        "choice": "Contempler le coucher de soleil à la surface",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "outro8",
+        "tags": [
+            "outro"
+        ],
+        "text": "Vous apercevez le soleil glissant lentement sous l'horizon, ses rayons dorés se mêlant aux teintes profondes du ciel. Ce spectacle, à la fois apaisant et captivant, évoque un sentiment de calme et de promesse pour la nuit à venir. ",
+        "description": "",
+        "choice": "Passer la tête hors de l'eau",
         "exif": {
             "camera": "Sony A7C",
             "date_taken": "N/A",

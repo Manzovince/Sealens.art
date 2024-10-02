@@ -49,13 +49,13 @@ let player;
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
-        height: '0',
-        width: '0',
-        videoId: 'cQEcydiTQdo',
+        height: '360',
+        width: '640',
         playerVars: {
-            'controls': 0,
-            'disablekb': 1,
-            'autoplay': 0
+            listType: 'playlist',
+            list: 'OLAK5uy_nrvFfUuv7EG61fs5p_ShH6UT4-b8DUSzg',
+            autoplay: 1,
+            loop: 1
         },
         events: {
             'onReady': onPlayerReady
@@ -104,7 +104,7 @@ function startStory() {
     document.getElementById('intro').style.display = 'block';
     setTimeout(() => {
         document.getElementById('intro').classList.add('intro-out');
-    }, 4000);
+    }, 6000);
     setTimeout(() => {
         document.getElementById('intro').classList.remove('intro-out');
         document.getElementById('intro').style.display = 'none';
@@ -113,7 +113,7 @@ function startStory() {
         storyTimeline.innerHTML = "";
         const introStories = storyData.filter(story => story.tags.includes("intro"));
         updateStory(introStories[Math.floor(Math.random() * introStories.length)]);
-    }, 6000);
+    }, 7500);
 }
 
 const storyImage = document.getElementById('story-image');
