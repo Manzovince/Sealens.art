@@ -49,13 +49,11 @@ let player;
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
-        height: '360',
-        width: '640',
+        height: '0',
+        width: '0',
         playerVars: {
             listType: 'playlist',
             list: 'OLAK5uy_nrvFfUuv7EG61fs5p_ShH6UT4-b8DUSzg',
-            autoplay: 1,
-            loop: 1
         },
         events: {
             'onReady': onPlayerReady
