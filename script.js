@@ -111,7 +111,7 @@ function startStory() {
         storyTimeline.innerHTML = "";
         const introStories = storyData.filter(story => story.tags.includes("intro"));
         updateStory(introStories[Math.floor(Math.random() * introStories.length)]);
-    }, 7500);
+    }, 8000);
 }
 
 const storyImage = document.getElementById('story-image');
