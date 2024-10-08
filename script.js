@@ -120,6 +120,7 @@ const storyImageJPG2 = document.getElementById('story-image-jpg2');
 const storyText = document.getElementById('story-text');
 
 function updatePhoto(name) {
+    console.log('Update photo');
     // storyImage.src = `./photos/${name}.png`;
     storyImageWEBP.srcset = `./photos/${name}.webp`;
     storyImageJPG1.srcset = `./photos/${name}.jpg`;
