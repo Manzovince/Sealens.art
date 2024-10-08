@@ -1,0 +1,656 @@
+[
+  {
+    "name": "intro1",
+    "tags": [
+      "intro"
+    ],
+    "text": "The darkness of the seabed hypnotizes you and seems to call you. ",
+    "description": "",
+    "choice": "",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "intro2",
+    "tags": [
+      "intro"
+    ],
+    "text": "The bottom is not visible from your height. ",
+    "description": "",
+    "choice": "",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "intro3",
+    "tags": [
+      "intro"
+    ],
+    "text": "You take your last breath, filling your lungs with air as a final link to the world above. ",
+    "description": "",
+    "choice": "",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "landscape1",
+    "tags": [
+      "landscape"
+    ],
+    "text": "The seaweed dances gently, swayed by the breath of the ocean. ",
+    "description": "",
+    "choice": "Get lost in the waves of floating seaweed",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "landscape2",
+    "tags": [
+      "landscape"
+    ],
+    "text": "In this mineral landscape bathed in amber light, a small shell sits, solitary sentinel of a mysterious underwater world.",
+    "description": "",
+    "choice": "Approaching a point that stands out from a rock",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "landscape4",
+    "tags": [
+      "landscape"
+    ],
+    "text": "Under the ocean, the relief generates life. ",
+    "description": "",
+    "choice": "Stroll near a rock mass",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "landscape5",
+    "tags": [
+      "landscape"
+    ],
+    "text": "Light, a vital source, reveals the beauty of the seabed. ",
+    "description": "",
+    "choice": "Head towards a point covered in algae",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "landscape6",
+    "tags": [
+      "landscape",
+      "statue"
+    ],
+    "text": "Distant travelers contemplate the sea surface, as one would admire a starry sky.",
+    "description": "",
+    "choice": "Continue moving along the sand",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "landscape7",
+    "tags": [
+      "landscape",
+      "statue"
+    ],
+    "text": "The statue of Neptune stands proudly, frozen in the water. ",
+    "description": "",
+    "choice": "You feel yourself watching on your left",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "landscape9",
+    "tags": [
+      "landscape",
+      "statue"
+    ],
+    "text": "In front of this silhouette, time seems to stand still, witness to a forgotten past. ",
+    "description": "",
+    "choice": "Stand facing eternity",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "landscape11",
+    "tags": [
+      "landscape",
+      "statue"
+    ],
+    "text": "A group of statues rests on the seabed, as if frozen in an eternal moment. ",
+    "description": "",
+    "choice": "Approach a frozen scene beneath the waves",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "landscape13",
+    "tags": [
+      "landscape",
+      "statue",
+      "animal"
+    ],
+    "text": "Pagures, these crustaceans better known as \"hermit crabs\", reign supreme over this marine microcosm. ",
+    "description": "",
+    "choice": "Approaching a moving area",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "landscape14",
+    "tags": [
+      "landscape",
+      "statue"
+    ],
+    "text": "A statue of a woman rests beneath the sea, her features gently erased by time. ",
+    "description": "",
+    "choice": "Discover a forgotten silhouette",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "landscape16",
+    "tags": [
+      "landscape",
+      "statue"
+    ],
+    "text": "Majestic, it sits in the heart of a vast carpet of sand. ",
+    "description": "",
+    "choice": "You see the anchor of a boat",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "landscape17",
+    "tags": [
+      "landscape"
+    ],
+    "text": "A vast landscape stretches before your eyes, filled with colorful life. ",
+    "description": "",
+    "choice": "Surrender to the beauty of the landscape",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "animal1",
+    "tags": [
+      "animal"
+    ],
+    "text": "Emerging from its shell, it examines you with an intrigued look. ",
+    "description": "",
+    "choice": "Approaching a pature",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "animal2",
+    "tags": [
+      "animal"
+    ],
+    "text": "Between the rocks, a changing shape. ",
+    "description": "",
+    "choice": "Meet the master of camouflage",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "animal3",
+    "tags": [
+      "animal"
+    ],
+    "text": "Its tentacles unfold slowly, drawing hypnotic arabesques in the water. ",
+    "description": "",
+    "choice": "Observe the grace of an octopus in motion",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "animal4",
+    "tags": [
+      "animal"
+    ],
+    "text": "It advances slowly, majestic and mysterious, the sea cicada seems almost unreal. ",
+    "description": "",
+    "choice": "Approach a surprising creature",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "animal5",
+    "tags": [
+      "animal"
+    ],
+    "text": "Lurking in the dark depths of the ocean, the moray eel remains motionless, patient and on the lookout, waiting for the right moment to emerge from its underwater lair.",
+    "description": "",
+    "choice": "Advancing towards reclining figure",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "animal7",
+    "tags": [
+      "animal"
+    ],
+    "text": "The fish slides between the rocks, inviting you to follow its secret path. ",
+    "description": "",
+    "choice": "Follow a stealthy inhabitant",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "animal8",
+    "tags": [
+      "animal"
+    ],
+    "text": "A lone fish glides between the rocks, its scales catching the light in fleeting bursts. ",
+    "description": "",
+    "choice": "Follow a bright shadow",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "animal9",
+    "tags": [
+      "animal"
+    ],
+    "text": "Invisible at first glance, the octopus blends into its environment, master of camouflage. ",
+    "description": "",
+    "choice": "Observe an elusive form",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "animal10",
+    "tags": [
+      "animal"
+    ],
+    "text": "The blenny is watching you, hidden between the rocks. ",
+    "description": "",
+    "choice": "Exchange a furtive glance",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "animal11",
+    "tags": [
+      "animal"
+    ],
+    "text": "The moray eel watches you from its rocky lair, its body snaking in the shadows. ",
+    "description": "",
+    "choice": "Observe a hidden creature",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "animal12",
+    "tags": [
+      "animal"
+    ],
+    "text": "An imposing school of barracudas has taken up residence in your exploration zone, transforming this peaceful reef into a formidable hunting ground. ",
+    "description": "",
+    "choice": "There appears to be movement on your right",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "animal14",
+    "tags": [
+      "animal"
+    ],
+    "text": "An immense school of pomfrets stands before you, forming a living wall that undulates in the azure waters. ",
+    "description": "",
+    "choice": "There's commotion behind you",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "animal16",
+    "tags": [
+      "animal"
+    ],
+    "text": "The starfish lies motionless on the sandy bottom. ",
+    "description": "",
+    "choice": "Admire a geometric being",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "animal18",
+    "tags": [
+      "animal"
+    ],
+    "text": "The jellyfish floats, elusive and fragile, like a dream undulating beneath the waves. ",
+    "description": "",
+    "choice": "Marvel at a floating dance",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "animal35",
+    "tags": [
+      "animal"
+    ],
+    "text": "The grouper swims, imposing and peaceful, its massive silhouette silhouetted against the deep blue. ",
+    "description": "",
+    "choice": "Meet a deep-sea dweller",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "outro1",
+    "tags": [
+      "outro"
+    ],
+    "text": "In full ascension, your silhouette rises gently. ",
+    "description": "",
+    "choice": "Return to the light",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "outro2",
+    "tags": [
+      "outro"
+    ],
+    "text": "In the distance, silvery bubbles rise in shimmering columns, betraying the presence of a group of invisible divers in the depths. ",
+    "description": "",
+    "choice": "Slowly return to the surface",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "outro3",
+    "tags": [
+      "outro"
+    ],
+    "text": "You can finally breathe, taking a moment to appreciate the brief but intense adventure that has unfolded before you. ",
+    "description": "",
+    "choice": "Head outwards",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "outro4",
+    "tags": [
+      "outro"
+    ],
+    "text": "Your lungs cry out for air, and you climb the depths with urgency, feeling the surface approach like a promise. ",
+    "description": "",
+    "choice": "Stay a moment longer",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "outro5",
+    "tags": [
+      "outro"
+    ],
+    "text": "The air becomes thin, but before going back up, you share a magical moment with your aquatic companions, silent witnesses to this secret universe. ",
+    "description": "",
+    "choice": "Enjoy a moment of communion with fish",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "outro6",
+    "tags": [
+      "outro"
+    ],
+    "text": "As you return to the surface, you let out a few air bubbles which escape like ephemeral memories. ",
+    "description": "",
+    "choice": "Resurface",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "outro7",
+    "tags": [
+      "outro"
+    ],
+    "text": "You are finally with your head above water, your breath short but free. ",
+    "description": "",
+    "choice": "Watch the sunset on the surface",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  },
+  {
+    "name": "outro8",
+    "tags": [
+      "outro"
+    ],
+    "text": "You see the sun slowly slipping below the horizon, its golden rays mixing with the deep hues of the sky.  ",
+    "description": "",
+    "choice": "Get your head above water",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N / A",
+      "exposure": "N / A",
+      "aperture": "N / A",
+      "iso": "N / A",
+      "focal_length": "N / A"
+    }
+  }
+]

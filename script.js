@@ -114,11 +114,17 @@ function startStory() {
     }, 8000);
 }
 
-const storyImage = document.getElementById('story-image');
+// const storyImage = document.getElementById('story-image');
+const storyImageWEBP = document.getElementById('story-image-webp');
+const storyImageJPG1 = document.getElementById('story-image-jpg1');
+const storyImageJPG2 = document.getElementById('story-image-jpg2');
 const storyText = document.getElementById('story-text');
 
 function updatePhoto(name) {
-    storyImage.src = `./photos/${name}.png`;
+    // storyImage.src = `./photos/${name}.png`;
+    storyImageWEBP.srcset = `./photos/${name}.webp`;
+    storyImageJPG1.srcset = `./photos/${name}.jpg`;
+    storyImageJPG2.src = `./photos/${name}.jpg`;
 }
 
 function updateStory(story) {
