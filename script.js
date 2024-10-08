@@ -1,7 +1,6 @@
 // Languages
 
 let language = navigator.language.slice(0, 2) || 'fr';
-language = 'fr';
 fetch(`./languages/${language}.json`)
     .then(response => response.json())
     .then(translations => {
@@ -192,16 +191,27 @@ function backToHome() {
     document.querySelectorAll('section').forEach(section => section.style.display = 'none');
 }
 
+const endChoiceList = {
+    fr: [
+        "Prendre une nouvelle inspiration et replongez...",
+        "Retourner à la page d'accueil"
+    ],
+    en: [
+        "Take a new breath and dive again...",
+        "Get back to home"
+    ]
+};
+
 function restartOrQuit() {
     storyTimeline.appendChild(Object.assign(document.createElement("button"), {
-        textContent: "Prendre une nouvelle inspiration et replongez...",
+        textContent: endChoiceList[language][0],
         classList: "story-choice story-reveal-in",
         onclick: () => {
             startStory();
         }
     }));
     storyTimeline.appendChild(Object.assign(document.createElement("button"), {
-        textContent: "Retourner à la page d'accueil",
+        textContent: endChoiceList[language][1],
         classList: "story-choice story-reveal-in",
         onclick: () => {
             document.querySelector('header').style.display = 'flex';
@@ -210,12 +220,22 @@ function restartOrQuit() {
     }));
 }
 
-const endTextList = [
-    "Vous commencez à sentir des contractions, il est temps de sortir de l'eau.",
-    "Attention, il ne vous reste plus beaucoup d'air.",
-    "Mais la fin de ce voyage approche, prenez vite une décision.",
-    "Il est temps de remonter, vous manquez d'oxygène.",
-    "Mais ces rencontres ne durent qu'un instant, et il va falloir rentrer."]
+const endTextList = {
+    fr: [
+        "Vous commencez à sentir des contractions, il est temps de sortir de l'eau.",
+        "Attention, il ne vous reste plus beaucoup d'air.",
+        "Mais la fin de ce voyage approche, prenez vite une décision.",
+        "Il est temps de remonter, vous manquez d'oxygène.",
+        "Mais ces rencontres ne durent qu'un instant, et il va falloir rentrer."
+    ],
+    en: [
+        "You are starting to feel contractions, it's time to get out of the water.",
+        "Be careful, you are running low on air.",
+        "But the end of this journey is approaching, make a decision quickly.",
+        "It's time to resurface, you're running out of oxygen.",
+        "But these encounters last only a moment, and it's time to head back."
+    ]
+};
 
 function endStory() {
 
@@ -224,7 +244,7 @@ function endStory() {
         .sort(() => 0.5 - Math.random())
         .slice(0, 2);
 
-    document.getElementsByClassName('timeline-event')[document.getElementsByClassName('timeline-event').length - 1].textContent += "\n" + endTextList[Math.floor(Math.random() * endTextList.length)];
+    document.getElementsByClassName('timeline-event')[document.getElementsByClassName('timeline-event').length - 1].textContent += "\n" + endTextList[language][Math.floor(Math.random() * endTextList[language].length)];
 
     setTimeout(() => {
         storyTimeline.appendChild(Object.assign(document.createElement("button"), {
