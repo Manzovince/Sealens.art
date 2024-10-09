@@ -1,6 +1,6 @@
 // Languages
 
-let language = navigator.language || 'en';
+let language = navigator.language.slice(0,2) || 'en';
 // console.log(language);
 // language = 'en';
 fetch(`./languages/${language}.json`)

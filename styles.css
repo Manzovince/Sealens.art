@@ -248,7 +248,9 @@ section {
 
 /* Shop */
 
-#shop {}
+#shop {
+    flex-direction: column;
+}
 
 /* Disclaimer */
 
