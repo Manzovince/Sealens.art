@@ -79,9 +79,15 @@ nav {
     display: flex;
     align-items: center;
     gap: 8px;
+    opacity: .8;
+    transition: all .25s ease-out;
 }
 
-#gallery {
+.nav-item:hover {
+    opacity: 1;
+}
+
+#nav-gallery {
     cursor: alias;
 }
 
@@ -201,11 +207,11 @@ video::-webkit-media-controls-start-playback-button {
     display: none;
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     #playPauseBtn {
         display: none;
     }
-}
+} */
 
 #playPauseBtn {
     color: var(--text-color);
@@ -230,11 +236,75 @@ section {
 
 /* About */
 
-#about {}
+#about {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    max-width: 52ch;
+    font-size: 16px;
+    font-weight: 200;
+}
 
 /* Shop */
 
 #shop {}
+
+/* Disclaimer */
+
+#disclaimer {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 24px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background-color: var(--bg-color);
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+    z-index: 4;
+}
+
+@media screen and (min-width: 600px) {
+    #disclaimer-text-2 {
+        display: none;
+    }
+}
+
+#disclaimer button {
+    font-size: 16px;
+    font-weight: 200;
+    padding: 8px 16px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all .5s ease-in;
+}
+
+.disclaimer-icon {
+    height: 48px;
+    width: 48px;
+}
+
+.disclaimer-icon path {
+    stroke: var(--text-color);
+}
+
+#disclaimer button:first-of-type {
+    margin-top: 32px;
+    border: solid 1px var(--text-color);
+}
+
+#disclaimer button:hover {
+    color: var(--bg-color);
+    background-color: var(--text-color);
+}
 
 /* Start experience */
 

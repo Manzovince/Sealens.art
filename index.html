@@ -41,9 +41,9 @@
             </svg>
         </button>
         <ul class="nav-list">
-            <!-- <li><button id="about" class="nav-item" data-lg="nav-about" data-section="about"></button></li> -->
-            <!-- <li><button id="shop" class="nav-item" data-lg="nav-shop" data-section="shop"></button></li> -->
-            <li><a id="gallery" href="https://www.instagram.com/sealens.art/" target="_blank" class="nav-item"
+            <!-- <li><button id="nav-about" class="nav-item" data-lg="nav-about" data-section="about"></button></li> -->
+            <!-- <li><button id="nav-shop" class="nav-item" data-lg="nav-shop" data-section="shop"></button></li> -->
+            <li><a id="nav-gallery" href="https://www.instagram.com/sealens.art/" target="_blank" class="nav-item"
                     data-section="gallery">
                     <div data-lg="nav-gallery"></div>
                     <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"
@@ -64,8 +64,26 @@
             <img src="./assets/sealens_animation.gif" alt="">
         </div>
         <h2 id="sub-heading" class="text-reveal-2" data-lg="header-subhead"></h2>
-        <button id="cta-experience" class="text-reveal-3" data-lg="cta-experience" onclick="startStory();"></button>
+        <button id="cta-experience" class="text-reveal-3" data-lg="cta-experience" onclick="startDisclaimer();"></button>
     </header>
+
+    <!-- Disclaimer screen -->
+    <section id="disclaimer">
+        <svg class="disclaimer-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18V5L21 3V16" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+                d="M6 21C7.65685 21 9 19.6569 9 18C9 16.3431 7.65685 15 6 15C4.34315 15 3 16.3431 3 18C3 19.6569 4.34315 21 6 21Z"
+             stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+                d="M18 19C19.6569 19 21 17.6569 21 16C21 14.3431 19.6569 13 18 13C16.3431 13 15 14.3431 15 16C15 17.6569 16.3431 19 18 19Z"
+             stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p data-lg="disclaimer-text-1"></p>
+        <p id="disclaimer-text-2" data-lg="disclaimer-text-2"></p>
+        <button><span data-lg="disclaimer-music-on" onclick="startStory(); togglePlayPause(); document.getElementById('disclaimer').style.display = 'none';"></span></button>
+        <button><span data-lg="disclaimer-music-off" onclick="startStory(); document.getElementById('disclaimer').style.display = 'none';"></span></button>
+    </section>
 
     <!-- Introduction -->
     <section id="intro">
@@ -105,7 +123,10 @@
     </section>
 
     <section id="about">
-        In progess
+        <p>Sealens est un projet d'exposition photographique sur les fonds marins de la mer Méditerranée.
+            Le temps d'une apnée, explorez des paysages sous-marins et rencontrez des habitants fascinants. Chaque visite est unique, vous offrant une nouvelle perspective sur la beauté et la diversité du monde caché sous la surface. Laissez-vous guider par le courant, plongez à votre rythme, et redécouvrez la Méditerranée à chaque immersion.
+        </p>
+        <p>Réunis autour d'une passion commune, Agathe et Vincent sont deux passionés de la mer et de la photographie.</p>
     </section>
 
     <!-- <section id="shop">

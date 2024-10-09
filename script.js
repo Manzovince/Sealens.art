@@ -1,6 +1,8 @@
 // Languages
 
-let language = navigator.language.slice(0, 2) || 'fr';
+let language = navigator.language || 'en';
+// console.log(language);
+// language = 'en';
 fetch(`./languages/${language}.json`)
     .then(response => response.json())
     .then(translations => {
@@ -23,7 +25,7 @@ document.querySelectorAll('.nav-item, #logo').forEach(item => {
         const targetId = this.getAttribute('data-section');
 
         document.querySelectorAll('section, header').forEach(el => {
-            el.style.display = el.id === targetId ? 'block' : 'none';
+            el.style.display = el.id === targetId ? 'flex' : 'none';
         });
 
         if (targetId === 'header' || targetId === 'gallery') {
@@ -40,11 +42,12 @@ document.querySelectorAll('.nav-item, #logo').forEach(item => {
 document.querySelector('header').style.display = 'flex';
 document.querySelectorAll('section').forEach(section => section.style.display = 'none');
 
-document.querySelectorAll('video').forEach( v => { v.setAttribute("playsinline", true) });
+document.querySelectorAll('video').forEach(v => { v.setAttribute("playsinline", true) });
 
-// Music player
+// Music
 
 let player;
+let hasPlayed = false; // Track whether a song has been played
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
@@ -60,24 +63,32 @@ function onYouTubeIframeAPIReady() {
     });
 }
 
-function onPlayerReady(event) {
-    const playPauseBtn = document.getElementById('playPauseBtn');
-    playPauseBtn.addEventListener('click', togglePlayPause);
+function onPlayerReady() {
+    document.getElementById('playPauseBtn').addEventListener('click', togglePlayPause);
 }
 
-const playIcon = document.getElementById('playing-icon');
-const pauseIcon = document.getElementById('muted-icon');
+const icons = {
+    play: document.getElementById('playing-icon'),
+    pause: document.getElementById('muted-icon')
+};
 
+// Toggle play/pause and play a random song if not yet played
 function togglePlayPause() {
-    if (player.getPlayerState() == YT.PlayerState.PLAYING) {
-        player.pauseVideo();
-        playIcon.style.display = "none";
-        pauseIcon.style.display = "block";
-    } else {
-        player.playVideo();
-        playIcon.style.display = "block";
-        pauseIcon.style.display = "none";
+    if (!hasPlayed) {
+        playRandomSong();
+        hasPlayed = true;
     }
+
+    const isPlaying = player.getPlayerState() === YT.PlayerState.PLAYING;
+    isPlaying ? player.pauseVideo() : player.playVideo();
+    icons.play.style.display = isPlaying ? "none" : "block";
+    icons.pause.style.display = isPlaying ? "block" : "none";
+}
+
+// Play a random song from the playlist
+function playRandomSong() {
+    const randomIndex = Math.floor(Math.random() * player.getPlaylist().length);
+    player.playVideoAt(randomIndex);
 }
 
 // Story
@@ -92,6 +103,14 @@ fetch(`./story-${language}.json`)
     });
 
 const storyTimeline = document.getElementById('story-timeline');
+
+function startDisclaimer() {
+    if (hasPlayed) {
+        startStory();
+    } else {
+        document.getElementById('disclaimer').style.display = 'flex';
+    }
+}
 
 function startStory() {
     console.log("Starting story");
