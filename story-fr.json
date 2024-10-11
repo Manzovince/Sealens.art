@@ -501,6 +501,125 @@
         }
     },
     {
+        "name": "animal20",
+        "tags": [
+            "animal"
+        ],
+        "text": "Il n'est pas nécessaire de descendre profondément pour être le témoin de l'écosystème dont regorge l'océean. Pour un instant magique, vous n'êtes plus un simple visiteur, mais un élément intégré de ce monde aquatique chatoyant.",
+        "description": "",
+        "choice": "Se mélanger avec les habitants",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal22",
+        "tags": [
+            "animal"
+        ],
+        "text": "Sous l'eau, le martin-pêcheur fend avec grâce les profondeurs cristallines, ses ailes repliées pour une plongée rapide. Sa silhouette fine se glisse entre les courants, les yeux fixés sur sa proie. Dans un éclat de lumière, son bec agile s'apprête à saisir un poisson.",
+        "description": "",
+        "choice": "Une ombre furtive transperce la surface",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal23",
+        "tags": [
+            "animal"
+        ],
+        "text": "Sous l'eau, le martin-pêcheur suspend son mouvement, flottant avec une calme maîtrise. Devant lui, un banc de poissons scintillants se déplace en un ballet synchronisé, leurs reflets d'argent illuminant les profondeurs. Les yeux du chasseur suivent silencieusement cette danse, patient et prêt pour le moment parfait.",
+        "description": "",
+        "choice": "Vous remarquez un habitant inhabituel",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal26",
+        "tags": [
+            "animal"
+        ],
+        "text": "Une murène immobile, gueule grande ouverte, attend silencieusement. Ses mâchoires dévoilent des dents acérées, tandis que son corps serpentin se fond dans le décor rocailleux. Les courants marins effleurent ses flancs, mais elle reste patiente, prête à bondir au moindre signe de proie.",
+        "description": "",
+        "choice": "Quelqu'un ne semble pas apprécier votre présence",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal28",
+        "tags": [
+            "animal"
+        ],
+        "text": "Elle glisse avec agilité le long de la roche, son corps ondulant dans un mouvement fluide. Fuyant rapidement, elle se fond dans les ombres des profondeurs, sa silhouette se détachant brièvement avant de disparaître. Entre les crevasses, elle serpente, laissant derrière elle le mystère de sa fuite silencieuse.",
+        "description": "",
+        "choice": "Une murène s'échappe en vous voyant",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal31",
+        "tags": [
+            "animal"
+        ],
+        "text": "Près de la roche, une anémone aux tentacules graciles ondule doucement au rythme des vagues. Chaque mouvement est une danse lente, ses bras colorés se déployant et se rétractant avec fluidité. Elle se balance paisiblement, suivant les courants marins comme une étreinte délicate du monde sous-marin.",
+        "description": "",
+        "choice": "Regarder la danse d'une anémone",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal34",
+        "tags": [
+            "animal"
+        ],
+        "text": "Le banc de saupes argentées glisse en parfaite harmonie, leurs écailles reflétant la lumière qui perce les profondeurs. Elles avancent en un mouvement fluide, créant un ballet silencieux autour des rochers et des herbiers marins. Autour d'elles, l'eau est animée par leur passage, dessinant des ondulations douces et brillantes.",
+        "description": "",
+        "choice": "Des poissons passent devant vous",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
         "name": "animal35",
         "tags": [
             "animal"
@@ -508,6 +627,125 @@
         "text": "Le mérou nage, imposant et paisible, sa silhouette massive se détachant dans le bleu profond. Il est le roi silencieux de ces eaux, et vous vous sentez tout petit dans son royaume infini, où chaque mouvement est une démonstration de force tranquille.",
         "description": "",
         "choice": "Rencontrer un habitant des profondeurs",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal37",
+        "tags": [
+            "animal"
+        ],
+        "text": "Les saupes forment une masse compacte, leurs mouvements synchronisés créant un tourbillon d'écailles argentées. Elles virevoltent entre les algues flottantes, comme des flèches lumineuses, dessinant des motifs éphémères. Leurs déplacements gracieux semblent répondre à une chorégraphie invisible, harmonisant l'ensemble du paysage sous-marin.",
+        "description": "",
+        "choice": "Suivre un banc de poissons",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "human1",
+        "tags": [
+            "human"
+        ],
+        "text": "Un autre explorateur des profondeurs glisse vers vous, sa progression ralentissant à votre hauteur. Son regard, intense derrière la vitre de son masque, oscille entre vous et les abysses. Son expression énigmatique vous intrigue. Quel secret les profondeurs lui ont-elles révélé ?",
+        "description": "",
+        "choice": "Vous n'êtes pas seul. Une silhouette semble sortir des profondeurs",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "human2",
+        "tags": [
+            "human"
+        ],
+        "text": "Une silhouette fend l'eau, c'est un autre plongeur. Il ralentit à votre niveau, son regard captivé par quelque chose en contrebas. Ses yeux, agrandis derrière son masque, trahissent une découverte fascinante. Que cache donc l'abysse à vos pieds ?",
+        "description": "",
+        "choice": "Tourner son regard vers le bas",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "human3",
+        "tags": [
+            "human"
+        ],
+        "text": "Une silhouette éthérée se dessine au loin. Suspendue entre deux eaux, elle semble défier la gravité, flottant avec grâce au-dessus du tapis doré du fond marin. Ses palmes, à peine frémissantes, maintiennent cette lévitation aquatique.",
+        "description": "",
+        "choice": "Observer une personne flotter au dessus du sable",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "human9",
+        "tags": [
+            "human"
+        ],
+        "text": "Un banc de poissons argentés virevolte soudain, captivant votre regard. À travers cette danse aquatique, une forme humaine se dessine, floue et distante. C'est une apnéiste, sa silhouette élancée se fondant presque dans le bleu.",
+        "description": "",
+        "choice": "Surprendre une apparition éphémère",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "human16",
+        "tags": [
+            "human"
+        ],
+        "text": "Un nuage de castagnolles s'agite soudain, leurs petits corps bleu électrique scintillant dans la lumière. À travers ce rideau vivant, une silhouette se dessine, indistincte.",
+        "description": "",
+        "choice": "Regarder un petit banc de poissons entre deux roches",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "human18",
+        "tags": [
+            "human"
+        ],
+        "text": "Au loin, une silhouette féminine se dessine dans le bleu profond. Immobile, elle contemple un spectacle fugace : un banc de poissons argentés glisse devant elle, leurs écailles miroitant sous les rayons filtrés du soleil. Dans un mouvement coordonné, le banc pivote soudain, s'étirant vers l'horizon sous-marin. La plongeuse reste en suspension, témoin silencieux de cet exode aquatique, alors que les derniers poissons disparaissent dans le large.",
+        "description": "",
+        "choice": "Un banc de poissons passe devant vous",
         "exif": {
             "camera": "Sony A7C",
             "date_taken": "N/A",
@@ -641,9 +879,27 @@
         "tags": [
             "outro"
         ],
-        "text": "Vous apercevez le soleil glissant lentement sous l'horizon, ses rayons dorés se mêlant aux teintes profondes du ciel. Ce spectacle, à la fois apaisant et captivant, évoque un sentiment de calme et de promesse pour la nuit à venir. ",
+        "text": "Vous apercevez le soleil glissant lentement sous l'horizon, ses rayons dorés se mêlant aux teintes profondes du ciel. Ce spectacle, à la fois apaisant et captivant, évoque un sentiment de calme et de promesse pour la nuit à venir.",
         "description": "",
         "choice": "Passer la tête hors de l'eau",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    }
+    ,
+    {
+        "name": "outro9",
+        "tags": [
+            "outro"
+        ],
+        "text": "La fin approche, et vous puisez vos dans vos dernières réserves d'oxygène pour admirer la lumière qui passe à travers les vagues.",
+        "description": "",
+        "choice": "Rester encore un peu sous les vagues",
         "exif": {
             "camera": "Sony A7C",
             "date_taken": "N/A",
