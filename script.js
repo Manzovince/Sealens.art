@@ -28,11 +28,15 @@ document.querySelectorAll('.nav-item, #logo').forEach(item => {
             el.style.display = el.id === targetId ? 'flex' : 'none';
         });
 
-        if (targetId === 'header' || targetId === 'gallery') {
+        if (targetId === 'header') {
             document.querySelector('header').style.display = 'flex';
+            document.querySelector('#nav-back').style.display = 'none';
+        } else {
+            document.querySelector('#nav-back').style.display = 'block';
         }
 
         if (targetId === 'story') {
+            document.querySelector('#nav-back').style.display = 'block';
             startStory();
         }
     });

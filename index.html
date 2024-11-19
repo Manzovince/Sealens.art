@@ -40,11 +40,30 @@
                     fill="white" />
             </svg>
         </button>
+        <input id="nav-checkbox" type="checkbox">
+        <label id="nav-container" for="nav-checkbox">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M1 4.98847C1 4.98847 3.94575 1.24185 6.7 1.0111C9.84228 0.747846 10.4582 5.25684 13.6 4.98847C16.1243 4.77286 16.4684 1.69346 19 1.5793C21.7295 1.45621 25 4.98847 25 4.98847"
+                    stroke="white" stroke-width="2" stroke-linecap="round" />
+                <path
+                    d="M1 15C1 15 3.4 10.7189 6.7 11.0146C9.84058 11.2961 10.4582 14.6885 13.6 14.4196C16.1243 14.2036 17.0684 11.972 19.6 11.8576C22.3295 11.7343 25 15 25 15"
+                    stroke="white" stroke-width="2" stroke-linecap="round" />
+                <path
+                    d="M1 24.9765C1 24.9765 4.0516 20.4685 6.7 21.3407C9.7 22.3288 10.6 25.2929 13.6 24.9765C16.1229 24.7104 17.0759 20.7597 19.6 21.0115C22.9 21.3408 25 24.9765 25 24.9765"
+                    stroke="white" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </label>
         <ul class="nav-list">
-            <!-- <li><button id="nav-about" class="nav-item" data-lg="nav-about" data-section="about"></button></li> -->
+            <li id="nav-back"><button class="nav-item" data-lg="nav-back" data-section="header"
+                    onclick="document.getElementById('nav-checkbox').checked = false;">
+                    <div data-lg="nav-back"></div>
+                </button></li>
+            <li><button id="nav-about" class="nav-item" data-lg="nav-about" data-section="about"
+                    onclick="document.getElementById('nav-checkbox').checked = false;"></button></li>
             <!-- <li><button id="nav-shop" class="nav-item" data-lg="nav-shop" data-section="shop"></button></li> -->
             <li><a id="nav-gallery" href="https://www.instagram.com/sealens.art/" target="_blank" class="nav-item"
-                    data-section="gallery">
+                    data-section="gallery" onclick="document.getElementById('nav-checkbox').checked = false;">
                     <div data-lg="nav-gallery"></div>
                     <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"
                         stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
@@ -64,7 +83,8 @@
             <img src="./assets/sealens_animation.gif" alt="">
         </div>
         <h2 id="sub-heading" class="text-reveal-2" data-lg="header-subhead"></h2>
-        <button id="cta-experience" class="text-reveal-3" data-lg="cta-experience" onclick="startDisclaimer();"></button>
+        <button id="cta-experience" class="text-reveal-3" data-lg="cta-experience"
+            onclick="startDisclaimer();"></button>
     </header>
 
     <!-- Disclaimer screen -->
@@ -74,15 +94,17 @@
             <path d="M9 18V5L21 3V16" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
             <path
                 d="M6 21C7.65685 21 9 19.6569 9 18C9 16.3431 7.65685 15 6 15C4.34315 15 3 16.3431 3 18C3 19.6569 4.34315 21 6 21Z"
-             stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
             <path
                 d="M18 19C19.6569 19 21 17.6569 21 16C21 14.3431 19.6569 13 18 13C16.3431 13 15 14.3431 15 16C15 17.6569 16.3431 19 18 19Z"
-             stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <p data-lg="disclaimer-text-1"></p>
         <p id="disclaimer-text-2" data-lg="disclaimer-text-2"></p>
-        <button><span data-lg="disclaimer-music-on" onclick="startStory(); togglePlayPause(); document.getElementById('disclaimer').style.display = 'none';"></span></button>
-        <button><span data-lg="disclaimer-music-off" onclick="startStory(); document.getElementById('disclaimer').style.display = 'none';"></span></button>
+        <button><span data-lg="disclaimer-music-on"
+                onclick="startStory(); togglePlayPause(); document.getElementById('disclaimer').style.display = 'none';"></span></button>
+        <button><span data-lg="disclaimer-music-off"
+                onclick="startStory(); document.getElementById('disclaimer').style.display = 'none';"></span></button>
     </section>
 
     <!-- Introduction -->
@@ -123,10 +145,40 @@
     </section>
 
     <section id="about">
-        <p>Sealens est un projet d'exposition photographique sur les fonds marins de la mer Méditerranée.
-            Le temps d'une apnée, explorez des paysages sous-marins et rencontrez des habitants fascinants. Chaque visite est unique, vous offrant une nouvelle perspective sur la beauté et la diversité du monde caché sous la surface. Laissez-vous guider par le courant, plongez à votre rythme, et redécouvrez la Méditerranée à chaque immersion.
+        <p class="about-paragraph" data-lg="about-p-1"></p>
+        <img src="./photos/landscape17.webp" alt="" class="about-illustration">
+        <p class="about-paragraph" data-lg="about-p-2">
+
         </p>
-        <p>Réunis autour d'une passion commune, Agathe et Vincent sont deux passionés de la mer et de la photographie.</p>
+        <img src="./photos/animal37.png" alt="" class="about-illustration">
+        <p class="about-paragraph" data-lg="about-p-3"></p>
+        <svg class="wavy-line" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 24">
+            <path d="M0,12 Q15,6 30,12 T60,12 T90,12 T120,12 T150,12 T180,12 T210,12 T240,12 T270,12 T300,12 T330,12 T360,12 T390,12 T420,12 T450,12 T480,12 T510,12 T540,12 T570,12 T600,12" 
+            fill="none" stroke="currentColor" stroke-width="1">
+            <animate 
+                attributeName="d"
+                values="
+                M0,12 Q15,6 30,12 T60,12 T90,12 T120,12 T150,12 T180,12 T210,12 T240,12 T270,12 T300,12 T330,12 T360,12 T390,12 T420,12 T450,12 T480,12 T510,12 T540,12 T570,12 T600,12;
+                M0,12 Q15,4 30,12 T60,12 T90,12 T120,12 T150,12 T180,12 T210,12 T240,12 T270,12 T300,12 T330,12 T360,12 T390,12 T420,12 T450,12 T480,12 T510,12 T540,12 T570,12 T600,12;
+                M0,12 Q15,6 30,12 T60,12 T90,12 T120,12 T150,12 T180,12 T210,12 T240,12 T270,12 T300,12 T330,12 T360,12 T390,12 T420,12 T450,12 T480,12 T510,12 T540,12 T570,12 T600,12"
+                dur="3s"
+                calcMode="spline"
+                keyTimes="0; 0.5; 1"
+                keySplines="0.5 0 0.5 1; 0.5 0 0.5 1"
+                repeatCount="indefinite"
+            />
+        </path>
+        </svg>
+        <div class="about-author-group">
+            <div class="about-author">
+                <img src="./assets/agathe.png" alt="">
+                <p data-lg="about-agathe"></p>
+            </div>
+            <div class="about-author">
+                <img src="./assets/vince.png" alt="">
+                <p data-lg="about-vincent"></p>
+            </div>
+        </div>
     </section>
 
     <!-- <section id="shop">

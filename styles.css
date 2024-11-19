@@ -46,7 +46,7 @@ body {
     background-color: var(--bg-color);
     font-family: 'Outfit', sans-serif;
     font-size: 1.2rem;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* Navigation */
@@ -67,14 +67,33 @@ nav {
 }
 
 .nav-list {
-    display: flex;
-    align-items: center;
+    display: none;
     gap: 32px;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+#nav-checkbox {
+    display: none;
+}
+
+#nav-checkbox:checked~.nav-list {
+    position: absolute;
+    height: 100dvh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    right: 0;
+    opacity: 1;
+    background-color: var(--bg-color);
 }
 
 .nav-item {
     color: var(--text-color);
-    font-size: 20px;
+    font-size: 32px;
     font-weight: 300;
     display: flex;
     align-items: center;
@@ -89,6 +108,28 @@ nav {
 
 #nav-gallery {
     cursor: alias;
+}
+
+#nav-back {
+    display: none;
+}
+
+@media screen and (min-width: 600px) {
+
+    #nav-container {
+        display: none;
+    }
+
+    .nav-list {
+        position: unset;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav-item {
+        font-size: 20px;
+    }
 }
 
 /* Header */
@@ -231,19 +272,70 @@ video::-webkit-media-controls-start-playback-button {
 
 section {
     display: none;
-    height: 100svh;
+    min-height: 100svh;
 }
 
 /* About */
 
 #about {
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
+    /* align-items: center; */
     padding: 24px;
-    max-width: 52ch;
+    font-weight: 100;
+    overflow-x: hidden;
+}
+
+.about-paragraph {
+    width: 100%;
+    /* height: 40vh; */
+    margin: 128px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    line-height: 1.4;
+    font-size: 20px;
+    max-width: 64ch;
+}
+
+.about-illustration {
+    padding: 24px;
+    max-width: 82ch;
+}
+
+.wavy-line {
+    max-width: 600px;
+    /* margin-bottom: 128px; */
+}
+
+.about-author-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 64px;
+    padding: 128px 0;
+}
+
+.about-author {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 32px;
+}
+
+.about-author img {
+    height:20vh;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    background-color: black;
+}
+
+.about-author p {
     font-size: 16px;
-    font-weight: 200;
+    max-width: 24ch;
 }
 
 /* Shop */
