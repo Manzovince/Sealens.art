@@ -146,6 +146,7 @@ header {
     /* background-image: radial-gradient(rgba(0, 0, 0, 0.4) 1px, transparent 0);
     background-size: 2px 2px;
     background-position: -2px -2px; */
+    overflow: hidden;
 }
 
 #bg-video {
@@ -295,6 +296,7 @@ section {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    white-space: pre-line;
     line-height: 1.4;
     font-size: 20px;
     max-width: 64ch;
@@ -335,7 +337,8 @@ section {
 
 .about-author p {
     font-size: 16px;
-    max-width: 24ch;
+    max-width: 32ch;
+    white-space: pre-line;
 }
 
 /* Shop */

@@ -39,6 +39,10 @@ document.querySelectorAll('.nav-item, #logo').forEach(item => {
             document.querySelector('#nav-back').style.display = 'block';
             startStory();
         }
+
+        if (targetId === 'gallery') {
+            return;
+        }
     });
 });
 
