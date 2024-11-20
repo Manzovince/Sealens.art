@@ -290,14 +290,13 @@ section {
 
 .about-paragraph {
     width: 100%;
-    /* height: 40vh; */
     margin: 128px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    white-space: pre-line;
     line-height: 1.4;
+    white-space: pre-line;
     font-size: 20px;
     max-width: 64ch;
 }
