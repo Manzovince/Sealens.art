@@ -60,6 +60,8 @@ nav {
     justify-content: space-between;
     padding: 24px;
     z-index: 99;
+    /* border: solid 1px red; */
+    background: linear-gradient(to bottom, var(--bg-color), transparent);
 }
 
 #logo {
