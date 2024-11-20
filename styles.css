@@ -91,6 +91,18 @@ nav {
     background-color: var(--bg-color);
 }
 
+body:has(#nav-checkbox:checked) #nav-icon-menu {
+    display: none;
+}
+
+#nav-icon-close {
+    display: none;
+}
+
+body:has(#nav-checkbox:checked) #nav-icon-close {
+    display: block;
+}
+
 .nav-item {
     color: var(--text-color);
     font-size: 32px;
@@ -99,6 +111,7 @@ nav {
     align-items: center;
     gap: 8px;
     opacity: .8;
+    padding: 24px;
     transition: all .25s ease-out;
 }
 
@@ -129,6 +142,7 @@ nav {
 
     .nav-item {
         font-size: 20px;
+        padding: 0;
     }
 }
 

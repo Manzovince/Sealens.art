@@ -24,6 +24,10 @@ document.querySelectorAll('.nav-item, #logo').forEach(item => {
     item.addEventListener('click', function () {
         const targetId = this.getAttribute('data-section');
 
+        if (targetId === 'gallery') {
+            return;
+        }
+
         document.querySelectorAll('section, header').forEach(el => {
             el.style.display = el.id === targetId ? 'flex' : 'none';
         });
@@ -38,10 +42,6 @@ document.querySelectorAll('.nav-item, #logo').forEach(item => {
         if (targetId === 'story') {
             document.querySelector('#nav-back').style.display = 'block';
             startStory();
-        }
-
-        if (targetId === 'gallery') {
-            return;
         }
     });
 });
