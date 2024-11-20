@@ -320,6 +320,7 @@ section {
 .about-illustration {
     padding: 24px;
     max-width: 82ch;
+    min-height: 70vh;
 }
 
 .wavy-line {
