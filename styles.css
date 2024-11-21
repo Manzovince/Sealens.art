@@ -8,6 +8,8 @@
     --color-secondary: hsl(175, 39%, 25%);
     --color-link: hsl(10, 84%, 76%);
 
+    --color-dark-tp: hsla(200, 90%, 4%, 0.6);
+
     --bg-color: var(--color-dark);
     --text-color: var(--color-light);
 }
@@ -60,8 +62,7 @@ nav {
     justify-content: space-between;
     padding: 24px;
     z-index: 99;
-    /* border: solid 1px red; */
-    background: linear-gradient(to bottom, var(--bg-color), transparent);
+    background: linear-gradient(to bottom, var(--color-dark-tp), transparent);
 }
 
 #logo {
@@ -302,6 +303,22 @@ section {
     padding: 24px;
     font-weight: 100;
     overflow-x: hidden;
+}
+
+#about-bg {
+    position: fixed; 
+    top: 0;
+    width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: .1;
+}
+
+#about h2 {
+    font-weight: 500;
+    width: 60vw;
+    max-width: 64ch;
 }
 
 .about-paragraph {
