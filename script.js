@@ -142,7 +142,7 @@ function startStory() {
 
 // const storyImage = document.getElementById('story-image');
 const storyImageWEBP = document.getElementById('story-image-webp');
-// const storyImagePNG1 = document.getElementById('story-image-png1');
+const storyImagePNG1 = document.getElementById('story-image-png1');
 const storyImagePNG2 = document.getElementById('story-image-png2');
 const storyText = document.getElementById('story-text');
 
@@ -150,7 +150,7 @@ function updatePhoto(name) {
     console.log('Update photo');
     // storyImage.src = `./photos/${name}.png`;
     storyImageWEBP.srcset = `./photos/${name}.webp`;
-    // storyImagePNG1.srcset = `./photos/${name}.png`;
+    storyImagePNG1.srcset = `./photos/${name}.png`;
     storyImagePNG2.src = `./photos/${name}.png`;
 }
 

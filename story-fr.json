@@ -51,6 +51,40 @@
         }
     },
     {
+        "name": "intro4",
+        "tags": [
+            "intro"
+        ],
+        "text": "L'air emplit une dernière fois vos poumons, tel un adieu éphémère à la surface. D'un mouvement fluide, vous glissez sous les eaux. Le monde devient silence.",
+        "description": "",
+        "choice": "",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "intro5",
+        "tags": [
+            "intro"
+        ],
+        "text": "L'atmosphère remplit une dernière fois votre cage thoracique, comme un au revoir à votre élément natal. Dans une danse maîtrisée, vous franchissez la frontière liquide. Le monde se tait subitement.",
+        "description": "",
+        "choice": "",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
         "name": "landscape1",
         "tags": [
             "landscape"
@@ -654,23 +688,6 @@
         }
     },
     {
-        "name": "human1",
-        "tags": [
-            "human"
-        ],
-        "text": "Un autre explorateur des profondeurs glisse vers vous, sa progression ralentissant à votre hauteur. Son regard, intense derrière la vitre de son masque, oscille entre vous et les abysses. Son expression énigmatique vous intrigue. Quel secret les profondeurs lui ont-elles révélé ?",
-        "description": "",
-        "choice": "Une silhouette semble sortir des profondeurs",
-        "exif": {
-            "camera": "Sony A7C",
-            "date_taken": "N/A",
-            "exposure": "N/A",
-            "aperture": "N/A",
-            "iso": "N/A",
-            "focal_length": "N/A"
-        }
-    },
-    {
         "name": "human2",
         "tags": [
             "human"
@@ -678,23 +695,6 @@
         "text": "Une silhouette fend l'eau, c'est un autre plongeur. Il ralentit à votre niveau, son regard captivé par quelque chose en contrebas. Ses yeux, agrandis derrière son masque, trahissent une découverte fascinante. Que cache donc l'abysse à vos pieds ?",
         "description": "",
         "choice": "Tourner son regard vers le bas",
-        "exif": {
-            "camera": "Sony A7C",
-            "date_taken": "N/A",
-            "exposure": "N/A",
-            "aperture": "N/A",
-            "iso": "N/A",
-            "focal_length": "N/A"
-        }
-    },
-    {
-        "name": "human3",
-        "tags": [
-            "human"
-        ],
-        "text": "Une silhouette éthérée se dessine au loin. Suspendue entre deux eaux, elle semble défier la gravité, flottant avec grâce au-dessus du tapis doré du fond marin. Ses palmes, à peine frémissantes, maintiennent cette lévitation aquatique.",
-        "description": "",
-        "choice": "Observer une personne flotter au dessus du sable",
         "exif": {
             "camera": "Sony A7C",
             "date_taken": "N/A",

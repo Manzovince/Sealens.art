@@ -15,6 +15,9 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <!-- Assets preload -->
+    <link rel="preload" as="image" href="./assets/homepage_video.mp4">
+    <link rel="preload" as="image" href="./assets/dernier-souffle.mp4">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FSH11HZF9Q"></script>
     <script>
@@ -29,6 +32,7 @@
 </head>
 
 <body>
+    <!-- Navigation -->
     <nav>
         <button id="logo" data-section="header">
             <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,6 +84,7 @@
         </ul>
     </nav>
 
+    <!-- Homepage -->
     <header>
         <video autoplay loop muted plays-inline id="bg-video" poster="./assets/initial.webp">
             <source src="./assets/homepage_video.mp4" type="video/mp4">
@@ -122,9 +127,9 @@
     <section id="story">
         <!-- <img id="story-image" src="" alt=""> -->
         <picture id="story-image">
-            <source id="story-image-webp" srcset="" media="(max-width:100vw)">
-            <!-- <source id="story-image-png1" srcset="" media="(max-width:100vw)"> -->
-            <img id="story-image-png2" src="" alt="" title="">
+            <source id="story-image-webp" srcset="" media="(min-width:600px)">
+            <source id="story-image-png1" srcset="" media="(min-width:1000px)">
+            <img id="story-image-png2" src="" alt="" title="" loading=“lazy” decoding=“async”>
         </picture>
         <div id="story-content">
             <div id="story-actions">
@@ -149,6 +154,7 @@
         </div>
     </section>
 
+    <!-- About section -->
     <section id="about">
         <img id="about-bg" src="./assets/bg-gouttes.png" alt="">
         <p class="about-paragraph" data-lg="about-p-1"></p>

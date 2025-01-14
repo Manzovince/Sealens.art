@@ -51,6 +51,40 @@
     }
   },
   {
+    "name": "intro4",
+    "tags": [
+      "intro"
+    ],
+    "text": "The air fills your lungs one last time, like an ephemeral farewell to the surface. With a fluid movement, you slip beneath the waters. The world becomes silence.",
+    "description": "",
+    "choice": "",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "intro5",
+    "tags": [
+      "intro"
+    ],
+    "text": "The atmosphere fills your ribcage one last time, like a goodbye to your native element. In a mastered dance, you cross the liquid border. The world suddenly falls silent.",
+    "description": "",
+    "choice": "",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
     "name": "landscape1",
     "tags": [
       "landscape"
@@ -508,6 +542,74 @@
     "text": "The grouper swims, imposing and peaceful, its massive silhouette standing out in the deep blue. It is the silent king of these waters, and you feel small in its infinite kingdom, where each movement is a demonstration of quiet strength.",
     "description": "",
     "choice": "Encounter a deep-sea inhabitant",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "human2",
+    "tags": [
+      "human"
+    ],
+    "text": "A figure cuts through the water, it's another diver. He slows down to your level, his gaze captivated by something below. His eyes, widened behind his mask, betray a fascinating discovery. What does the abyss beneath your feet conceal?",
+    "description": "",
+    "choice": "Turn your gaze downwards",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "human9",
+    "tags": [
+      "human"
+    ],
+    "text": "A school of silver fish suddenly swirls, captivating your gaze. Through this aquatic dance, a human form appears, blurry and distant. It's a freediver, her slender silhouette almost blending into the blue.",
+    "description": "",
+    "choice": "Catch a fleeting apparition",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "human16",
+    "tags": [
+      "human"
+    ],
+    "text": "A cloud of damselfish suddenly stirs, their small, electric blue bodies shimmering in the light. Through this living curtain, a silhouette emerges, indistinct.",
+    "description": "",
+    "choice": "Look at a small school of fish between two rocks",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "human18",
+    "tags": [
+      "human"
+    ],
+    "text": "In the distance, a female silhouette emerges in the deep blue. Motionless, she watches a fleeting spectacle: a school of silver fish glides past her, their scales shimmering under the sun's filtered rays. In a coordinated movement, the school suddenly pivots, stretching toward the underwater horizon. The diver remains suspended, a silent witness to this aquatic exodus, as the last fish disappear into the vastness.",
+    "description": "",
+    "choice": "A school of fish passes in front of you",
     "exif": {
       "camera": "Sony A7C",
       "date_taken": "N/A",
