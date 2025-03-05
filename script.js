@@ -198,7 +198,7 @@ function displayNextChoices(fullStory, list) {
                 updateStory(list[1]);
             }
         }));
-    }, 6000);
+    }, 3000);
 }
 
 function removeUnselectedChoice(selectedIndex) {
