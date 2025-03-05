@@ -284,9 +284,7 @@ function endStory() {
                     textContent: endChoice[0].text,
                     classList: "timeline-event story-reveal-in"
                 }));
-                setTimeout(() => {
-                    restartOrQuit();
-                }, 4000);
+                restartOrQuit();
             }
         }));
         storyTimeline.appendChild(Object.assign(document.createElement("button"), {
@@ -300,9 +298,7 @@ function endStory() {
                     textContent: endChoice[1].text,
                     classList: "timeline-event story-reveal-in"
                 }));
-                setTimeout(() => {
-                    restartOrQuit();
-                }, 4000);
+                restartOrQuit();
             }
         }));
     }, 6000);
