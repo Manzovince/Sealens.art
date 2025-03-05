@@ -1,6 +1,6 @@
 // Languages
 
-let language = navigator.language.slice(0,2) || 'en';
+let language = navigator.language.slice(0, 2) || 'en';
 // console.log(language);
 // language = 'en';
 fetch(`./languages/${language}.json`)
@@ -179,26 +179,24 @@ function updateStory(story) {
 }
 
 function displayNextChoices(fullStory, list) {
-    setTimeout(() => {
-        storyTimeline.appendChild(Object.assign(document.createElement("button"), {
-            textContent: list[0].choice + "...",
-            classList: "story-choice story-reveal-in",
-            onclick: () => {
-                document.getElementsByClassName('timeline-event')[fullStory.length - 1].style.display = "none";
-                removeUnselectedChoice(0);
-                updateStory(list[0]);
-            }
-        }));
-        storyTimeline.appendChild(Object.assign(document.createElement("button"), {
-            textContent: list[1].choice + "...",
-            classList: "story-choice story-reveal-in",
-            onclick: () => {
-                document.getElementsByClassName('timeline-event')[fullStory.length - 1].style.display = "none";
-                removeUnselectedChoice(1);
-                updateStory(list[1]);
-            }
-        }));
-    }, 3000);
+    storyTimeline.appendChild(Object.assign(document.createElement("button"), {
+        textContent: list[0].choice + "...",
+        classList: "story-choice story-reveal-in",
+        onclick: () => {
+            document.getElementsByClassName('timeline-event')[fullStory.length - 1].style.display = "none";
+            removeUnselectedChoice(0);
+            updateStory(list[0]);
+        }
+    }));
+    storyTimeline.appendChild(Object.assign(document.createElement("button"), {
+        textContent: list[1].choice + "...",
+        classList: "story-choice story-reveal-in",
+        onclick: () => {
+            document.getElementsByClassName('timeline-event')[fullStory.length - 1].style.display = "none";
+            removeUnselectedChoice(1);
+            updateStory(list[1]);
+        }
+    }));
 }
 
 function removeUnselectedChoice(selectedIndex) {
