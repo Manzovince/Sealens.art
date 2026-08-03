@@ -1,6 +1,8 @@
 // Languages
 
-let language = navigator.language.slice(0, 2) || 'en';
+const supportedLanguages = ['en', 'fr'];
+const detectedLanguage = navigator.language.slice(0, 2);
+let language = supportedLanguages.includes(detectedLanguage) ? detectedLanguage : 'en';
 // console.log(language);
 // language = 'en';
 fetch(`./languages/${language}.json`)
@@ -9,6 +11,15 @@ fetch(`./languages/${language}.json`)
         // Store translations in a global variable or state management system
         window.translations = translations;
         updatePageContent();
+    })
+    .catch(() => {
+        language = 'en';
+        fetch(`./languages/en.json`)
+            .then(response => response.json())
+            .then(translations => {
+                window.translations = translations;
+                updatePageContent();
+            });
     });
 
 function updatePageContent() {
