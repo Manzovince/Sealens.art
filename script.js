@@ -10,19 +10,22 @@ function savedLanguage() {
 const detectedLanguage = savedLanguage() || (navigator.language || 'en').slice(0, 2);
 let language = supportedLanguages.includes(detectedLanguage) ? detectedLanguage : 'en';
 
+// Bump with any change to the JSON files: browsers keep them for days
+const DATA_VERSION = 2;
+
 let translations = {};
 let storyData = [];
 let storyLoaded;
 
 function loadLanguage() {
     document.documentElement.lang = language;
-    const texts = fetch(`./languages/${language}.json`)
+    const texts = fetch(`./languages/${language}.json?v=${DATA_VERSION}`)
         .then(response => response.json())
         .then(data => {
             translations = data;
             updatePageContent();
         });
-    storyLoaded = fetch(`./story-${language}.json`)
+    storyLoaded = fetch(`./story-${language}.json?v=${DATA_VERSION}`)
         .then(response => response.json())
         .then(data => { storyData = data; });
     return Promise.all([texts, storyLoaded]);
