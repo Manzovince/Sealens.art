@@ -1,23 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Une exposition de photographie sous-marine dont vous êtes le héros.">
     <meta name="keywords"
         content="galerie, photo, photography, photographie, sous-marin, apnée, freediving, underwater, océan, mer, histoire, exploration, immersion">
+    <meta name="theme-color" content="#010e14">
+    <!-- Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sealens.art/">
+    <meta property="og:title" content="Sealens | L'exposition qui retient son souffle">
+    <meta property="og:description" content="Une exposition de photographie sous-marine dont vous êtes le héros.">
+    <meta property="og:image" content="https://sealens.art/photos/1600/intro3.webp">
+    <meta name="twitter:card" content="summary_large_image">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <!-- Styles -->
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css?v=2">
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;500&display=swap" rel="stylesheet">
     <!-- Assets preload -->
-    <link rel="preload" as="image" href="./assets/homepage_video.mp4">
-    <link rel="preload" as="image" href="./assets/dernier-souffle.mp4">
+    <link rel="preload" as="image" href="./assets/video/accueil-poster.webp">
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FSH11HZF9Q"></script>
     <script>
@@ -28,14 +35,14 @@
         gtag('config', 'G-FSH11HZF9Q');
     </script>
     <!-- Title -->
-    <title data-lg="tab-title"></title>
+    <title data-lg="tab-title">Sealens | L'exposition qui retient son souffle</title>
 </head>
 
 <body>
     <!-- Navigation -->
     <nav>
-        <button id="logo" data-section="header">
-            <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button id="logo" data-section="header" aria-label="Sealens">
+            <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path
                     d="M13.499 15.6933C13.499 17.5832 12.8965 19.3358 11.8013 20.6505C10.5693 22.102 8.78947 22.8962 6.81788 22.8962C4.95603 22.8962 3.25832 22.2662 2.02631 21.116C0.711912 19.8837 0 18.1582 0 16.1588C0 13.0091 2.27253 11.1468 4.46328 11.1468C5.64058 11.1468 6.65374 11.667 7.42036 12.5436C8.0502 13.283 8.46088 14.2691 8.57031 15.4467C8.62502 15.9946 8.18699 16.4327 7.63923 16.4327H7.31063C6.76317 16.4327 6.32514 15.9946 6.24276 15.4467C6.16099 14.844 5.96887 14.3238 5.66794 13.9951C5.25727 13.5296 4.79158 13.4202 4.46328 13.4202C3.39542 13.4202 2.30019 14.4609 2.30019 16.1588C2.30019 19.2263 4.57271 20.6231 6.81819 20.6231C8.92657 20.6231 11.2265 19.0621 11.2265 15.6933C11.2265 13.5844 9.52874 12.1055 7.74896 10.5168C5.85944 8.81898 3.91552 7.06613 3.91552 4.4367C3.91552 1.99913 5.66794 0 7.80368 0C9.61082 0 11.007 1.12286 11.7466 3.0402C11.9384 3.53307 11.6095 4.0536 11.0897 4.19042L10.7608 4.27282C10.2407 4.40964 9.72055 4.0536 9.50139 3.56074C9.20015 2.90338 8.68004 2.30075 7.80399 2.30075C7.03736 2.30075 6.18835 3.14997 6.18835 4.43701C6.18835 6.05273 7.63953 7.31272 9.28253 8.79162C11.2538 10.5718 13.499 12.571 13.499 15.6933Z"
                     fill="white" />
@@ -45,9 +52,9 @@
             </svg>
         </button>
         <input id="nav-checkbox" type="checkbox">
-        <label id="nav-container" for="nav-checkbox">
+        <label id="nav-container" for="nav-checkbox" aria-label="Menu">
             <svg id="nav-icon-menu" width="26" height="23" viewBox="0 0 26 23" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path
                     d="M1 4.34065C1 4.34065 3.94575 2.29794 6.7 2.04037C9.84228 1.74651 10.4582 4.64022 13.6 4.34065C16.1243 4.09997 16.4684 1.73231 19 1.60487C21.7295 1.46748 25 4.34065 25 4.34065"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -59,48 +66,58 @@
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" />
             </svg>
             <svg id="nav-icon-close" width="27" height="30" viewBox="0 0 27 30" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M12.185 1.03517C9.56105 1.62319 10.4842 8.85099 8.90477 10.4461C7.32532 12.0413 1.62369 10.0599 1.03231 12.2108C0.48998 14.1834 6.93641 13.9751 8.24883 15.74C10.2166 18.6806 4.96841 23.9747 7.5928 25.7391C10.2172 27.5035 11.5292 19.7589 14.8091 19.2689C18.089 18.7789 22.0252 24.5623 23.9934 22.7979C25.9616 21.0335 19.4012 17.5044 20.0572 14.5633C20.7131 11.6222 26.524 12.2106 25.9617 9.85795C25.54 8.09355 19.9004 10.8505 16.777 9.26963C13.0839 7.40048 14.8089 0.447155 12.185 1.03517Z" stroke="currentColor" stroke-width="2"/>
             </svg>
         </label>
-        <ul class="nav-list">
-            <li id="nav-back"><button class="nav-item" data-lg="nav-back" data-section="header"
-                    onclick="document.getElementById('nav-checkbox').checked = false;">
-                    <div data-lg="nav-back"></div>
-                </button></li>
-            <li><button id="nav-about" class="nav-item" data-lg="nav-about" data-section="about"
-                    onclick="document.getElementById('nav-checkbox').checked = false;"></button></li>
+        <ul class="nav-list" id="nav-list">
+            <li id="nav-back"><button class="nav-item" data-lg="nav-back" data-section="header"></button></li>
+            <li><button id="nav-about" class="nav-item" data-lg="nav-about" data-section="about"></button></li>
             <!-- <li><button id="nav-shop" class="nav-item" data-lg="nav-shop" data-section="shop"></button></li> -->
-            <li><a id="nav-gallery" href="https://www.instagram.com/sealens.art/" target="_blank" class="nav-item"
-                    data-section="gallery" onclick="document.getElementById('nav-checkbox').checked = false;">
-                    <div data-lg="nav-gallery"></div>
+            <li><a id="nav-gallery" href="https://www.instagram.com/sealens.art/" target="_blank" rel="noopener"
+                    class="nav-item">
+                    <span data-lg="nav-gallery"></span>
                     <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                     </svg>
                 </a></li>
+            <li><button id="nav-lang" class="nav-item" data-lg-aria="lang-switch-label">
+                    <span class="lang-fr">FR</span><span aria-hidden="true">·</span><span class="lang-en">EN</span>
+                </button></li>
         </ul>
+        <!-- While diving the links hide behind this -->
+        <button id="nav-toggle" data-lg-aria="nav-toggle" aria-expanded="false" aria-controls="nav-list">
+            <svg class="icon-closed" width="22" height="20" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M1 4.34065C1 4.34065 3.94575 2.29794 6.7 2.04037C9.84228 1.74651 10.4582 4.64022 13.6 4.34065C16.1243 4.09997 16.4684 1.73231 19 1.60487C21.7295 1.46748 25 4.34065 25 4.34065" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                <path d="M1 12.8056C1 12.8056 3.4 10.1663 6.7 10.4964C9.84058 10.8106 10.4582 12.4579 13.6 12.1578C16.1243 11.9166 17.0684 10.4953 19.6 10.3676C22.3295 10.23 25 12.8056 25 12.8056" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                <path d="M1 21.1161C1 21.1161 4.0516 18.2236 6.7 19.1972C9.7 20.3001 10.6 21.4693 13.6 21.1161C16.1229 20.8191 17.0759 18.5486 19.6 18.8297C22.9 19.1972 25 21.1161 25 21.1161" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+            <svg class="icon-open" width="20" height="22" viewBox="0 0 27 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12.185 1.03517C9.56105 1.62319 10.4842 8.85099 8.90477 10.4461C7.32532 12.0413 1.62369 10.0599 1.03231 12.2108C0.48998 14.1834 6.93641 13.9751 8.24883 15.74C10.2166 18.6806 4.96841 23.9747 7.5928 25.7391C10.2172 27.5035 11.5292 19.7589 14.8091 19.2689C18.089 18.7789 22.0252 24.5623 23.9934 22.7979C25.9616 21.0335 19.4012 17.5044 20.0572 14.5633C20.7131 11.6222 26.524 12.2106 25.9617 9.85795C25.54 8.09355 19.9004 10.8505 16.777 9.26963C13.0839 7.40048 14.8089 0.447155 12.185 1.03517Z" stroke="currentColor" stroke-width="1.6"/>
+            </svg>
+        </button>
     </nav>
 
     <!-- Homepage -->
-    <header>
-        <video autoplay loop muted plays-inline id="bg-video" poster="./assets/initial.webp">
-            <source src="./assets/homepage_video.mp4" type="video/mp4">
+    <header id="header" class="active">
+        <video autoplay loop muted playsinline id="bg-video" poster="./assets/video/accueil-poster.webp" aria-hidden="true">
+            <source src="./assets/video/accueil-540.mp4" type="video/mp4" media="(max-width: 900px)">
+            <source src="./assets/video/accueil-720.mp4" type="video/mp4">
         </video>
-        <div id="logo-main" class="text-reveal-1">
-            <img src="./assets/sealens_animation.gif" alt="">
-        </div>
+        <h1 id="logo-main" class="text-reveal-1">
+            <img src="./assets/sealens_animation.gif" alt="Sealens">
+        </h1>
         <h2 id="sub-heading" class="text-reveal-2" data-lg="header-subhead"></h2>
-        <button id="cta-experience" class="text-reveal-3" data-lg="cta-experience"
-            onclick="startDisclaimer();"></button>
+        <button id="cta-experience" class="text-reveal-3" data-lg="cta-experience"></button>
     </header>
 
     <!-- Disclaimer screen -->
     <section id="disclaimer">
         <svg class="disclaimer-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M9 18V5L21 3V16" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
             <path
                 d="M6 21C7.65685 21 9 19.6569 9 18C9 16.3431 7.65685 15 6 15C4.34315 15 3 16.3431 3 18C3 19.6569 4.34315 21 6 21Z"
@@ -111,58 +128,90 @@
         </svg>
         <p data-lg="disclaimer-text-1"></p>
         <p id="disclaimer-text-2" data-lg="disclaimer-text-2"></p>
-        <button><span data-lg="disclaimer-music-on"
-                onclick="startStory(); togglePlayPause(); document.getElementById('disclaimer').style.display = 'none';"></span></button>
-        <button><span data-lg="disclaimer-music-off"
-                onclick="startStory(); document.getElementById('disclaimer').style.display = 'none';"></span></button>
+        <button id="disclaimer-music-on" data-lg="disclaimer-music-on"></button>
+        <button id="disclaimer-music-off" data-lg="disclaimer-music-off"></button>
     </section>
 
     <!-- Introduction -->
     <section id="intro">
-        <video autoplay loop muted plays-inline id="intro-video" src="./assets/dernier-souffle.mp4" poster=""></video>
+        <video muted playsinline preload="none" id="intro-video" poster="./assets/video/souffle-poster.webp" aria-hidden="true">
+            <source src="./assets/video/souffle-540.mp4" type="video/mp4" media="(max-width: 900px)">
+            <source src="./assets/video/souffle-720.mp4" type="video/mp4">
+        </video>
         <div id="intro-text" data-lg="intro-text"></div>
+        <p id="intro-skip" data-lg="intro-skip"></p>
     </section>
 
     <!-- Story -->
     <section id="story">
-        <!-- <img id="story-image" src="" alt=""> -->
-        <picture id="story-image">
-            <source id="story-image-webp" srcset="" media="(min-width:600px)">
-            <source id="story-image-png1" srcset="" media="(min-width:1000px)">
-            <img id="story-image-png2" src="" alt="" title="" loading=“lazy” decoding=“async”>
-        </picture>
+        <div id="story-image" aria-hidden="true">
+            <img class="story-layer" alt="" decoding="async">
+            <img class="story-layer" alt="" decoding="async">
+        </div>
+        <div id="story-air" aria-hidden="true"><div id="story-air-level"></div></div>
         <div id="story-content">
-            <div id="story-actions">
-                <div id="story-full">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.3333 7.33333L7.99996 4L4.66663 7.33333" stroke="white" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M11.3333 12.0003L7.99996 8.66699L4.66663 12.0003" stroke="white" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
+            <div id="story-timeline" aria-live="polite"></div>
+        </div>
+        <button id="zen-mode" data-lg-aria="zen-mode" aria-pressed="false">
+            <svg class="icon-hide" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="1.2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"></path>
+            </svg>
+            <svg class="icon-show" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="1.2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 14h6v6M20 10h-6V4M14 10l7-7M3 21l7-7"></path>
+            </svg>
+        </button>
+        <button id="zen-peek" data-lg-aria="zen-peek">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="8" cy="16.5" r="4.5" stroke="currentColor" stroke-width="1.3" />
+                <circle cx="16.5" cy="9.5" r="3" stroke="currentColor" stroke-width="1.3" />
+                <circle cx="9.5" cy="4.5" r="1.8" stroke="currentColor" stroke-width="1.3" />
+            </svg>
+        </button>
+    </section>
+
+    <!-- Dive recap -->
+    <section id="recap" aria-labelledby="recap-title">
+        <div id="recap-sheet">
+            <div id="recap-head">
+                <div>
+                    <h2 id="recap-title" data-lg="recap-title" tabindex="-1"></h2>
+                    <p id="recap-date"></p>
                 </div>
-                <div id="story-view">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.3334 4.66699L4.66675 11.3337" stroke="white" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M11.3334 11.3337H4.66675V4.66699" stroke="white" stroke-linecap="round"
-                            stroke-linejoin="round" />
+                <button id="recap-close" data-lg-aria="recap-close">
+                    <svg width="27" height="30" viewBox="0 0 27 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M12.185 1.03517C9.56105 1.62319 10.4842 8.85099 8.90477 10.4461C7.32532 12.0413 1.62369 10.0599 1.03231 12.2108C0.48998 14.1834 6.93641 13.9751 8.24883 15.74C10.2166 18.6806 4.96841 23.9747 7.5928 25.7391C10.2172 27.5035 11.5292 19.7589 14.8091 19.2689C18.089 18.7789 22.0252 24.5623 23.9934 22.7979C25.9616 21.0335 19.4012 17.5044 20.0572 14.5633C20.7131 11.6222 26.524 12.2106 25.9617 9.85795C25.54 8.09355 19.9004 10.8505 16.777 9.26963C13.0839 7.40048 14.8089 0.447155 12.185 1.03517Z" stroke="currentColor" stroke-width="1.5"/>
                     </svg>
-                </div>
+                </button>
             </div>
-            <div id="story-timeline"></div>
+            <ol id="recap-log"></ol>
         </div>
     </section>
 
+    <!-- Full-screen photo -->
+    <div id="viewer" role="dialog" aria-modal="true" aria-labelledby="viewer-caption">
+        <img id="viewer-img" alt="">
+        <p id="viewer-caption"></p>
+        <button id="viewer-prev" class="viewer-arrow" data-lg-aria="viewer-prev">‹</button>
+        <button id="viewer-next" class="viewer-arrow" data-lg-aria="viewer-next">›</button>
+        <button id="viewer-close" data-lg-aria="viewer-close">
+            <svg width="27" height="30" viewBox="0 0 27 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12.185 1.03517C9.56105 1.62319 10.4842 8.85099 8.90477 10.4461C7.32532 12.0413 1.62369 10.0599 1.03231 12.2108C0.48998 14.1834 6.93641 13.9751 8.24883 15.74C10.2166 18.6806 4.96841 23.9747 7.5928 25.7391C10.2172 27.5035 11.5292 19.7589 14.8091 19.2689C18.089 18.7789 22.0252 24.5623 23.9934 22.7979C25.9616 21.0335 19.4012 17.5044 20.0572 14.5633C20.7131 11.6222 26.524 12.2106 25.9617 9.85795C25.54 8.09355 19.9004 10.8505 16.777 9.26963C13.0839 7.40048 14.8089 0.447155 12.185 1.03517Z" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+        </button>
+    </div>
+
     <!-- About section -->
     <section id="about">
-        <img id="about-bg" src="./assets/bg-gouttes.png" alt="">
+        <img id="about-bg" src="./assets/bg-gouttes.webp" alt="" loading="lazy">
         <p class="about-paragraph" data-lg="about-p-1"></p>
-        <img src="./photos/animal37.png" alt="" class="about-illustration">
+        <img src="./photos/1600/animal37.webp" srcset="./photos/800/animal37.webp 800w, ./photos/1600/animal37.webp 1600w"
+            sizes="(max-width: 82ch) 100vw, 82ch" alt="" class="about-illustration" loading="lazy" decoding="async">
         <p class="about-paragraph" data-lg="about-p-2"></p>
-        <iframe class="about-illustration" width="100%" src="https://www.youtube-nocookie.com/embed/1L7uqRU2Eo4?si=H7uvSgSO166wnCGM" title="Vidéo de présentation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="about-illustration" loading="lazy" src="https://www.youtube-nocookie.com/embed/1L7uqRU2Eo4?si=H7uvSgSO166wnCGM" title="Sealens" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <p class="about-paragraph" data-lg="about-p-3"></p>
-        <svg class="wavy-line" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 24">
+        <svg class="wavy-line" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 24" aria-hidden="true">
             <path
                 d="M0,12 Q15,6 30,12 T60,12 T90,12 T120,12 T150,12 T180,12 T210,12 T240,12 T270,12 T300,12 T330,12 T360,12 T390,12 T420,12 T450,12 T480,12 T510,12 T540,12 T570,12 T600,12"
                 fill="none" stroke="currentColor" stroke-width="1">
@@ -177,11 +226,11 @@
         </svg>
         <div class="about-author-group">
             <div class="about-author">
-                <img src="./assets/agathe.png" alt="">
+                <img src="./assets/agathe.webp" alt="Agathe" loading="lazy">
                 <p data-lg="about-agathe"></p>
             </div>
             <div class="about-author">
-                <img src="./assets/vince.png" alt="">
+                <img src="./assets/vince.webp" alt="Vincent" loading="lazy">
                 <p data-lg="about-vincent"></p>
             </div>
         </div>
@@ -193,26 +242,21 @@
 
     <!-- Music player -->
     <div id="player"></div>
-    <button id="playPauseBtn">
-        <div id="playing-icon">
-            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1" fill="none"
-                stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
-                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-            </svg>
-        </div>
-        <div id="muted-icon">
-            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="1" fill="none"
-                stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
-                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                <line x1="23" y1="9" x2="17" y2="15"></line>
-                <line x1="17" y1="9" x2="23" y2="15"></line>
-            </svg>
-        </div>
+    <button id="playPauseBtn" data-lg-aria="music-toggle" aria-pressed="false">
+        <svg id="playing-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="1.2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        </svg>
+        <svg id="muted-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="1.2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+        </svg>
     </button>
-</body>
 
-<script src="./script.js"></script>
-<script src="https://www.youtube.com/iframe_api"></script>
+    <script src="./script.js?v=2"></script>
+</body>
 
 </html>
