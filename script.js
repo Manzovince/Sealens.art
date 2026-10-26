@@ -11,7 +11,7 @@ const detectedLanguage = savedLanguage() || (navigator.language || 'en').slice(0
 let language = supportedLanguages.includes(detectedLanguage) ? detectedLanguage : 'en';
 
 // Bump with any change to the JSON files: browsers keep them for days
-const DATA_VERSION = 2;
+const DATA_VERSION = 3;
 
 let translations = {};
 let storyData = [];

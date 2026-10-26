@@ -621,6 +621,31 @@ iframe.about-illustration {
     white-space: pre-line;
 }
 
+/* Music credit */
+
+.about-credits {
+    padding-bottom: 96px;
+    font-size: 15px;
+    font-weight: 200;
+    text-align: center;
+    opacity: .8;
+}
+
+.about-credits a {
+    text-decoration: underline wavy rgba(255, 255, 255, .4);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
+    transition: text-decoration-color .25s ease;
+}
+
+.about-credits a:hover {
+    text-decoration-color: currentColor;
+}
+
+.about-credits cite {
+    font-style: italic;
+}
+
 /* Shop */
 
 #shop {
