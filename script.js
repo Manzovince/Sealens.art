@@ -11,7 +11,7 @@ const detectedLanguage = savedLanguage() || (navigator.language || 'en').slice(0
 let language = supportedLanguages.includes(detectedLanguage) ? detectedLanguage : 'en';
 
 // Bump with any change to the JSON files: browsers keep them for days
-const DATA_VERSION = 3;
+const DATA_VERSION = 4;
 
 let translations = {};
 let storyData = [];
@@ -28,8 +28,10 @@ function loadLanguage() {
     storyLoaded = fetch(`./story-${language}.json?v=${DATA_VERSION}`)
         .then(response => response.json())
         .then(data => { storyData = data; });
-    return Promise.all([texts, storyLoaded]);
+    languageLoaded = Promise.all([texts, storyLoaded]);
+    return languageLoaded;
 }
+let languageLoaded;
 loadLanguage();
 
 document.getElementById('nav-lang').addEventListener('click', () => {
@@ -80,6 +82,7 @@ function showSection(id) {
     if (id !== 'intro') cancelIntro();
     if (id !== 'recap') viewer.classList.remove('open');
     if (id !== 'story') setZen(false); // the bar and the sound must come back elsewhere
+    if (id !== 'prints') setHash('');
     window.scrollTo(0, 0);
 
     // One history entry for everything past the home page, so the phone's back button returns home
@@ -89,12 +92,12 @@ function showSection(id) {
 
 window.addEventListener('popstate', () => {
     if (!document.getElementById('header').classList.contains('active')) showSection('header');
+    if (location.hash) history.replaceState(history.state, '', location.pathname + location.search);
 });
 
 document.querySelectorAll('.nav-item[data-section], #logo').forEach(item => {
     item.addEventListener('click', () => showSection(item.dataset.section));
 });
-document.getElementById('nav-gallery').addEventListener('click', () => { navCheckbox.checked = false; });
 document.addEventListener('keydown', event => {
     if (event.key === 'Escape') navCheckbox.checked = false;
 });
@@ -442,6 +445,7 @@ function relocalize() {
     }
     if (recap.classList.contains('active')) renderRecap();
     if (isViewerOpen()) showInViewer(viewerIndex);
+    if (printsSection.classList.contains('active')) renderPrints();
 }
 
 function updateStory(story) {
@@ -538,6 +542,14 @@ function renderRecap() {
         text.className = 'log-text';
         if (entry.via) text.appendChild(Object.assign(document.createElement('em'), { textContent: localized(entry.via).choice }));
         text.appendChild(Object.assign(document.createElement('p'), { textContent: localized(entry.story).text }));
+        const print = printOf(entry.story.name);
+        if (print) {
+            text.appendChild(Object.assign(document.createElement('button'), {
+                className: 'log-print',
+                textContent: `${t('log-print')} · ${t('prints-from')} ${euros(Math.min(...formatsOf(print).map(f => f.price)))}`,
+                onclick: () => openPrint(print.photo, { fromLog: true }),
+            }));
+        }
         item.append(
             Object.assign(document.createElement('span'), { className: 'log-step', textContent: logStep(i) }),
             logPhoto(entry, i),
@@ -664,4 +676,269 @@ function resurface(choice) {
     setAir(1);
     page = { kind: 'final', story: choice };
     turnPage(choice.name);
+}
+
+// Prints
+
+const printsSection = document.getElementById('prints');
+const printsList = document.getElementById('prints-list');
+const printDetail = document.getElementById('print-detail');
+const printsGrid = document.getElementById('prints-grid');
+const guideStart = document.getElementById('prints-guide-start');
+const guideSteps = document.getElementById('prints-guide-steps');
+const orderForm = document.getElementById('order-form');
+
+let printsData = null;
+const printsLoaded = fetch(`./tirages.json?v=${DATA_VERSION}`)
+    .then(response => response.json())
+    .then(data => { printsData = data; });
+
+let currentPrint = null;
+let currentFormat = null;
+let printFromLog = false; // the way back leads to the dive log
+let guide = null; // null: not asked, then { light, subject } as the answers come
+
+const printOf = name => printsData?.prints.find(print => print.photo === name);
+// A print may list the sizes its resolution allows; none listed means all of them
+const formatsOf = print => printsData.formats.filter(format => !print.formats || print.formats.includes(format.id));
+const copiesLeft = (print, format) => format.edition - (print.sold[format.id] || 0);
+const titleOf = print => print.title[language] || print.title.fr;
+const euros = amount => new Intl.NumberFormat(language, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(amount);
+const fill = (text, values) => text.replace(/\{(\w+)\}/g, (_, key) => values[key]);
+
+// The address bar names the print, so a link can be shared
+function setHash(hash) {
+    if ((location.hash || '') === hash) return;
+    history.replaceState(history.state, '', hash || location.pathname + location.search);
+}
+
+function photoSet(name) {
+    return {
+        src: `./photos/1600/${name}.webp`,
+        srcset: SIZES.map(size => `./photos/${size}/${name}.webp ${size}w`).join(', '),
+    };
+}
+
+async function showPrintList() {
+    await Promise.all([printsLoaded, languageLoaded]); // a shared link may arrive before the texts
+
+    if (!printsSection.classList.contains('active')) showSection('prints');
+    currentPrint = null;
+    printFromLog = false;
+    printDetail.hidden = true;
+    printsList.hidden = false;
+    renderPrints();
+    setHash('#tirages');
+}
+
+async function openPrint(name, { fromLog = false } = {}) {
+    await Promise.all([printsLoaded, languageLoaded]); // the photo's text comes from the story
+    const print = printOf(name);
+    if (!print) return showPrintList();
+    if (!printsSection.classList.contains('active')) showSection('prints');
+    currentPrint = print;
+    printFromLog = fromLog;
+    currentFormat = formatsOf(print).find(format => copiesLeft(print, format) > 0) || formatsOf(print)[0];
+    orderForm.hidden = true;
+    printsList.hidden = true;
+    printDetail.hidden = false;
+    document.getElementById('print-img').removeAttribute('src');
+    renderPrints();
+    window.scrollTo(0, 0);
+    setHash(`#tirages/${name}`);
+    document.getElementById('print-title').focus({ preventScroll: true });
+}
+
+function renderPrints() {
+    if (!printsData) return;
+    if (currentPrint) renderDetail();
+    else {
+        renderGuide();
+        renderGrid();
+    }
+}
+
+// The guided pick asks like the dive does, then keeps the three closest photos
+function guidedPrints() {
+    const score = print => (print.light === guide.light) + 2 * (print.subject === guide.subject);
+    return [...printsData.prints].sort((a, b) => score(b) - score(a)).slice(0, 3);
+}
+
+function renderGrid() {
+    const prints = guide?.subject ? guidedPrints() : printsData.prints;
+    printsGrid.replaceChildren(...prints.map((print, i) => {
+        const item = document.createElement('li');
+        item.style.animationDelay = `${Math.min(i, 12) * 60}ms`;
+        const button = Object.assign(document.createElement('button'), {
+            className: 'print-card',
+            onclick: () => openPrint(print.photo),
+        });
+        const soldOut = formatsOf(print).every(format => copiesLeft(print, format) <= 0);
+        button.append(
+            Object.assign(document.createElement('img'), {
+                src: `./photos/800/${print.photo}.webp`, alt: '', loading: 'lazy', decoding: 'async',
+                srcset: `./photos/800/${print.photo}.webp 800w, ./photos/1600/${print.photo}.webp 1600w`,
+                sizes: '(max-width: 1000px) 100vw, 640px',
+            }),
+            Object.assign(document.createElement('span'), { className: 'print-card-title', textContent: titleOf(print) }),
+            Object.assign(document.createElement('span'), {
+                className: 'print-card-price',
+                textContent: soldOut ? t('prints-sold-out')
+                    : `${t('prints-from')} ${euros(Math.min(...formatsOf(print).map(f => f.price)))}`,
+            }),
+        );
+        item.appendChild(button);
+        return item;
+    }));
+}
+
+function guideChoice(label, onclick) {
+    return Object.assign(document.createElement('button'), {
+        className: 'story-choice story-reveal-in', textContent: t(label), onclick,
+    });
+}
+
+function renderGuide() {
+    guideStart.hidden = guide !== null;
+    const line = key => Object.assign(document.createElement('p'), { className: 'guide-line story-reveal-in', textContent: t(key) });
+    if (guide === null) return guideSteps.replaceChildren();
+    if (!guide.light) {
+        guideSteps.replaceChildren(line('prints-guide-q1'),
+            ...['light', 'dark'].map(light => guideChoice(`prints-guide-${light}`, () => { guide.light = light; renderPrints(); })));
+    } else if (!guide.subject) {
+        guideSteps.replaceChildren(line('prints-guide-q2'),
+            ...['life', 'place', 'people'].map(subject => guideChoice(`prints-guide-${subject}`, () => { guide.subject = subject; renderPrints(); })));
+    } else {
+        guideSteps.replaceChildren(line('prints-guide-result'),
+            guideChoice('prints-guide-reset', () => { guide = null; renderPrints(); }));
+    }
+    guideSteps.querySelector('button')?.focus({ preventScroll: true });
+}
+
+guideStart.addEventListener('click', () => {
+    guide = {};
+    renderPrints();
+});
+
+// Every length in centimetres: a 240 × 200 cm stretch of wall
+const WALL = [240, 200];
+const place = (element, left, bottom, width, height) => Object.assign(element.style, {
+    left: `${left / WALL[0] * 100}%`, bottom: `${bottom / WALL[1] * 100}%`,
+    width: `${width / WALL[0] * 100}%`, height: `${height / WALL[1] * 100}%`,
+});
+
+function renderDetail() {
+    const print = currentPrint;
+    const name = print.photo;
+    document.getElementById('print-back').textContent = `‹ ${t(printFromLog ? 'prints-back-log' : 'prints-back')}`;
+    const img = document.getElementById('print-img');
+    if (!img.getAttribute('src')) Object.assign(img, photoSet(name), { sizes: '(max-width: 900px) 100vw, 60vw' });
+    document.getElementById('print-title').textContent = titleOf(print);
+    document.getElementById('print-story').textContent = storyData.find(story => story.name === name)?.text || '';
+
+    document.getElementById('print-formats').replaceChildren(...formatsOf(print).map(format => {
+        const left = copiesLeft(print, format);
+        const label = document.createElement('label');
+        label.className = 'print-format';
+        const input = Object.assign(document.createElement('input'), {
+            type: 'radio', name: 'format', value: format.id,
+            checked: format === currentFormat, disabled: left <= 0,
+            onchange: () => { currentFormat = format; renderDetail(); },
+        });
+        label.append(input,
+            Object.assign(document.createElement('span'), { className: 'format-size', textContent: format.label }),
+            Object.assign(document.createElement('span'), {
+                className: 'format-price', textContent: left > 0 ? euros(format.price) : t('prints-sold-out'),
+            }),
+        );
+        return label;
+    }));
+
+    // The remaining copies, drawn like the air gauge of the dive
+    const left = copiesLeft(print, currentFormat);
+    document.getElementById('print-copies-text').textContent = left <= 0 ? t('prints-sold-out')
+        : left === 1 ? t('prints-left-one')
+        : fill(t('prints-left'), { left, edition: currentFormat.edition });
+    document.getElementById('print-gauge').replaceChildren(...Array.from({ length: currentFormat.edition }, (_, i) =>
+        Object.assign(document.createElement('span'), { className: i < left ? 'full' : '' })));
+
+    const [sheetW, sheetH] = currentFormat.sheet;
+    const [imageW, imageH] = currentFormat.image;
+    place(document.querySelector('.wall-person'), 18, 0, 40, 170);
+    place(document.querySelector('.wall-furniture'), 100, 0, 120, 75);
+    place(document.getElementById('wall-sheet'), 160 - sheetW / 2, 100, sheetW, sheetH);
+    const wallImg = document.getElementById('wall-img');
+    wallImg.src = `./photos/800/${name}.webp`;
+    Object.assign(wallImg.style, {
+        width: `${imageW / sheetW * 100}%`, height: `${imageH / sheetH * 100}%`,
+        left: `${(sheetW - imageW) / 2 / sheetW * 100}%`, top: `${(sheetH - imageH) / 2 / sheetH * 100}%`,
+    });
+
+    document.getElementById('print-price').textContent = euros(currentFormat.price);
+    document.getElementById('print-order').disabled = left <= 0;
+    document.getElementById('order-summary').textContent = `${titleOf(print)} · ${currentFormat.label} · ${euros(currentFormat.price)}`;
+    document.getElementById('order-email').textContent = printsData.email;
+    document.getElementById('order-email').href = `mailto:${printsData.email}`;
+}
+
+document.getElementById('print-back').addEventListener('click', () => {
+    if (printFromLog) openRecap();
+    else showPrintList();
+});
+document.getElementById('nav-prints').addEventListener('click', () => {
+    guide = null;
+    showPrintList();
+});
+
+document.getElementById('print-order').addEventListener('click', () => {
+    orderForm.hidden = false;
+    document.getElementById('order-sent').hidden = true;
+    if (!orderForm.country.value) orderForm.country.value = t('order-country-default');
+    orderForm.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
+    orderForm.querySelector('h3').focus({ preventScroll: true });
+});
+
+function orderMessage() {
+    const field = name => orderForm[name].value.trim();
+    const lines = [
+        t('mail-hello'), '',
+        t('mail-want'),
+        `- ${t('mail-photo')} : ${titleOf(currentPrint)} (${currentPrint.photo})`,
+        `- ${t('mail-format')} : ${currentFormat.label}`,
+        `- ${t('mail-price')} : ${euros(currentFormat.price)}`,
+        `- ${t('mail-link')} : https://sealens.art/#tirages/${currentPrint.photo}`, '',
+        t('mail-me'),
+        field('name'),
+        field('address'),
+        `${field('zip')} ${field('city')}`,
+        field('country'),
+    ];
+    if (field('phone')) lines.push(field('phone'));
+    if (field('gift')) lines.push('', `${t('mail-gift')} :`, field('gift'));
+    lines.push('', t('mail-pay'), '', t('mail-bye'), field('name'));
+    // English has no space before the colon
+    return lines.join('\n').replaceAll(' :', language === 'fr' ? ' :' : ':');
+}
+
+orderForm.addEventListener('submit', event => {
+    event.preventDefault();
+    const subject = fill(t('mail-subject'), { title: titleOf(currentPrint), format: currentFormat.label });
+    location.href = `mailto:${printsData.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(orderMessage().replaceAll('\n', '\r\n'))}`;
+    document.getElementById('order-sent').hidden = false;
+});
+
+document.getElementById('order-copy').addEventListener('click', async event => {
+    const button = event.currentTarget;
+    try {
+        await navigator.clipboard.writeText(orderMessage());
+        button.textContent = t('order-copied');
+        setTimeout(() => { button.textContent = t('order-copy'); }, 2500);
+    } catch { }
+});
+
+// A shared link opens on its print: sealens.art/#tirages/animal14
+if (location.hash.startsWith('#tirages')) {
+    const name = location.hash.split('/')[1];
+    history.replaceState(null, '', location.pathname + location.search);
+    name ? openPrint(name) : showPrintList();
 }

@@ -206,10 +206,6 @@ body.nav-peek #nav-toggle .icon-open {
     text-decoration-color: currentColor;
 }
 
-#nav-gallery {
-    cursor: alias;
-}
-
 #nav-back {
     display: none;
 }
@@ -352,6 +348,7 @@ header {
     /* background-image: radial-gradient(rgba(0, 0, 0, 0.4) 1px, transparent 0);
     background-size: 2px 2px;
     background-position: -2px -2px; */
+    position: relative;
     overflow: hidden;
 }
 
@@ -624,6 +621,9 @@ iframe.about-illustration {
 /* Music credit */
 
 .about-credits {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     padding-bottom: 96px;
     font-size: 15px;
     font-weight: 200;
@@ -1411,6 +1411,550 @@ body.zen.zen-peek #zen-peek {
     text-decoration: underline wavy;
     text-decoration-thickness: 1px;
     text-underline-offset: 6px;
+}
+
+/* Prints */
+
+[hidden] {
+    display: none !important;
+}
+
+#prints.active {
+    display: block;
+    padding: 112px 24px 96px;
+    font-weight: 200;
+    animation: section-in .8s ease-out both;
+}
+
+#prints-list,
+#print-detail {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+#prints-list {
+    max-width: 1280px;
+}
+
+.prints-head {
+    max-width: 640px;
+    margin-bottom: 32px;
+}
+
+#prints-title,
+#print-title {
+    font-size: 32px;
+    font-weight: 200;
+}
+
+.prints-lede {
+    margin-top: 12px;
+    font-size: 17px;
+    line-height: 1.6;
+    opacity: .8;
+}
+
+#prints-guide {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    min-height: 32px;
+    margin-bottom: 32px;
+}
+
+#prints-guide-steps {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#prints-guide-steps:empty {
+    display: none;
+}
+
+#prints-guide-start {
+    text-decoration: underline wavy;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
+    opacity: .9;
+}
+
+.guide-line {
+    font-size: 15px;
+    font-style: italic;
+    opacity: .6;
+}
+
+#prints-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(440px, 100%), 1fr));
+    gap: 48px 32px;
+}
+
+#prints-grid li {
+    animation: storyTextRevealIn 1s cubic-bezier(.2, .7, .2, 1) both;
+}
+
+.print-card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    text-align: start;
+}
+
+.print-card img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, .04);
+    transition: transform .6s cubic-bezier(.2, .7, .2, 1), filter .3s ease;
+}
+
+.print-card:hover img {
+    transform: scale(1.03);
+    filter: brightness(1.08);
+}
+
+.print-card-title {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.print-card-price {
+    font-size: 14px;
+    letter-spacing: .04em;
+    opacity: .6;
+}
+
+/* One print */
+
+.print-back {
+    margin-bottom: 24px;
+    font-size: 15px;
+    font-weight: 200;
+    opacity: .7;
+    transition: opacity .25s ease;
+}
+
+.print-back:hover {
+    opacity: 1;
+}
+
+.print-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(300px, 2fr);
+    gap: 48px;
+    align-items: start;
+}
+
+.print-photo {
+    position: sticky;
+    top: 96px;
+}
+
+.print-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, .04);
+}
+
+.print-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.print-authors {
+    margin-top: -18px;
+    font-size: 14px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    opacity: .6;
+}
+
+#print-story {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: .85;
+}
+
+#print-story:empty {
+    display: none;
+}
+
+.print-formats {
+    border: none;
+}
+
+.print-formats legend,
+.print-copies p {
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    opacity: .6;
+}
+
+#print-formats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.print-format {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color .25s ease, background-color .25s ease;
+}
+
+.print-format input {
+    position: absolute;
+    opacity: 0;
+}
+
+.print-format:hover {
+    border-color: rgba(255, 255, 255, .5);
+}
+
+.print-format:has(:checked) {
+    border-color: var(--color-primary);
+    background-color: hsla(175, 43%, 47%, .12);
+}
+
+.print-format:has(:focus-visible) {
+    outline: 1px solid var(--text-color);
+    outline-offset: 3px;
+}
+
+.print-format:has(:disabled) {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+.format-size {
+    font-size: 15px;
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+.format-price {
+    font-size: 14px;
+    opacity: .7;
+}
+
+/* Copies left, one bar each, like the air gauge */
+#print-gauge {
+    display: flex;
+    gap: 4px;
+    height: 14px;
+}
+
+#print-gauge span {
+    flex: 1;
+    max-width: 14px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, .12);
+    transition: background-color .4s ease;
+}
+
+#print-gauge span.full {
+    background-color: var(--color-primary);
+}
+
+/* The print on a wall, to scale */
+.print-wall figcaption {
+    margin-top: 8px;
+    font-size: 13px;
+    opacity: .6;
+}
+
+#print-wall {
+    position: relative;
+    aspect-ratio: 6 / 5;
+    overflow: hidden;
+    border-radius: 4px;
+    background: linear-gradient(to top, hsl(35, 18%, 74%) 0 3%, hsl(35, 22%, 86%) 3%);
+    color: hsl(200, 30%, 25%);
+}
+
+#print-wall > * {
+    position: absolute;
+    transition: all .6s cubic-bezier(.2, .7, .2, 1);
+}
+
+#print-wall svg {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.2;
+    vector-effect: non-scaling-stroke;
+    overflow: visible;
+}
+
+#print-wall svg * {
+    vector-effect: non-scaling-stroke;
+}
+
+.wall-person {
+    opacity: .55;
+}
+
+#wall-sheet {
+    background-color: hsl(40, 30%, 97%);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .25);
+}
+
+#wall-img {
+    position: absolute;
+    object-fit: cover;
+    transition: all .6s cubic-bezier(.2, .7, .2, 1);
+}
+
+.print-facts {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 15px;
+    opacity: .8;
+}
+
+.print-facts li::before {
+    content: "~ ";
+    opacity: .5;
+}
+
+.print-buy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, .15);
+}
+
+.print-price {
+    font-size: 26px;
+    font-weight: 200;
+}
+
+.print-price small {
+    font-size: 14px;
+    opacity: .6;
+}
+
+.print-button {
+    padding: 12px 22px;
+    border: 1px solid var(--text-color);
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: 300;
+    transition: background-color .25s ease, color .25s ease;
+}
+
+.print-button:hover:not(:disabled) {
+    background-color: var(--text-color);
+    color: var(--color-dark);
+}
+
+.print-button:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+/* The order form */
+#order-form {
+    display: grid;
+    gap: 16px;
+    margin-top: 24px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, .15);
+    scroll-margin-top: 96px;
+}
+
+#order-form h3 {
+    font-size: 24px;
+    font-weight: 200;
+}
+
+#order-summary {
+    margin-top: -8px;
+    opacity: .7;
+    font-size: 16px;
+}
+
+#order-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+    opacity: .9;
+}
+
+#order-form input,
+#order-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, .04);
+    color: var(--text-color);
+    font: inherit;
+    font-size: 16px;
+    font-weight: 300;
+    resize: vertical;
+}
+
+#order-form input:focus,
+#order-form textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.order-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 12px;
+}
+
+.order-note {
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: .7;
+}
+
+#order-form .print-button {
+    justify-self: start;
+}
+
+#order-sent {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+#order-sent a {
+    text-decoration: underline wavy;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+}
+
+/* From the dive log */
+.log-print {
+    margin-top: 12px;
+    font-size: 15px;
+    font-weight: 200;
+    opacity: .8;
+    text-decoration: underline wavy;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
+    transition: opacity .25s ease;
+}
+
+.log-print:hover {
+    opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+    .print-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .print-photo {
+        position: static;
+        margin: 0 -24px;
+    }
+
+    .print-photo img {
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #prints.active {
+        padding: 96px 16px 0;
+    }
+
+    #prints-title,
+    #print-title {
+        font-size: 26px;
+    }
+
+    #prints-grid {
+        gap: 32px;
+    }
+
+    .print-photo {
+        margin: 0 -16px;
+    }
+
+    #print-formats {
+        gap: 6px;
+    }
+
+    .print-format {
+        padding: 10px 8px;
+    }
+
+    .format-size {
+        font-size: 14px;
+    }
+
+    /* The price and the button stay at hand */
+    .print-buy {
+        position: sticky;
+        bottom: 0;
+        margin: 0 -16px;
+        padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+        background-color: hsla(200, 90%, 4%, .92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+
+    #order-form {
+        margin-bottom: 48px;
+    }
+}
+
+/* Instagram, at the foot of the home page */
+#home-instagram {
+    position: absolute;
+    left: 0;
+    bottom: 0; /* level with the sound button, in the other corner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    opacity: .7;
+    transition: opacity .25s ease;
+}
+
+#home-instagram:hover {
+    opacity: 1;
+}
+
+/* The sound button would sit on the order button */
+@media screen and (max-width: 600px) {
+    body:has(#prints.active) #playPauseBtn {
+        display: none;
+    }
 }
 
 /* Reduced motion */

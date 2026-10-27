@@ -18,7 +18,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <!-- Styles -->
-    <link rel="stylesheet" href="./styles.css?v=3">
+    <link rel="stylesheet" href="./styles.css?v=4">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,18 +72,8 @@
         </label>
         <ul class="nav-list" id="nav-list">
             <li id="nav-back"><button class="nav-item" data-lg="nav-back" data-section="header"></button></li>
+            <li><button id="nav-prints" class="nav-item" data-lg="nav-prints" data-section="prints"></button></li>
             <li><button id="nav-about" class="nav-item" data-lg="nav-about" data-section="about"></button></li>
-            <!-- <li><button id="nav-shop" class="nav-item" data-lg="nav-shop" data-section="shop"></button></li> -->
-            <li><a id="nav-gallery" href="https://www.instagram.com/sealens.art/" target="_blank" rel="noopener"
-                    class="nav-item">
-                    <span data-lg="nav-gallery"></span>
-                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                    </svg>
-                </a></li>
             <li><button id="nav-lang" class="nav-item" data-lg-aria="lang-switch-label">
                     <span class="lang-fr">FR</span><span aria-hidden="true">·</span><span class="lang-en">EN</span>
                 </button></li>
@@ -112,6 +102,14 @@
         </h1>
         <h2 id="sub-heading" class="text-reveal-2" data-lg="header-subhead"></h2>
         <button id="cta-experience" class="text-reveal-3" data-lg="cta-experience"></button>
+        <a id="home-instagram" class="text-reveal-3" href="https://www.instagram.com/sealens.art/" target="_blank" rel="noopener" data-lg-aria="instagram-label">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+        </a>
     </header>
 
     <!-- Disclaimer screen -->
@@ -234,15 +232,108 @@
                 <p data-lg="about-vincent"></p>
             </div>
         </div>
-        <p class="about-credits">
-            <span data-lg="about-music"></span>
-            <a href="https://music.youtube.com/playlist?list=OLAK5uy_nrvFfUuv7EG61fs5p_ShH6UT4-b8DUSzg" target="_blank" rel="noopener">Jonny Nash, <cite>Point Of Entry</cite></a>
-        </p>
+        <div class="about-credits">
+            <p>
+                <span data-lg="about-music"></span>
+                <a href="https://music.youtube.com/playlist?list=OLAK5uy_nrvFfUuv7EG61fs5p_ShH6UT4-b8DUSzg" target="_blank" rel="noopener">Jonny Nash, <cite>Point Of Entry</cite></a>
+            </p>
+            <p>
+                <span data-lg="about-instagram"></span>
+                <a href="https://www.instagram.com/sealens.art/" target="_blank" rel="noopener">@sealens.art</a>
+            </p>
+        </div>
     </section>
 
-    <!-- <section id="shop">
-        In progress
-    </section> -->
+    <!-- Prints -->
+    <section id="prints" aria-labelledby="prints-title">
+        <!-- Every print -->
+        <div id="prints-list">
+            <div class="prints-head">
+                <h2 id="prints-title" data-lg="prints-title" tabindex="-1"></h2>
+                <p class="prints-lede" data-lg="prints-lede"></p>
+            </div>
+            <div id="prints-guide">
+                <button id="prints-guide-start" class="story-choice" data-lg="prints-guide-start"></button>
+                <div id="prints-guide-steps" aria-live="polite"></div>
+            </div>
+            <ul id="prints-grid"></ul>
+        </div>
+
+        <!-- One print -->
+        <article id="print-detail" hidden>
+            <button id="print-back" class="print-back"></button>
+            <div class="print-layout">
+                <figure class="print-photo">
+                    <img id="print-img" alt="" decoding="async">
+                </figure>
+                <div class="print-info">
+                    <h2 id="print-title" tabindex="-1"></h2>
+                    <p class="print-authors" data-lg="prints-authors"></p>
+                    <p id="print-story"></p>
+
+                    <fieldset class="print-formats">
+                        <legend data-lg="prints-format"></legend>
+                        <div id="print-formats"></div>
+                    </fieldset>
+                    <div class="print-copies">
+                        <p id="print-copies-text"></p>
+                        <div id="print-gauge" aria-hidden="true"></div>
+                    </div>
+
+                    <figure class="print-wall">
+                        <div id="print-wall" aria-hidden="true">
+                            <svg class="wall-person" viewBox="0 0 40 170" preserveAspectRatio="none">
+                                <circle cx="20" cy="11" r="9" />
+                                <path d="M20 22c-9 0-13 5-14 14l-3 50h7l3-38 1 120h7l1-70h4l1 70h7l1-120 3 38h7l-3-50c-1-9-5-14-14-14z" />
+                            </svg>
+                            <svg class="wall-furniture" viewBox="0 0 120 75" preserveAspectRatio="none">
+                                <rect x="1" y="1" width="118" height="62" rx="2" />
+                                <line x1="60" y1="1" x2="60" y2="63" />
+                                <line x1="10" y1="63" x2="8" y2="74" />
+                                <line x1="110" y1="63" x2="112" y2="74" />
+                            </svg>
+                            <div id="wall-sheet"><img id="wall-img" alt="" decoding="async"></div>
+                        </div>
+                        <figcaption data-lg="prints-scale"></figcaption>
+                    </figure>
+
+                    <ul class="print-facts">
+                        <li data-lg="prints-fact-paper"></li>
+                        <li data-lg="prints-fact-signed"></li>
+                        <li data-lg="prints-fact-card"></li>
+                        <li data-lg="prints-fact-ship"></li>
+                    </ul>
+
+                    <div class="print-buy">
+                        <p class="print-price"><span id="print-price"></span> <small data-lg="prints-shipping"></small></p>
+                        <button id="print-order" class="print-button" data-lg="prints-order"></button>
+                    </div>
+                    <!-- The order: a form that writes the e-mail -->
+                    <form id="order-form" hidden>
+                        <h3 data-lg="order-title" tabindex="-1"></h3>
+                        <p id="order-summary"></p>
+                        <label><span data-lg="order-name"></span><input name="name" autocomplete="name" required></label>
+                        <label><span data-lg="order-address"></span><textarea name="address" rows="2" autocomplete="street-address" required></textarea></label>
+                        <div class="order-row">
+                            <label><span data-lg="order-zip"></span><input name="zip" autocomplete="postal-code" required></label>
+                            <label><span data-lg="order-city"></span><input name="city" autocomplete="address-level2" required></label>
+                        </div>
+                        <label><span data-lg="order-country"></span><input name="country" autocomplete="country-name" required></label>
+                        <label><span data-lg="order-phone"></span><input name="phone" type="tel" autocomplete="tel"></label>
+                        <label><span data-lg="order-gift"></span><textarea name="gift" rows="2"></textarea></label>
+                        <p class="order-note" data-lg="order-payment"></p>
+                        <button type="submit" class="print-button" data-lg="order-send"></button>
+                        <div id="order-sent" hidden>
+                            <p data-lg="order-sent"></p>
+                            <p><span data-lg="order-fallback"></span> <a id="order-email"></a></p>
+                            <button type="button" id="order-copy" class="story-choice" data-lg="order-copy"></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </article>
+    </section>
 
     <!-- Music player -->
     <div id="player"></div>
@@ -260,7 +351,7 @@
         </svg>
     </button>
 
-    <script src="./script.js?v=4"></script>
+    <script src="./script.js?v=5"></script>
 </body>
 
 </html>
