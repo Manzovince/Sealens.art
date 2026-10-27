@@ -1786,6 +1786,10 @@ body.zen.zen-peek #zen-peek {
     border-color: var(--color-primary);
 }
 
+#order-form input:user-invalid {
+    border-color: #e59a8c;
+}
+
 .order-row {
     display: grid;
     grid-template-columns: 1fr 2fr;

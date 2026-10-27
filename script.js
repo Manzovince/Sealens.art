@@ -11,7 +11,7 @@ const detectedLanguage = savedLanguage() || (navigator.language || 'en').slice(0
 let language = supportedLanguages.includes(detectedLanguage) ? detectedLanguage : 'en';
 
 // Bump with any change to the JSON files: browsers keep them for days
-const DATA_VERSION = 5;
+const DATA_VERSION = 6;
 
 let translations = {};
 let storyData = [];
@@ -907,6 +907,41 @@ function orderMessage() {
     // English has no space before the colon
     return lines.join('\n').replaceAll(' :', language === 'fr' ? ' :' : ':');
 }
+
+// Light checks, so the e-mail does not arrive with an address we cannot ship to
+const isFrance = () => /^(france|fr)$/i.test(orderForm.country.value.trim());
+
+function orderProblem(name) {
+    const value = orderForm[name].value.trim();
+    if (!value) return ''; // required and optional fields are left to the browser
+    if (name === 'zip') {
+        if (isFrance()) return /^\d{5}$/.test(value.replace(/\s/g, '')) ? '' : 'order-error-zip-fr';
+        return /^[\p{L}\d][\p{L}\d -]{1,9}$/u.test(value) ? '' : 'order-error-zip';
+    }
+    if (name === 'city') return /^\p{L}[\p{L}\d '’.-]*$/u.test(value) ? '' : 'order-error-city';
+    if (name === 'phone') {
+        if (!/^\+?[\d\s().-]+$/.test(value)) return 'order-error-phone';
+        const digits = value.replace(/\D/g, '');
+        if (isFrance() && !value.startsWith('+')) return /^0\d{9}$/.test(digits) ? '' : 'order-error-phone-fr';
+        return digits.length >= 8 && digits.length <= 15 ? '' : 'order-error-phone';
+    }
+    return '';
+}
+
+function checkOrderField(name) {
+    const problem = orderProblem(name);
+    orderForm[name].setCustomValidity(problem ? t(problem) : '');
+}
+
+orderForm.addEventListener('input', event => {
+    const name = event.target.name;
+    if (['zip', 'city', 'phone'].includes(name)) checkOrderField(name);
+    if (name === 'country') ['zip', 'phone'].forEach(checkOrderField);
+});
+// Runs before the browser's own validation, which then shows the message
+orderForm.querySelector('button[type=submit]').addEventListener('click', () => {
+    ['zip', 'city', 'phone'].forEach(checkOrderField);
+});
 
 orderForm.addEventListener('submit', event => {
     event.preventDefault();
