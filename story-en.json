@@ -85,6 +85,23 @@
     }
   },
   {
+    "name": "human6",
+    "tags": [
+      "intro"
+    ],
+    "text": "Just below the surface, your teammate checks his camera one last time. His reflection trembles above him, on the border between two worlds. He takes a deep breath, gives you a sign, and the blue is waiting.",
+    "description": "",
+    "choice": "",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
     "name": "landscape1",
     "tags": [
       "landscape"
@@ -215,6 +232,24 @@
     "text": "A group of statues rests on the ocean floor, frozen in an eternal moment. Around them, the ocean continues its infinite cycle, unaware of their presence, slowly covering them with a thriving ecosystem.",
     "description": "",
     "choice": "Approach a scene frozen under the waves",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "landscape12",
+    "tags": [
+      "landscape",
+      "statue"
+    ],
+    "text": "Alone in the middle of the sand, a statue stands, worn away by the sea. The stone has vanished under the growth; all that is left is a profile, a presence. It seems to have been waiting for someone for a very long time.",
+    "description": "",
+    "choice": "Head for a figure standing on the sand",
     "exif": {
       "camera": "Sony A7C",
       "date_taken": "N/A",
@@ -484,6 +519,23 @@
     }
   },
   {
+    "name": "animal13",
+    "tags": [
+      "animal"
+    ],
+    "text": "Thousands of damselfish scatter through the blue like living dust. The cloud stretches, tightens, then parts as you pass before gathering again a little further on. You are just one more current in their sky.",
+    "description": "",
+    "choice": "Dive into a cloud of fish",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
     "name": "animal14",
     "tags": [
       "animal"
@@ -491,6 +543,23 @@
     "text": "A massive school of damselfish stands before you, forming a living wall that undulates in the azure waters. These thousands of small fish move in unison, creating a supple, flowing veil that gracefully shifts with the currents, like a curtain of marine silk pulsing to the rhythm of the ocean.",
     "description": "",
     "choice": "There is movement behind you",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "animal15",
+    "tags": [
+      "animal"
+    ],
+    "text": "The rock slopes gently down into the blue. A grouper glides along it, unhurried. He spares you a single glance, then carries on with his rounds, at home in a landscape you are only passing through.",
+    "description": "",
+    "choice": "Follow the rocky slope",
     "exif": {
       "camera": "Sony A7C",
       "date_taken": "N/A",
@@ -518,6 +587,23 @@
     }
   },
   {
+    "name": "animal17",
+    "tags": [
+      "animal"
+    ],
+    "text": "A ray of light breaks through the shadow and gilds a carpet of short seaweed. It takes a long moment to spot it: a small striped fish, resting on the rock, blends into the algae. Only its eye gives it away.",
+    "description": "",
+    "choice": "Search a carpet of seaweed",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
     "name": "animal18",
     "tags": [
       "animal"
@@ -525,6 +611,245 @@
     "text": "The jellyfish floats, elusive and fragile, like a dream undulating beneath the waves. Its movements are a gentle melody, an echo of the ocean's peaceful rhythm, almost out of time.",
     "description": "",
     "choice": "Marvel at a floating dance",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "animal19",
+    "tags": [
+      "animal",
+      "statue"
+    ],
+    "text": "Up close, what looked like a rock is a stone head. Barnacles and tube worms have settled on it one by one, until they gave it a new face. Behind it, other figures wait in the haze.",
+    "description": "",
+    "choice": "Approach a face covered in shells",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "animal20",
+    "tags": [
+      "animal"
+    ],
+    "text": "There is no need to go deep to witness the life the ocean is teeming with. For one magical moment, you are no longer just a visitor but part of this shimmering underwater world.",
+    "description": "",
+    "choice": "Mingle with the locals",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "animal22",
+    "tags": [
+      "animal"
+    ],
+    "text": "Underwater, the kingfisher gracefully cuts through the crystal depths, wings folded for a swift dive. Its slender silhouette slips between the currents, eyes fixed on its prey. In a flash of light, its nimble beak is about to seize a fish.",
+    "description": "",
+    "choice": "A fleeting shadow pierces the surface",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "animal23",
+    "tags": [
+      "animal"
+    ],
+    "text": "Underwater, the kingfisher holds still, floating with calm mastery. In front of it, a school of glittering fish moves in a synchronised ballet, their silver reflections lighting up the depths. The hunter's eyes silently follow the dance, patient and ready for the perfect moment.",
+    "description": "",
+    "choice": "You notice an unusual inhabitant",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "animal24",
+    "tags": [
+      "animal"
+    ],
+    "text": "A cormorant darts along the rock, neck stretched out, wings pressed against its body. Underwater, this bird swims better than it flies: a few kicks of its feet and it is already gone.",
+    "description": "",
+    "choice": "Meet a bird underwater",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "animal25",
+    "tags": [
+      "animal"
+    ],
+    "text": "Silvery sea bream and small pinkish fish circle around you, curious. They come closer, size you up, then dart away with a flick of the tail. Here, you are the strange animal.",
+    "description": "",
+    "choice": "Let the sea bream gather around you",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "animal26",
+    "tags": [
+      "animal"
+    ],
+    "text": "A moray eel waits silently, motionless, mouth wide open. Its jaws reveal sharp teeth, while its snake-like body blends into the rocky setting. The currents brush its flanks, but it stays patient, ready to strike at the slightest sign of prey.",
+    "description": "",
+    "choice": "Someone does not seem to like you being here",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "animal27",
+    "tags": [
+      "animal"
+    ],
+    "text": "On a mound of pink sand, a dark shape lies perfectly still. A fish, seaweed, a piece of wood? You hesitate. The slightest move could be enough to make it flee.",
+    "description": "",
+    "choice": "Notice a shape lying on the sand",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "animal28",
+    "tags": [
+      "animal"
+    ],
+    "text": "It glides nimbly along the rock, its body rippling in a fluid motion. Fleeing quickly, it melts into the shadows of the deep, its silhouette standing out for a moment before it disappears. It winds between the crevices, leaving behind the mystery of its silent escape.",
+    "description": "",
+    "choice": "A moray eel slips away when it sees you",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "animal29",
+    "tags": [
+      "animal"
+    ],
+    "text": "The rock forms a vault a few metres below the surface. A sea bream lingers there, sheltered, while the light ripples over the stone. You hold your breath so as not to disturb this secret room.",
+    "description": "",
+    "choice": "Swim under a stone arch",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "animal30",
+    "tags": [
+      "animal"
+    ],
+    "text": "The adult damselfish, almost black, hover facing the current, each in its place. You cross their swarm slowly; they move aside just enough to let you through, never breaking ranks.",
+    "description": "",
+    "choice": "Cross a dark swarm",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "animal31",
+    "tags": [
+      "animal"
+    ],
+    "text": "Near the rock, an anemone with slender tentacles sways gently with the waves. Each movement is a slow dance, its coloured arms unfolding and folding back with ease. It rocks peacefully, following the currents like a delicate embrace of the underwater world.",
+    "description": "",
+    "choice": "Watch an anemone dance",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "animal32",
+    "tags": [
+      "animal"
+    ],
+    "text": "Light falls in columns from the surface. Through the beam, a school of small silver fish passes in close formation, like a flight of birds. Below, the bottom sinks into shadow.",
+    "description": "",
+    "choice": "Gaze at the sunbeams",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "animal34",
+    "tags": [
+      "animal"
+    ],
+    "text": "The school of silver salema glides in perfect harmony, their scales reflecting the light that pierces the depths. They move as one fluid body, creating a silent ballet around the rocks and seagrass. Around them, the water comes alive with their passing, drawing soft, shining ripples.",
+    "description": "",
+    "choice": "Fish swim past you",
     "exif": {
       "camera": "Sony A7C",
       "date_taken": "N/A",
@@ -552,6 +877,57 @@
     }
   },
   {
+    "name": "animal37",
+    "tags": [
+      "animal"
+    ],
+    "text": "The salema form a tight mass, their synchronised movements creating a whirl of silver scales. They twirl between the floating seaweed like arrows of light, drawing fleeting patterns. Their graceful movements seem to follow an invisible choreography that brings the whole underwater landscape together.",
+    "description": "",
+    "choice": "Follow a school of fish",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "animal38",
+    "tags": [
+      "animal"
+    ],
+    "text": "A mauve stinger drifts through the blue, its bell speckled with purple. Beautiful and stinging, it lets itself be carried with no aim. You watch it pass at a respectful distance, holding back your fins.",
+    "description": "",
+    "choice": "Steer clear of a jellyfish",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "animal40",
+    "tags": [
+      "animal"
+    ],
+    "text": "What looked like a pale stone among the seaweed suddenly opens an eye. An octopus, curled up on itself, has taken on the colour of its shelter. It stares at you, ready to vanish if you come too close.",
+    "description": "",
+    "choice": "Inspect a rock covered in orange seaweed",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
     "name": "human2",
     "tags": [
       "human"
@@ -559,6 +935,57 @@
     "text": "A figure cuts through the water, it's another diver. He slows down to your level, his gaze captivated by something below. His eyes, widened behind his mask, betray a fascinating discovery. What does the abyss beneath your feet conceal?",
     "description": "",
     "choice": "Turn your gaze downwards",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "human5",
+    "tags": [
+      "human"
+    ],
+    "text": "Above the sand, a swimmer has settled against a rock covered in brown seaweed. She is looking closely at what you had missed: the tiny life teeming in every nook.",
+    "description": "",
+    "choice": "Join a swimmer by a rock",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "human7",
+    "tags": [
+      "human"
+    ],
+    "text": "Between two large boulders, a young woman rises slowly, her eyes turned towards the light. Small fish keep her company, as if to show her the way.",
+    "description": "",
+    "choice": "Slip between the stone blocks",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "human8",
+    "tags": [
+      "human"
+    ],
+    "text": "A diver glides down a slab of granite, amid a ballet of sea bream. She moves silently, at the same pace as them. For a moment, she is part of the school.",
+    "description": "",
+    "choice": "Follow a diver along the rock face",
     "exif": {
       "camera": "Sony A7C",
       "date_taken": "N/A",
@@ -586,6 +1013,108 @@
     }
   },
   {
+    "name": "human10",
+    "tags": [
+      "human"
+    ],
+    "text": "A freediver floats between two rocks, surrounded by curious sea bream. She stays still so as not to frighten them. They circle her, come closer, swim off: she is the one being watched.",
+    "description": "",
+    "choice": "Watch a swimmer surrounded by fish",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "human11",
+    "tags": [
+      "human"
+    ],
+    "text": "A mermaid stands upright in the water, just below the surface, as if resting on nothing. Her reflection doubles above her. Beneath her fins, a small school passes by without stopping.",
+    "description": "",
+    "choice": "Glimpse a mermaid below the surface",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "human12",
+    "tags": [
+      "human"
+    ],
+    "text": "Halfway between the bottom and the surface, a figure pauses. She lets herself float, fins barely moving, and watches the blue spread out around her. There is no hurry.",
+    "description": "",
+    "choice": "Pause halfway up",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "human13",
+    "tags": [
+      "human"
+    ],
+    "text": "An explorer glides on her back through a swarm of damselfish, leaving a thin string of bubbles behind her. The fish barely move aside. She seems to be flying through a starry sky.",
+    "description": "",
+    "choice": "Swim through a swarm of fish",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "human14",
+    "tags": [
+      "human"
+    ],
+    "text": "A burst of bubbles tears through the surface: someone has just dived in. Arms outstretched, she cuts through the water towards you, still wrapped in foam. The silence closes behind her.",
+    "description": "",
+    "choice": "See someone diving towards you",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "human15",
+    "tags": [
+      "human"
+    ],
+    "text": "Above you, the surface wrinkles. A figure breaks through it and heads straight down into the blue, eyes wide open behind the mask. You are no longer alone in the deep.",
+    "description": "",
+    "choice": "Wait for a swimmer from above",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
     "name": "human16",
     "tags": [
       "human"
@@ -603,6 +1132,23 @@
     }
   },
   {
+    "name": "human17",
+    "tags": [
+      "human"
+    ],
+    "text": "Your dive buddy brushes past the rock and turns towards you. For a moment, your eyes meet through the masks. No need for words: you share the same held breath.",
+    "description": "",
+    "choice": "Meet someone's gaze underwater",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
     "name": "human18",
     "tags": [
       "human"
@@ -610,6 +1156,40 @@
     "text": "In the distance, a female silhouette emerges in the deep blue. Motionless, she watches a fleeting spectacle: a school of silver fish glides past her, their scales shimmering under the sun's filtered rays. In a coordinated movement, the school suddenly pivots, stretching toward the underwater horizon. The diver remains suspended, a silent witness to this aquatic exodus, as the last fish disappear into the vastness.",
     "description": "",
     "choice": "A school of fish passes in front of you",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "human19",
+    "tags": [
+      "human"
+    ],
+    "text": "Against the light, a figure descends head first, fins still pointing at the sky. She stands out like a shadow puppet against the blue. The deeper she goes, the more the world above fades away.",
+    "description": "",
+    "choice": "Look up towards the light",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "animal33",
+    "tags": [
+      "human"
+    ],
+    "text": "Head first, a finned figure slips into the gap between two boulders. Small dark fish scatter, then return. She descends without a wasted move, as if the rock had been waiting for her.",
+    "description": "",
+    "choice": "Follow a shadow between two rocks",
     "exif": {
       "camera": "Sony A7C",
       "date_taken": "N/A",
@@ -746,6 +1326,57 @@
     "text": "You see the sun slowly slipping below the horizon, its golden rays mingling with the deep hues of the sky. This spectacle, both calming and captivating, evokes a feeling of peace and promise for the night to come.",
     "description": "",
     "choice": "Lift your head above water",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "outro9",
+    "tags": [
+      "outro"
+    ],
+    "text": "The end is near, and you draw on your last reserves of oxygen to admire the light shining through the waves.",
+    "description": "",
+    "choice": "Stay under the waves a little longer",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "outro10",
+    "tags": [
+      "outro"
+    ],
+    "text": "Your face breaks through, level with the water. The coast is now just a shadow, and the low sun bursts into a thousand reflections on the waves. At last you breathe, rocked by the swell.",
+    "description": "",
+    "choice": "Look at the coast from the surface",
+    "exif": {
+      "camera": "Sony A7C",
+      "date_taken": "N/A",
+      "exposure": "N/A",
+      "aperture": "N/A",
+      "iso": "N/A",
+      "focal_length": "N/A"
+    }
+  },
+  {
+    "name": "outro11",
+    "tags": [
+      "outro"
+    ],
+    "text": "The last rays dance on the water, blurred and golden. You stay there floating, eyes level with the waves, between two worlds. The dive is over, but something in you stayed down below.",
+    "description": "",
+    "choice": "Float in the evening light",
     "exif": {
       "camera": "Sony A7C",
       "date_taken": "N/A",

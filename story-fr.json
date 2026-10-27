@@ -85,6 +85,23 @@
         }
     },
     {
+        "name": "human6",
+        "tags": [
+            "intro"
+        ],
+        "text": "Juste sous la surface, votre coéquipier vérifie une dernière fois son appareil. Son reflet tremble au-dessus de lui, à la frontière des deux mondes. Il prend une grande inspiration, vous fait signe, et le bleu vous attend.",
+        "description": "",
+        "choice": "",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
         "name": "landscape1",
         "tags": [
             "landscape"
@@ -215,6 +232,24 @@
         "text": "Un groupe de statues repose sur le fond marin, comme figé dans un instant éternel. Autour d'eux, l'océan continue son cycle infini, ignorant leur présence et les recouvrant peu à peu d'un écosystème prolifique.",
         "description": "",
         "choice": "Approcher une scène figée sous les vagues",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "landscape12",
+        "tags": [
+            "landscape",
+            "statue"
+        ],
+        "text": "Seule au milieu du sable, une statue se dresse, rongée par la mer. La pierre a disparu sous les concrétions ; il ne reste qu'un profil, une présence. Elle semble attendre quelqu'un depuis très longtemps.",
+        "description": "",
+        "choice": "Se diriger vers une silhouette sur le sable",
         "exif": {
             "camera": "Sony A7C",
             "date_taken": "N/A",
@@ -484,6 +519,23 @@
         }
     },
     {
+        "name": "animal13",
+        "tags": [
+            "animal"
+        ],
+        "text": "Des milliers de castagnoles s'éparpillent dans le bleu comme une poussière vivante. Le nuage s'étire, se resserre, puis se disperse à votre passage avant de se reformer un peu plus loin. Vous n'êtes qu'un courant de plus dans leur ciel.",
+        "description": "",
+        "choice": "Plonger dans un nuage de poissons",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
         "name": "animal14",
         "tags": [
             "animal"
@@ -491,6 +543,23 @@
         "text": "Un immense banc de castagnoles se dresse devant vous, formant un mur vivant qui ondule dans les eaux azurées. Ces milliers de petits poissons se meuvent à l'unisson, créant un voile souple et mouvant qui se déforme gracieusement au gré des courants, tel un rideau de soie marine pulsant au rythme de l'océan.",
         "description": "",
         "choice": "Il y a de l'agitation derrière vous",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal15",
+        "tags": [
+            "animal"
+        ],
+        "text": "La roche descend en pente douce vers le bleu. Un mérou la longe sans hâte. Il ne vous accorde qu'un regard, puis reprend sa ronde, chez lui dans ce paysage que vous ne faites que traverser.",
+        "description": "",
+        "choice": "Longer la pente rocheuse",
         "exif": {
             "camera": "Sony A7C",
             "date_taken": "N/A",
@@ -518,6 +587,23 @@
         }
     },
     {
+        "name": "animal17",
+        "tags": [
+            "animal"
+        ],
+        "text": "Un rayon perce l'ombre et dore un tapis d'algues rases. Il faut un long moment pour l'apercevoir : un petit poisson rayé, posé sur la roche, se confond avec les algues. Seul son œil trahit sa présence.",
+        "description": "",
+        "choice": "Fouiller du regard un tapis d'algues",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
         "name": "animal18",
         "tags": [
             "animal"
@@ -525,6 +611,24 @@
         "text": "La méduse flotte, insaisissable et fragile, tel un rêve ondoyant sous les vagues. Ses mouvements sont une mélodie douce, un écho du rythme paisible de l'océan, presque hors du temps.",
         "description": "",
         "choice": "S'émerveiller devant une danse flottante",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal19",
+        "tags": [
+            "animal",
+            "statue"
+        ],
+        "text": "De près, ce qui ressemblait à un rocher est une tête de pierre. Balanes et vers tubicoles s'y sont installés un à un, jusqu'à lui composer un nouveau visage. Derrière, d'autres silhouettes attendent dans le flou.",
+        "description": "",
+        "choice": "Approcher un visage couvert de coquillages",
         "exif": {
             "camera": "Sony A7C",
             "date_taken": "N/A",
@@ -586,6 +690,40 @@
         }
     },
     {
+        "name": "animal24",
+        "tags": [
+            "animal"
+        ],
+        "text": "Un cormoran file au ras de la roche, le cou tendu, les ailes plaquées contre le corps. Sous l'eau, cet oiseau nage mieux qu'il ne vole : quelques battements de pattes et il a déjà disparu.",
+        "description": "",
+        "choice": "Croiser un oiseau sous l'eau",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal25",
+        "tags": [
+            "animal"
+        ],
+        "text": "Des sars au reflet d'argent et de petits poissons rosés tournent autour de vous, curieux. Ils s'approchent, vous jaugent, puis s'écartent d'un coup de queue. Ici, c'est vous l'animal étrange.",
+        "description": "",
+        "choice": "Se laisser entourer par les sars",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
         "name": "animal26",
         "tags": [
             "animal"
@@ -593,6 +731,23 @@
         "text": "Une murène immobile, gueule grande ouverte, attend silencieusement. Ses mâchoires dévoilent des dents acérées, tandis que son corps serpentin se fond dans le décor rocailleux. Les courants marins effleurent ses flancs, mais elle reste patiente, prête à bondir au moindre signe de proie.",
         "description": "",
         "choice": "Quelqu'un ne semble pas apprécier votre présence",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal27",
+        "tags": [
+            "animal"
+        ],
+        "text": "Sur une butte de sable rose, une silhouette sombre se tient parfaitement immobile. Poisson, algue, morceau de bois ? Vous hésitez. Le moindre geste pourrait suffire à la faire fuir.",
+        "description": "",
+        "choice": "Remarquer une forme posée sur le sable",
         "exif": {
             "camera": "Sony A7C",
             "date_taken": "N/A",
@@ -620,6 +775,40 @@
         }
     },
     {
+        "name": "animal29",
+        "tags": [
+            "animal"
+        ],
+        "text": "La roche forme une voûte à quelques mètres sous la surface. Un sar s'y attarde, à l'abri, pendant que la lumière ondule sur la pierre. Vous retenez votre souffle pour ne pas troubler cette pièce secrète.",
+        "description": "",
+        "choice": "Passer sous une arche de pierre",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal30",
+        "tags": [
+            "animal"
+        ],
+        "text": "Les castagnoles adultes, presque noires, flottent face au courant, chacune à sa place. Vous traversez leur nuée lentement ; elles s'écartent juste assez pour vous laisser passer, sans jamais rompre le rang.",
+        "description": "",
+        "choice": "Traverser une nuée sombre",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
         "name": "animal31",
         "tags": [
             "animal"
@@ -627,6 +816,23 @@
         "text": "Près de la roche, une anémone aux tentacules graciles ondule doucement au rythme des vagues. Chaque mouvement est une danse lente, ses bras colorés se déployant et se rétractant avec fluidité. Elle se balance paisiblement, suivant les courants marins comme une étreinte délicate du monde sous-marin.",
         "description": "",
         "choice": "Regarder la danse d'une anémone",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal32",
+        "tags": [
+            "animal"
+        ],
+        "text": "La lumière tombe en colonnes depuis la surface. Dans ce faisceau, un banc de petits poissons argentés passe en rang serré, comme une volée d'oiseaux. En dessous, le fond s'enfonce dans l'ombre.",
+        "description": "",
+        "choice": "Contempler les rayons du soleil",
         "exif": {
             "camera": "Sony A7C",
             "date_taken": "N/A",
@@ -688,6 +894,40 @@
         }
     },
     {
+        "name": "animal38",
+        "tags": [
+            "animal"
+        ],
+        "text": "Une pélagie dérive dans le bleu, son ombrelle tachetée de mauve. Belle et urticante, elle se laisse porter sans but. Vous la regardez passer à distance respectueuse, en retenant vos palmes.",
+        "description": "",
+        "choice": "S'écarter d'une méduse",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal40",
+        "tags": [
+            "animal"
+        ],
+        "text": "Ce qui ressemblait à une pierre claire au milieu des algues ouvre soudain un œil. Une pieuvre, lovée sur elle-même, a pris la couleur de son abri. Elle vous fixe, prête à disparaître si vous approchez trop.",
+        "description": "",
+        "choice": "Inspecter une roche couverte d'algues orangées",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
         "name": "human2",
         "tags": [
             "human"
@@ -695,6 +935,57 @@
         "text": "Une silhouette fend l'eau, c'est un autre plongeur. Il ralentit à votre niveau, son regard captivé par quelque chose en contrebas. Ses yeux, agrandis derrière son masque, trahissent une découverte fascinante. Que cache donc l'abysse à vos pieds ?",
         "description": "",
         "choice": "Tourner son regard vers le bas",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "human5",
+        "tags": [
+            "human"
+        ],
+        "text": "Au-dessus du sable, une nageuse s'est posée contre un rocher couvert d'algues brunes. Elle observe de près ce que vous n'aviez pas vu : la vie minuscule qui grouille dans chaque recoin.",
+        "description": "",
+        "choice": "Rejoindre une nageuse près d'un rocher",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "human7",
+        "tags": [
+            "human"
+        ],
+        "text": "Entre deux grands blocs, une jeune femme remonte lentement, le regard tourné vers la lumière. De petits poissons l'accompagnent, comme pour lui montrer le chemin.",
+        "description": "",
+        "choice": "Se faufiler entre les blocs de pierre",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "human8",
+        "tags": [
+            "human"
+        ],
+        "text": "Une plongeuse descend le long d'une dalle de granite, au milieu d'un ballet de sars. Elle avance sans bruit, au même rythme qu'eux. Pour un instant, elle fait partie du banc.",
+        "description": "",
+        "choice": "Suivre une plongeuse le long de la paroi",
         "exif": {
             "camera": "Sony A7C",
             "date_taken": "N/A",
@@ -722,6 +1013,108 @@
         }
     },
     {
+        "name": "human10",
+        "tags": [
+            "human"
+        ],
+        "text": "Une apnéiste flotte entre deux rochers, cernée de sars curieux. Elle reste immobile pour ne pas les effrayer. Ils tournent autour d'elle, s'approchent, repartent : c'est elle qu'ils observent.",
+        "description": "",
+        "choice": "Observer une baigneuse entourée de poissons",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "human11",
+        "tags": [
+            "human"
+        ],
+        "text": "Une sirène se tient debout dans l'eau, juste sous la surface, comme posée sur rien. Son reflet se dédouble au-dessus d'elle. Sous ses palmes, un petit banc passe sans s'arrêter.",
+        "description": "",
+        "choice": "Apercevoir une sirène sous la surface",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "human12",
+        "tags": [
+            "human"
+        ],
+        "text": "À mi-chemin entre le fond et la surface, une silhouette fait une pause. Elle se laisse flotter, les palmes à peine en mouvement, et regarde le bleu s'étendre autour d'elle. Rien ne presse.",
+        "description": "",
+        "choice": "S'arrêter à mi-hauteur",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "human13",
+        "tags": [
+            "human"
+        ],
+        "text": "Une exploratrice glisse sur le dos à travers une nuée de castagnoles, laissant derrière elle un fin chapelet de bulles. Les poissons s'écartent à peine. Elle semble voler dans un ciel constellé.",
+        "description": "",
+        "choice": "Nager au milieu d'une nuée de poissons",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "human14",
+        "tags": [
+            "human"
+        ],
+        "text": "Une gerbe de bulles déchire la surface : quelqu'un vient de plonger. Les bras tendus, elle fend l'eau dans votre direction, encore enveloppée d'écume. Le silence se referme derrière elle.",
+        "description": "",
+        "choice": "Voir quelqu'un plonger vers vous",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "human15",
+        "tags": [
+            "human"
+        ],
+        "text": "Au-dessus de vous, la surface se plisse. Une silhouette la traverse et descend droit vers le bleu, les yeux grands ouverts derrière son masque. Vous n'êtes plus seul dans les profondeurs.",
+        "description": "",
+        "choice": "Attendre un nageur venu d'en haut",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
         "name": "human16",
         "tags": [
             "human"
@@ -739,6 +1132,23 @@
         }
     },
     {
+        "name": "human17",
+        "tags": [
+            "human"
+        ],
+        "text": "Votre binôme frôle la roche et tourne la tête vers vous. Un instant, vos regards se croisent à travers les masques. Pas besoin de mots : vous partagez le même souffle retenu.",
+        "description": "",
+        "choice": "Croiser un regard sous l'eau",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
         "name": "human18",
         "tags": [
             "human"
@@ -746,6 +1156,40 @@
         "text": "Au loin, une silhouette féminine se dessine dans le bleu profond. Immobile, elle contemple un spectacle fugace : un banc de poissons argentés glisse devant elle, leurs écailles miroitant sous les rayons filtrés du soleil. Dans un mouvement coordonné, le banc pivote soudain, s'étirant vers l'horizon sous-marin. La plongeuse reste en suspension, témoin silencieux de cet exode aquatique, alors que les derniers poissons disparaissent dans le large.",
         "description": "",
         "choice": "Un banc de poissons passe devant vous",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "human19",
+        "tags": [
+            "human"
+        ],
+        "text": "À contre-jour, une silhouette descend tête la première, les palmes encore pointées vers le ciel. Elle se découpe en ombre chinoise sur le bleu. Plus elle s'enfonce, plus le monde d'en haut s'efface.",
+        "description": "",
+        "choice": "Lever les yeux vers la lumière",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "animal33",
+        "tags": [
+            "human"
+        ],
+        "text": "Tête la première, une silhouette palmée se glisse dans la faille entre deux blocs. De petits poissons sombres s'écartent puis reviennent. Elle descend sans un geste de trop, comme si la roche l'attendait.",
+        "description": "",
+        "choice": "Suivre une ombre entre deux rochers",
         "exif": {
             "camera": "Sony A7C",
             "date_taken": "N/A",
@@ -890,8 +1334,7 @@
             "iso": "N/A",
             "focal_length": "N/A"
         }
-    }
-    ,
+    },
     {
         "name": "outro9",
         "tags": [
@@ -900,6 +1343,40 @@
         "text": "La fin approche, et vous puisez vos dans vos dernières réserves d'oxygène pour admirer la lumière qui passe à travers les vagues.",
         "description": "",
         "choice": "Rester encore un peu sous les vagues",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "outro10",
+        "tags": [
+            "outro"
+        ],
+        "text": "Votre visage émerge au ras de l'eau. La côte n'est plus qu'une ombre, et le soleil bas éclate en mille reflets sur les vagues. Vous respirez enfin, bercé par la houle.",
+        "description": "",
+        "choice": "Regarder la côte depuis la surface",
+        "exif": {
+            "camera": "Sony A7C",
+            "date_taken": "N/A",
+            "exposure": "N/A",
+            "aperture": "N/A",
+            "iso": "N/A",
+            "focal_length": "N/A"
+        }
+    },
+    {
+        "name": "outro11",
+        "tags": [
+            "outro"
+        ],
+        "text": "Les derniers rayons dansent sur l'eau, flous et dorés. Vous restez là à flotter, les yeux au niveau des vagues, entre deux mondes. La plongée est finie, mais quelque chose en vous est resté en bas.",
+        "description": "",
+        "choice": "Se laisser flotter dans la lumière du soir",
         "exif": {
             "camera": "Sony A7C",
             "date_taken": "N/A",

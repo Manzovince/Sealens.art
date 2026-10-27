@@ -11,7 +11,7 @@ const detectedLanguage = savedLanguage() || (navigator.language || 'en').slice(0
 let language = supportedLanguages.includes(detectedLanguage) ? detectedLanguage : 'en';
 
 // Bump with any change to the JSON files: browsers keep them for days
-const DATA_VERSION = 4;
+const DATA_VERSION = 5;
 
 let translations = {};
 let storyData = [];
@@ -210,7 +210,6 @@ const localized = story => storyData.find(s => s.name === story.name) || story;
 
 const storySection = document.getElementById('story');
 const storyTimeline = document.getElementById('story-timeline');
-const storyAir = document.getElementById('story-air');
 const layers = document.querySelectorAll('.story-layer');
 let frontLayer = 0;
 
@@ -282,12 +281,6 @@ function clearPhotos() {
 // Waits for the photo, but never longer than a slow connection deserves
 const photoReady = name => Promise.race([preloadPhoto(name), wait(1500)]);
 
-// 1 = full lungs, 0 = empty
-function setAir(level) {
-    storyAir.style.setProperty('--air', level);
-    storyAir.classList.toggle('low', level < 0.3);
-}
-
 // Intro
 
 const INTRO_FADE = 5800; // the sentence has been read
@@ -317,7 +310,6 @@ function startStory() {
     storyTimeline.replaceChildren();
     setZen(false);
     clearPhotos();
-    setAir(1);
 
     storyLoaded.then(() => {
         introNext = pick(storyData.filter(story => story.tags.includes('intro')));
@@ -451,7 +443,6 @@ function relocalize() {
 function updateStory(story) {
     fullStory.push(story.name);
     diveLog.push({ story, via: lastChoice });
-    setAir(1 - (fullStory.length - 1) / ROUNDS);
 
     if (fullStory.length < ROUNDS) {
         const choices = shuffle(storyData.filter(s =>
@@ -665,15 +656,12 @@ function endStory(story) {
     const choices = shuffle(storyData.filter(s => s.tags.includes('outro'))).slice(0, 2);
     choices.forEach(choice => preloadPhoto(choice.name));
     page = { kind: 'end', story, choices, endText: Math.floor(Math.random() * endTextList[language].length) };
-    // The gauge empties as the warning appears
-    setTimeout(() => page?.kind === 'end' && setAir(0.12), 1600);
 }
 
 function resurface(choice) {
     fullStory.push(choice.name);
     lastChoice = choice;
     diveLog.push({ story: choice, via: choice });
-    setAir(1);
     page = { kind: 'final', story: choice };
     turnPage(choice.name);
 }

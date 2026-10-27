@@ -78,6 +78,13 @@
       "sold": { "20x30": 0, "27x40": 0, "30x45": 0 }
     },
     {
+      "photo": "landscape7",
+      "title": { "fr": "Neptune", "en": "Neptune" },
+      "light": "light",
+      "subject": "place",
+      "sold": { "20x30": 0, "27x40": 0, "30x45": 0 }
+    },
+    {
       "photo": "human9",
       "title": { "fr": "La Danse", "en": "The Dance" },
       "light": "light",
