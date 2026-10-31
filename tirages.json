@@ -43,13 +43,6 @@
       "sold": { "20x30": 0, "27x40": 0, "30x45": 0 }
     },
     {
-      "photo": "intro4",
-      "title": { "fr": "Dernière inspiration", "en": "Last Breath" },
-      "light": "light",
-      "subject": "people",
-      "sold": { "20x30": 0, "27x40": 0, "30x45": 0 }
-    },
-    {
       "photo": "animal37",
       "title": { "fr": "Le Tourbillon", "en": "The Whirl" },
       "light": "light",
@@ -61,13 +54,6 @@
       "title": { "fr": "L'Herbier", "en": "The Seagrass Meadow" },
       "light": "light",
       "subject": "place",
-      "sold": { "20x30": 0, "27x40": 0, "30x45": 0 }
-    },
-    {
-      "photo": "intro5",
-      "title": { "fr": "Au ras du fond", "en": "Skimming the Floor" },
-      "light": "light",
-      "subject": "people",
       "sold": { "20x30": 0, "27x40": 0, "30x45": 0 }
     },
     {
@@ -85,24 +71,10 @@
       "sold": { "20x30": 0, "27x40": 0, "30x45": 0 }
     },
     {
-      "photo": "human9",
-      "title": { "fr": "La Danse", "en": "The Dance" },
-      "light": "light",
-      "subject": "people",
-      "sold": { "20x30": 0, "27x40": 0, "30x45": 0 }
-    },
-    {
       "photo": "landscape17",
       "title": { "fr": "Jardin de roche", "en": "Rock Garden" },
       "light": "dark",
       "subject": "place",
-      "sold": { "20x30": 0, "27x40": 0, "30x45": 0 }
-    },
-    {
-      "photo": "human16",
-      "title": { "fr": "Nuage bleu", "en": "Blue Cloud" },
-      "light": "light",
-      "subject": "people",
       "sold": { "20x30": 0, "27x40": 0, "30x45": 0 }
     },
     {
@@ -120,13 +92,6 @@
       "sold": { "20x30": 0, "27x40": 0, "30x45": 0 }
     },
     {
-      "photo": "human18",
-      "title": { "fr": "Contemplation", "en": "Contemplation" },
-      "light": "dark",
-      "subject": "people",
-      "sold": { "20x30": 0, "27x40": 0, "30x45": 0 }
-    },
-    {
       "photo": "animal31",
       "title": { "fr": "Arabesques", "en": "Arabesques" },
       "light": "dark",
@@ -138,13 +103,6 @@
       "title": { "fr": "La tête hors de l'eau", "en": "Head Above Water" },
       "light": "dark",
       "subject": "place",
-      "sold": { "20x30": 0, "27x40": 0, "30x45": 0 }
-    },
-    {
-      "photo": "outro5",
-      "title": { "fr": "Compagnons", "en": "Companions" },
-      "light": "dark",
-      "subject": "people",
       "sold": { "20x30": 0, "27x40": 0, "30x45": 0 }
     }
   ]

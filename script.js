@@ -11,7 +11,7 @@ const detectedLanguage = savedLanguage() || (navigator.language || 'en').slice(0
 let language = supportedLanguages.includes(detectedLanguage) ? detectedLanguage : 'en';
 
 // Bump with any change to the JSON files: browsers keep them for days
-const DATA_VERSION = 6;
+const DATA_VERSION = 7;
 
 let translations = {};
 let storyData = [];
@@ -795,7 +795,7 @@ function renderGuide() {
             ...['light', 'dark'].map(light => guideChoice(`prints-guide-${light}`, () => { guide.light = light; renderPrints(); })));
     } else if (!guide.subject) {
         guideSteps.replaceChildren(line('prints-guide-q2'),
-            ...['life', 'place', 'people'].map(subject => guideChoice(`prints-guide-${subject}`, () => { guide.subject = subject; renderPrints(); })));
+            ...['life', 'place'].map(subject => guideChoice(`prints-guide-${subject}`, () => { guide.subject = subject; renderPrints(); })));
     } else {
         guideSteps.replaceChildren(line('prints-guide-result'),
             guideChoice('prints-guide-reset', () => { guide = null; renderPrints(); }));
